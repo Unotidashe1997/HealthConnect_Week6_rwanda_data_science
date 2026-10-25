@@ -1,0 +1,8 @@
+venv/
+__pycache__/
+*.pyc
+.ipynb_checkpoints/
+outputs/.state/
+# raw patient-level source data stays local
+data/*
+!data/README.md
