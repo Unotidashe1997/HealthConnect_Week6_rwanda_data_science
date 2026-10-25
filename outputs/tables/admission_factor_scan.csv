@@ -1,0 +1,27 @@
+Factor,Type,n,Test,Statistic,p,Effect,Effect_name,Highest_group,Lowest_group,p_holm,Signif_raw,Signif_holm
+High-risk patient flag,categorical,5000,χ²,5.222390567860037,0.02229787793734499,0.032318386617713565,Cramér's V,1 (13.2%),0 (11.0%),0.5797448263709698,True,False
+Gender,categorical,5000,χ²,4.342331439384415,0.03717598343127195,0.02946975208373635,Cramér's V,Male (12.7%),Female (10.7%),0.9293995857817988,True,False
+Age group,categorical,5000,χ²,11.85388868340544,0.06530888102645958,0.048690632945989604,Cramér's V,50–64 (13.9%),35–49 (9.4%),1.0,False,False
+Insurance code,categorical,5000,χ²,21.745723172825056,0.0839922546911084,0.06594804496393362,Cramér's V,INS001 (15.4%),INS010 (8.0%),1.0,False,False
+Month of visit,categorical,5000,χ²,16.944185472547467,0.10953744423197434,0.058213719126246295,Cramér's V,7 (14.7%),8 (8.2%),1.0,False,False
+Day of week,categorical,5000,χ²,9.837873336095111,0.13164766248892112,0.04435735189592614,Cramér's V,Saturday (13.9%),Tuesday (9.3%),1.0,False,False
+Age,numeric,5000,Mann-Whitney,1342728.0,0.13219965473089554,0.03821690525492105,|rank-biserial r|,admitted median 50.0,not admitted median 46.0,1.0,False,False
+Patient province,categorical,5000,χ²,6.929665148340919,0.1396521127333049,0.0372281214899192,Cramér's V,Eastern (13.4%),Kigali City (9.6%),1.0,False,False
+Patient visits,numeric,5000,Mann-Whitney,1325918.5,0.16288806571551528,0.025219554288170798,|rank-biserial r|,admitted median 1.0,not admitted median 1.0,1.0,False,False
+Frequent visitor,categorical,5000,χ²,1.7842797646423327,0.18162467296310453,0.018890631353357848,Cramér's V,1 (12.9%),0 (11.4%),1.0,False,False
+Department type,categorical,5000,χ²,12.047334270980167,0.21065396342396928,0.04908632043855023,Cramér's V,Pharmacy (15.1%),Internal Medicine (9.6%),1.0,False,False
+Doctor experience (y),numeric,5000,Mann-Whitney,1253062.5,0.2198950213583195,0.031113769251110757,|rank-biserial r|,admitted median 12.0,not admitted median 13.0,1.0,False,False
+Referred,categorical,5000,χ²,1.294034093455459,0.2553058474962591,0.01608747396862204,Cramér's V,0 (11.9%),1 (9.9%),1.0,False,False
+Abnormal lab result,categorical,2272,χ²,0.7670328577609513,0.3811365295519227,0.018373962289383483,Cramér's V,1.0 (12.3%),0.0 (11.0%),1.0,False,False
+Claim coverage category,categorical,5000,χ²,2.8631242501445477,0.4132136809813748,0.02392958106672387,Cramér's V,High (≥85%) (12.7%),Low (<60%) (10.8%),1.0,False,False
+Department workload index,numeric,5000,Mann-Whitney,1268574.5,0.4511217698339425,0.019119664239288237,|rank-biserial r|,admitted median 98.5,not admitted median 98.5,1.0,False,False
+Visit type,categorical,5000,χ²,1.3809390027947983,0.5013406336736745,0.01661889889730844,Cramér's V,Consultation (12.4%),Emergency (11.2%),1.0,False,False
+BMI,numeric,5000,Mann-Whitney,1271702.0,0.5106183444283159,0.016701435550242727,|rank-biserial r|,admitted median 28.7,not admitted median 29.1,1.0,False,False
+Disease severity,categorical,5000,χ²,1.2596177438226972,0.5326936039882497,0.015872099696150457,Cramér's V,Severe (12.4%),Moderate (11.1%),1.0,False,False
+Marital status,categorical,5000,χ²,0.9995279257580023,0.6066738403606589,0.01413879716070644,Cramér's V,Single (12.4%),Widowed (11.4%),1.0,False,False
+Diagnosis,categorical,5000,χ²,2.416766632237103,0.6595993989992963,0.021985297961306337,Cramér's V,Upper Respiratory Infection (12.4%),Malaria (10.7%),1.0,False,False
+Bill amount,numeric,5000,Mann-Whitney,1307386.0,0.6679587856915266,0.01088995455044528,|rank-biserial r|,admitted median 158785.5,not admitted median 153554.0,1.0,False,False
+BMI category,categorical,5000,χ²,1.0664402063319776,0.7851810951634883,0.014604384316580945,Cramér's V,Overweight (12.7%),Obese (11.4%),1.0,False,False
+Chronic condition,categorical,5000,χ²,0.8697853285936152,0.8327124937336159,0.013189278438137662,Cramér's V,Hypertension (12.1%),None (11.1%),1.0,False,False
+Facility,categorical,5000,χ²,12.329451271448661,0.871064335846077,0.04965773106264253,Cramér's V,HF007 (15.2%),HF014 (8.7%),1.0,False,False
+Education,categorical,5000,χ²,0.9424793578457329,0.9183889231397847,0.013729379868338795,Cramér's V,Secondary (12.3%),Diploma (11.0%),1.0,False,False

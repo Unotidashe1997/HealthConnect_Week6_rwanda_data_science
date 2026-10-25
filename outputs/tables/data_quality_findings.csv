@@ -1,0 +1,109 @@
+Table,Check,Records_Checked,Issues_Found,Pct_Affected,Severity,Action_Taken,Note
+Appointments,Appointment FacilityID ≠ facility that owns the appointment's DepartmentID,5000,4744,94.88,Critical,Facility = appointment.FacilityID; department TYPE = name of DepartmentID (documented assumption),95% of appointments reference a department belonging to a different facility — IDs were generated independently
+Appointments,Doctor's FacilityID ≠ appointment FacilityID,5000,4743,94.86,Critical,Doctor workload computed per DoctorID; facility attribution uses appointment.FacilityID,
+Diagnoses (csv),Foreign key: Diagnoses (csv) → Appointment,60000,55000,91.67,Critical,"Orphans retained, excluded from joined analyses; cohort-based analyses disclose n","Child records whose parent appointment is absent from the 5,000-row Appointments sheet"
+Billing,Foreign key: Billing → Appointment,60000,55000,91.67,Critical,"Orphans retained, excluded from joined analyses; cohort-based analyses disclose n","Child records whose parent appointment is absent from the 5,000-row Appointments sheet"
+Feedback,Foreign key: Feedback → Appointment,21064,19308,91.66,Critical,"Orphans retained, excluded from joined analyses; cohort-based analyses disclose n","Child records whose parent appointment is absent from the 5,000-row Appointments sheet"
+Referrals (xlsx),Foreign key: Referrals (xlsx) → Appointment,4708,4293,91.19,Critical,"Orphans retained, excluded from joined analyses; cohort-based analyses disclose n","Child records whose parent appointment is absent from the 5,000-row Appointments sheet"
+Admissions (xlsx),Foreign key: Admissions (xlsx) → Appointment,5000,4414,88.28,Critical,"Orphans retained, excluded from joined analyses; cohort-based analyses disclose n","Child records whose parent appointment is absent from the 5,000-row Appointments sheet"
+Laboratory_Tests (xlsx),Foreign key: Laboratory_Tests (xlsx) → Appointment,5000,2728,54.56,Critical,"Orphans retained, excluded from joined analyses; cohort-based analyses disclose n","Child records whose parent appointment is absent from the 5,000-row Appointments sheet"
+Beds,Every bed has Status = 'Available' (no occupied/maintenance state),2000,2000,100.0,High,Bed occupancy estimated indirectly from admissions length-of-stay,Snapshot status carries no occupancy information
+Facilities,"No Health-Facility master table (name, type, ownership, district) is included; OwnershipID is not referenced anywhere",20,20,100.0,High,Facilities identified only as HF001–HF020; ownership/type/regional analysis not possible,"Brief lists a Health Facilities dataset; the file supplied contains only departments, rooms, beds, etc."
+Patients,InsuranceID has 15 codes but no insurance-plan lookup table; 100% of patients carry an InsuranceID,20000,20000,100.0,High,'Insured vs uninsured' comparison replaced by 'claim filed vs no claim' and by claim coverage ratio,
+Revenue_Summary,Revenue summary total vs sum of billed amounts (should reconcile),1,1,100.0,High,Two revenue series reported separately; forecasting uses the monthly Revenue_Summary (only dated series),"Summary revenue = 1,132,677,500 RWF vs billed 9,309,401,961 RWF vs paid 8,389,454,556 RWF (ratio 8.2x)"
+Patients,Phone numbers truncated by scientific-notation export (2.50788E+11),20000,19990,99.95,High,Phone excluded from analysis & integrated dataset; flagged PhoneValid = False,"Only 10 distinct values remain for 20,000 patients, so 'duplicate phone' detection is meaningless; the source export must be re-run with phone stored as text"
+Staff (all cadres),Staff FacilityID ≠ facility owning their DepartmentID,1250,1187,94.96,High,Staff attributed to staff.FacilityID for facility counts and to DepartmentID name for department counts,
+Appointments,Doctor's department name ≠ appointment department name,5000,4510,90.2,High,Noted; department of the appointment record used,
+Billing/Payments,Bill Status 'Pending' but payment = full amount,19884,15975,80.34,High,As above,
+Billing/Payments,Bill Status 'Partially Paid' but payment = full amount,19971,16035,80.29,High,As above,Status is statistically unrelated to the amount actually paid → treat Status as unreliable
+Patient_Feedback,"Rating contradicts comment (rating ≤2 with 'Good/Excellent', or ≥4 with 'Poor')",21064,6336,30.08,High,Both fields retained; rating used as the primary satisfaction measure,Rating and Comment are statistically independent (see χ² test in section 4)
+Billing/Payments,Bill Status 'Paid' but payment < billed amount,20145,4042,20.06,High,"Outstanding balance computed from amounts (Amount − AmountPaid), not from Status",
+Prescriptions (xlsx),Foreign key: Prescriptions (xlsx) → Appointment,5000,997,19.94,High,"Orphans retained, excluded from joined analyses; cohort-based analyses disclose n","Child records whose parent appointment is absent from the 5,000-row Appointments sheet"
+Patients,"Age-illogical demographics (child married/widowed, minor with Diploma/Bachelor/Master, under-15 with a job)",20000,3674,18.37,High,Flagged (Flag_AgeLogic); retained and sensitivity-tested,Values look randomly generated independently of age — treat demographic cross-tabs with caution
+Patients,Child with adult height/weight (age ≤5 & ≥125 cm or ≥35 kg; age ≤10 & ≥150 cm),20000,2154,10.77,High,Flagged (Flag_AnthroImplausible); retained and sensitivity-tested,Values look randomly generated independently of age — treat demographic cross-tabs with caution
+Patients,DateOfBirth is always 1 January (placeholder day/month),20000,20000,100.0,Medium,Age used as supplied (equals 2026 − birth year); month-level age precision is unavailable,Age is accurate only to ±1 year; infants cannot be separated from 1-year-olds
+Appointments,Cancellation / no-show status column missing,5000,5000,100.0,Medium,Cancellation-rate KPI cannot be computed,Recommend adding AppointmentStatus
+Equipment,"No quantity, condition or availability fields (1 generic item per department)",200,200,100.0,Medium,Equipment distribution reported; availability cannot be measured,
+Patients,No patient registration date and no patient→facility link,20000,20000,100.0,Medium,Patient growth proxied by first-appointment month (appointment cohort only),
+Revenue_Summary,Summary appointment count vs billed appointments,1,1,100.0,Medium,Noted,"Summary = 60,809 appointments vs 60,000 bills vs 5,000 rows in Appointments sheet"
+Staff (all cadres),Pharmacists / lab scientists / radiographers assigned to a department that does not match their cadre (e.g. radiographer in Pharmacy),120,108,90.0,Medium,"Staff counted by cadre, not by department fit",Department assignment appears cyclic/arbitrary
+Payments/Claims,Payment method 'Insurance' with no insurance claim on file,14944,4485,30.01,Medium,Noted,
+Patients,ChronicCondition 'None' text mis-read as missing by default CSV parsers,20000,5071,25.36,Medium,Read with keep_default_na=False; kept as explicit category 'None' (= no chronic disease),Naïve read shows 25.4% 'missing' values that are really a valid answer
+Appointments,Appointments dated after the analysis date (2026-10-23),5000,898,17.96,Medium,Retained (could be scheduled bookings); full calendar-year 2026 treated as the observed history,"No appointment-status column exists, so booked / attended / cancelled cannot be distinguished"
+Patients,BMI < 13 or > 50 (physiologically extreme),20000,1167,5.83,Medium,Flagged (Flag_BMIExtreme); retained and sensitivity-tested,Values look randomly generated independently of age — treat demographic cross-tabs with caution
+Patients,Status = Active for every patient (zero variance; no inactive/deceased records),20000,20000,100.0,Low,Noted; 'Active Patients' = all patients,
+Referrals,Referred to the same facility the patient was seen at (self-referral),415,30,7.23,Low,Retained,"Only 415 of 4,708 referrals link to the Appointments sheet"
+All tables,Missing values (true NaN) across 31 tables,298110,0,0.0,Info,None required,"Tables are structurally complete — the problems are relational, not nulls"
+Patients,Duplicate primary key (PatientID),20000,0,0.0,Info,None required,
+Appointments,Duplicate primary key (AppointmentID),5000,0,0.0,Info,None required,
+Billing,Duplicate primary key (BillingID),60000,0,0.0,Info,None required,
+Payments,Duplicate primary key (PaymentID),60000,0,0.0,Info,None required,
+Insurance_Claims,Duplicate primary key (ClaimID),42036,0,0.0,Info,None required,
+Patient_Feedback,Duplicate primary key (FeedbackID),21064,0,0.0,Info,None required,
+Diagnoses_csv,Duplicate primary key (DiagnosisID),60000,0,0.0,Info,None required,
+CT::Diagnoses,Duplicate primary key (DiagnosisID),5000,0,0.0,Info,None required,
+CT::Diagnoses,More than one record per appointment,5000,0,0.0,Info,None required,
+CT::Laboratory_Tests,Duplicate primary key (LabID),5000,0,0.0,Info,None required,
+CT::Laboratory_Tests,More than one record per appointment,5000,0,0.0,Info,None required,
+CT::Prescriptions,Duplicate primary key (PrescriptionID),5000,0,0.0,Info,None required,
+CT::Prescriptions,More than one record per appointment,5000,0,0.0,Info,None required,
+CT::Admissions,Duplicate primary key (AdmissionID),5000,0,0.0,Info,None required,
+CT::Admissions,More than one record per appointment,5000,0,0.0,Info,None required,
+CT::Referrals,Duplicate primary key (ReferralID),4708,0,0.0,Info,None required,
+CT::Referrals,More than one record per appointment,4708,0,0.0,Info,None required,
+Doctors,Duplicate StaffID,350,0,0.0,Info,None required,
+Nurses,Duplicate StaffID,700,0,0.0,Info,None required,
+Pharmacists,Duplicate StaffID,50,0,0.0,Info,None required,
+Lab_Scientists,Duplicate StaffID,40,0,0.0,Info,None required,
+Radiographers,Duplicate StaffID,30,0,0.0,Info,None required,
+Admin_Staff,Duplicate StaffID,80,0,0.0,Info,None required,
+Billing,Appointments billed more than once,60000,0,0.0,Info,None required,
+All tables,Fully duplicated rows,298110,0,0.0,Info,None required,
+Appointments,Same patient + doctor + date appears twice,5000,0,0.0,Info,None required,
+Patients,Unparseable DateOfBirth,20000,0,0.0,Info,Converted to datetime (format m/d/Y),
+Patients,Age inconsistent with DateOfBirth (reference year 2026),20000,0,0.0,Info,None required,
+Patients,Impossible age (<0 or >110),20000,0,0.0,Info,None required,Age range 0–90 (mean 45.0)
+Patients,Stored BMI differs from Weight/Height² by >0.2,20000,0,0.0,Info,None required,
+Patients,Category labels needing trim/case standardisation,120000,0,0.0,Info,Trim/strip applied to all text columns; labels were already consistent,
+Appointments,Unparseable Date,5000,0,0.0,Info,Converted to datetime (ISO),
+Appointments,Category labels with stray whitespace (VisitType),5000,0,0.0,Info,Trimmed; none found,
+Diagnoses_csv,"Category labels with stray whitespace (Diagnosis, Severity)",120000,0,0.0,Info,Trimmed; none found,
+Payments,Category labels with stray whitespace (Method),60000,0,0.0,Info,Trimmed; none found,
+Billing,Category labels with stray whitespace (Status),60000,0,0.0,Info,Trimmed; none found,
+Insurance_Claims,"Category labels with stray whitespace (Provider, Status)",84072,0,0.0,Info,Trimmed; none found,
+Patient_Feedback,Category labels with stray whitespace (Comment),21064,0,0.0,Info,Trimmed; none found,
+Province,Foreign key: Province → Country,5,0,0.0,Info,None required,
+District,Foreign key: District → Province,30,0,0.0,Info,None required,
+Sector,Foreign key: Sector → District,120,0,0.0,Info,None required,
+Village,Foreign key: Village → Sector,480,0,0.0,Info,None required,
+Patient,Foreign key: Patient → Village,20000,0,0.0,Info,None required,
+Department,Foreign key: Department → Facility (ID list derived from Departments),200,0,0.0,Info,None required,
+Room,Foreign key: Room → Department,400,0,0.0,Info,None required,
+Bed,Foreign key: Bed → Room,2000,0,0.0,Info,None required,
+Equipment,Foreign key: Equipment → Department,200,0,0.0,Info,None required,
+Service,Foreign key: Service → Department,400,0,0.0,Info,None required,
+Specialty,Foreign key: Specialty → Department,200,0,0.0,Info,None required,
+Doctors,Foreign key: Doctors → Department,350,0,0.0,Info,None required,
+Nurses,Foreign key: Nurses → Department,700,0,0.0,Info,None required,
+Pharmacists,Foreign key: Pharmacists → Department,50,0,0.0,Info,None required,
+Lab_Scientists,Foreign key: Lab_Scientists → Department,40,0,0.0,Info,None required,
+Radiographers,Foreign key: Radiographers → Department,30,0,0.0,Info,None required,
+Admin_Staff,Foreign key: Admin_Staff → Department,80,0,0.0,Info,None required,
+Appointment,Foreign key: Appointment → Patient,5000,0,0.0,Info,None required,
+Appointment,Foreign key: Appointment → Doctor,5000,0,0.0,Info,None required,
+Appointment,Foreign key: Appointment → Department,5000,0,0.0,Info,None required,
+Appointment,Foreign key: Appointment → Facility,5000,0,0.0,Info,None required,
+Diagnoses (xlsx),Foreign key: Diagnoses (xlsx) → Appointment,5000,0,0.0,Info,None required,
+Referral,Foreign key: Referral → Referred facility,4708,0,0.0,Info,None required,
+Payment,Foreign key: Payment → Billing,60000,0,0.0,Info,None required,
+Claim,Foreign key: Claim → Billing,42036,0,0.0,Info,None required,
+Patients,Duplicate Patient IDs,20000,0,0.0,Info,None required,
+Appointments,Duplicate Appointment IDs,5000,0,0.0,Info,None required,
+Appointments,Invalid Facility IDs (not in master),5000,0,0.0,Info,None required,
+Appointments,Invalid Department IDs (not in master),5000,0,0.0,Info,None required,
+Billing,Invalid billing amounts (≤ 0 or missing),60000,0,0.0,Info,None required,"Amounts range 10,002–299,998 RWF"
+Payments,Invalid payment amounts (≤ 0),60000,0,0.0,Info,None required,
+Staff (all cadres),Staff department name ≠ name of their DepartmentID,1250,0,0.0,Info,None required,
+Doctors,Doctor specialty ≠ specialty defined for their DepartmentID,350,0,0.0,Info,None required,
+Payments,AmountPaid exceeds billed Amount,60000,0,0.0,Info,None required,
+Insurance_Claims,ClaimAmount exceeds billed Amount,42036,0,0.0,Info,None required,

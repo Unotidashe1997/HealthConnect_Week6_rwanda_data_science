@@ -1,0 +1,12 @@
+Pair,Data,n,Method,Coefficient,p_value,Strength,Significant (α=.05)
+Age ↔ hospital admission (0/1),Appointment cohort,5000,Point-biserial (Spearman ρ = 0.021),0.02147201509962527,0.12899016551625264,negligible,No
+Age ↔ billing amount,Appointment cohort,5000,Pearson (Spearman ρ = -0.003),-0.002508720090327814,0.8592340880480057,negligible,No
+Diagnosis ↔ length of stay,Admitted cohort,586,Kruskal-Wallis; η = 0.073 (ANOVA p = 0.544),0.0726886690164648,0.5383835340954406,negligible,No
+Department workload index ↔ mean satisfaction,200 departments (IDs),200,Spearman,-0.024457448693240146,0.7310237808672794,negligible,No
+"  … same, 10 department types",10 department types,10,Spearman,0.2249250511616239,0.5321220586935935,weak,No
+"  … same, 20 facilities (appts per clinician)",20 facilities,20,Spearman,0.01880406300711836,0.9372823403483928,negligible,No
+Monthly revenue ↔ monthly appointments,"Revenue summary, 12 months",12,Pearson (Spearman ρ = 0.329),0.2845355166279801,0.37006453373039305,weak,No
+  … facility billed revenue ↔ appointments,20 facilities (cohort),20,Pearson,0.8963600655486585,8.946438346623699e-08,strong,Yes
+Insurance code (15) ↔ healthcare utilisation (visited yes/no),"20,000 patients",20000,χ²; Cramér's V = 0.006,0.006242097832180451,0.6931023016236479,negligible,No
+Claim coverage ratio ↔ bill amount,"42,036 bills with claims",42036,Spearman,0.0008476025417427672,0.8620414094528792,negligible,No
+Claim filed (0/1) ↔ bill amount,"60,000 bills",60000,Point-biserial,-0.005817513830686289,0.15484949303616324,negligible,No

@@ -1,0 +1,3980 @@
+{
+ "R": {
+  "n_source_files": 22,
+  "n_tables_loaded": 31,
+  "relationships": [
+   {
+    "Relationship": "Province \u2192 Country",
+    "Child_Rows": 5,
+    "Matched": 5,
+    "Match_Rate": 1.0
+   },
+   {
+    "Relationship": "District \u2192 Province",
+    "Child_Rows": 30,
+    "Matched": 30,
+    "Match_Rate": 1.0
+   },
+   {
+    "Relationship": "Sector \u2192 District",
+    "Child_Rows": 120,
+    "Matched": 120,
+    "Match_Rate": 1.0
+   },
+   {
+    "Relationship": "Village \u2192 Sector",
+    "Child_Rows": 480,
+    "Matched": 480,
+    "Match_Rate": 1.0
+   },
+   {
+    "Relationship": "Patient \u2192 Village",
+    "Child_Rows": 20000,
+    "Matched": 20000,
+    "Match_Rate": 1.0
+   },
+   {
+    "Relationship": "Department \u2192 Facility (ID list derived from Departments)",
+    "Child_Rows": 200,
+    "Matched": 200,
+    "Match_Rate": 1.0
+   },
+   {
+    "Relationship": "Room \u2192 Department",
+    "Child_Rows": 400,
+    "Matched": 400,
+    "Match_Rate": 1.0
+   },
+   {
+    "Relationship": "Bed \u2192 Room",
+    "Child_Rows": 2000,
+    "Matched": 2000,
+    "Match_Rate": 1.0
+   },
+   {
+    "Relationship": "Equipment \u2192 Department",
+    "Child_Rows": 200,
+    "Matched": 200,
+    "Match_Rate": 1.0
+   },
+   {
+    "Relationship": "Service \u2192 Department",
+    "Child_Rows": 400,
+    "Matched": 400,
+    "Match_Rate": 1.0
+   },
+   {
+    "Relationship": "Specialty \u2192 Department",
+    "Child_Rows": 200,
+    "Matched": 200,
+    "Match_Rate": 1.0
+   },
+   {
+    "Relationship": "Doctors \u2192 Department",
+    "Child_Rows": 350,
+    "Matched": 350,
+    "Match_Rate": 1.0
+   },
+   {
+    "Relationship": "Nurses \u2192 Department",
+    "Child_Rows": 700,
+    "Matched": 700,
+    "Match_Rate": 1.0
+   },
+   {
+    "Relationship": "Pharmacists \u2192 Department",
+    "Child_Rows": 50,
+    "Matched": 50,
+    "Match_Rate": 1.0
+   },
+   {
+    "Relationship": "Lab_Scientists \u2192 Department",
+    "Child_Rows": 40,
+    "Matched": 40,
+    "Match_Rate": 1.0
+   },
+   {
+    "Relationship": "Radiographers \u2192 Department",
+    "Child_Rows": 30,
+    "Matched": 30,
+    "Match_Rate": 1.0
+   },
+   {
+    "Relationship": "Admin_Staff \u2192 Department",
+    "Child_Rows": 80,
+    "Matched": 80,
+    "Match_Rate": 1.0
+   },
+   {
+    "Relationship": "Appointment \u2192 Patient",
+    "Child_Rows": 5000,
+    "Matched": 5000,
+    "Match_Rate": 1.0
+   },
+   {
+    "Relationship": "Appointment \u2192 Doctor",
+    "Child_Rows": 5000,
+    "Matched": 5000,
+    "Match_Rate": 1.0
+   },
+   {
+    "Relationship": "Appointment \u2192 Department",
+    "Child_Rows": 5000,
+    "Matched": 5000,
+    "Match_Rate": 1.0
+   },
+   {
+    "Relationship": "Appointment \u2192 Facility",
+    "Child_Rows": 5000,
+    "Matched": 5000,
+    "Match_Rate": 1.0
+   },
+   {
+    "Relationship": "Diagnoses (xlsx) \u2192 Appointment",
+    "Child_Rows": 5000,
+    "Matched": 5000,
+    "Match_Rate": 1.0
+   },
+   {
+    "Relationship": "Laboratory_Tests (xlsx) \u2192 Appointment",
+    "Child_Rows": 5000,
+    "Matched": 2272,
+    "Match_Rate": 0.4544
+   },
+   {
+    "Relationship": "Prescriptions (xlsx) \u2192 Appointment",
+    "Child_Rows": 5000,
+    "Matched": 4003,
+    "Match_Rate": 0.8006
+   },
+   {
+    "Relationship": "Admissions (xlsx) \u2192 Appointment",
+    "Child_Rows": 5000,
+    "Matched": 586,
+    "Match_Rate": 0.1172
+   },
+   {
+    "Relationship": "Referrals (xlsx) \u2192 Appointment",
+    "Child_Rows": 4708,
+    "Matched": 415,
+    "Match_Rate": 0.0881
+   },
+   {
+    "Relationship": "Referral \u2192 Referred facility",
+    "Child_Rows": 4708,
+    "Matched": 4708,
+    "Match_Rate": 1.0
+   },
+   {
+    "Relationship": "Diagnoses (csv) \u2192 Appointment",
+    "Child_Rows": 60000,
+    "Matched": 5000,
+    "Match_Rate": 0.0833
+   },
+   {
+    "Relationship": "Billing \u2192 Appointment",
+    "Child_Rows": 60000,
+    "Matched": 5000,
+    "Match_Rate": 0.0833
+   },
+   {
+    "Relationship": "Payment \u2192 Billing",
+    "Child_Rows": 60000,
+    "Matched": 60000,
+    "Match_Rate": 1.0
+   },
+   {
+    "Relationship": "Claim \u2192 Billing",
+    "Child_Rows": 42036,
+    "Matched": 42036,
+    "Match_Rate": 1.0
+   },
+   {
+    "Relationship": "Feedback \u2192 Appointment",
+    "Child_Rows": 21064,
+    "Matched": 1756,
+    "Match_Rate": 0.0834
+   }
+  ],
+  "dq_counts": {
+   "Info": 74,
+   "High": 14,
+   "Medium": 10,
+   "Critical": 8,
+   "Low": 2
+  },
+  "dq_n_checks": 108,
+  "encounter_coverage": {
+   "Admitted": 586,
+   "LabDone": 2272,
+   "PrescriptionIssued": 4003,
+   "Referred": 415,
+   "HasBill": 5000,
+   "HasFeedback": 1756
+  },
+  "n_encounters": 5000,
+  "n_fin": 60000,
+  "n_patients": 20000,
+  "revenue_tercile_cuts": [
+   106681.66666666666,
+   203897.66666666657
+  ],
+  "highrisk_pct": 0.3331,
+  "gender_split": {
+   "Male": 10090,
+   "Female": 9910
+  },
+  "mean_age": 45.0332,
+  "chronic_prev": 0.74645,
+  "blood_uniform_p": 0.38227755249827583,
+  "under15": 0.16385,
+  "over65": 0.28505,
+  "chronic_age_p": 0.4564763535952051,
+  "chronic_sex_p": 0.6532478427821613,
+  "insurance_cov_all": 1.0,
+  "claim_rate": 0.7006,
+  "province_patients": {
+   "Western": 4091,
+   "Eastern": 4067,
+   "Southern": 3967,
+   "Kigali City": 3952,
+   "Northern": 3923
+  },
+  "top_province": "Western",
+  "unique_patients_seen": 4443,
+  "returning_patients": 510,
+  "patients_seen_pct": 0.22215,
+  "dx_freq": {
+   "Gastritis": 12208,
+   "Diabetes": 12083,
+   "Hypertension": 12075,
+   "Malaria": 11878,
+   "Upper Respiratory Infection": 11756
+  },
+  "severity_mix": {
+   "Mild": 0.3365,
+   "Moderate": 0.33045,
+   "Severe": 0.33305
+  },
+  "dx_sev_p": 0.18683906856605947,
+  "rx_concordance": 1.0,
+  "lab_dx_p": 0.3662493549062064,
+  "lab_volume": {
+   "Malaria": 1272,
+   "CBC": 1257,
+   "Glucose": 1247,
+   "Urinalysis": 1224
+  },
+  "rx_volume": {
+   "Amlodipine": 1068,
+   "Omeprazole": 1040,
+   "Metformin": 999,
+   "Amoxicillin": 979,
+   "Artemether-Lumefantrine": 914
+  },
+  "abnormal_rate": 0.5034,
+  "med_dx_p": 0.0,
+  "admit_rate": 0.1172,
+  "mean_los": 5.4876,
+  "referral_rate": 0.083,
+  "n_admissions_all": 5000,
+  "admit_trend_rho": 0.31468531468531474,
+  "admit_trend_p": 0.3191387855033045,
+  "doc_load_mean": 14.285714285714286,
+  "doc_load_max": 28,
+  "doc_load_cv": 0.25779425838478337,
+  "doc_dispersion": 0.9493982808022922,
+  "fac_appt_range": [
+   217,
+   278
+  ],
+  "staff_per1000_range": [
+   220.21660649819495,
+   289.59276018099547
+  ],
+  "staff_vs_patients_rho": -0.09548985276936021,
+  "staff_vs_patients_p": 0.6888149729163153,
+  "fac_uniform_p": 0.05210469470599673,
+  "busiest_facility": "HF013",
+  "quietest_facility": "HF019",
+  "bed_occupancy_system": 0.03758630136986301,
+  "beds_total": 2000,
+  "beds_available_status": 2000,
+  "equip_per_dept_type": 20,
+  "rev_appt_corr": [
+   0.2845355166279801,
+   0.37006453373039305
+  ],
+  "rev_total": 1132677500.0,
+  "rev_mean": 94389791.66666667,
+  "rev_cv": 0.2711960059565991,
+  "rev_peak": [
+   "Sep",
+   145759784.0
+  ],
+  "rev_low": [
+   "Dec",
+   66686482.0
+  ],
+  "appts_summary_total": 60809,
+  "bill_total": 9309401961.0,
+  "paid_total": 8389454556.0,
+  "outstanding_total": 919947405.0,
+  "outstanding_pct": 0.09881917322443995,
+  "mean_bill": 155156.69935,
+  "median_bill": 155247.0,
+  "claim_approval": 0.4997621086687601,
+  "claim_value": 4881863293.88,
+  "provider_claim_value": {
+   "Radiant": 1236511902.69,
+   "Private": 1217496359.42,
+   "RSSB": 1214649237.67,
+   "MMI": 1213205794.1
+  },
+  "provider_approval": {
+   "Radiant": 0.5011273957158963,
+   "Private": 0.4925770841263799,
+   "RSSB": 0.5094662734278375,
+   "MMI": 0.495806420514798
+  },
+  "pay_method_share": {
+   "Card": 0.2524166666666667,
+   "Mobile Money": 0.2502666666666667,
+   "Insurance": 0.24906666666666666,
+   "Cash": 0.24825
+  },
+  "provider_approval_p": 0.07657061375931976,
+  "dep_rev_top": [
+   "Cardiology",
+   86248476.0
+  ],
+  "dep_rev_kw_p": 0.4714704820003536,
+  "fac_rev_kw_p": 0.30292991154795307,
+  "dx_rev_kw_p": 0.5547544770632694,
+  "fac_rev_top": [
+   "HF011",
+   44206632.0
+  ],
+  "cohort_billed": 771133439.0,
+  "mean_rating": 2.9871819217622484,
+  "rating_dist": {
+   "1": 0.20152867451576148,
+   "2": 0.20285795670338017,
+   "3": 0.19948727687048995,
+   "4": 0.19915495632358526,
+   "5": 0.19697113558678314
+  },
+  "rating_comment_p": 0.9037165481071,
+  "feedback_coverage": 0.3510666666666667,
+  "poor_trend": [
+   0.06993006993006995,
+   0.8290236405313092
+  ],
+  "exc_trend": [
+   0.06993006993006995,
+   0.8290236405313092
+  ],
+  "sat_fac_p": 0.7952304278874007,
+  "sat_dept_p": 0.8780613985682388,
+  "sat_best_fac": [
+   "HF011",
+   3.1868131868131866
+  ],
+  "sat_worst_fac": [
+   "HF020",
+   2.7560975609756095
+  ],
+  "sat_best_dept": [
+   "Emergency",
+   3.021505376344086
+  ],
+  "sat_worst_dept": [
+   "ICU",
+   2.761627906976744
+  ],
+  "descriptives": [
+   {
+    "Variable": "Patient age (years)",
+    "Source": "Patients (20,000)",
+    "n": 20000,
+    "Mean": 45.033,
+    "Median": 45.0,
+    "Mode": 90.0,
+    "Std Dev": 26.261,
+    "Variance": 689.636,
+    "Min": 0.0,
+    "P5": 4.0,
+    "P10": 9.0,
+    "Q1 (P25)": 22.0,
+    "Q3 (P75)": 68.0,
+    "P90": 82.0,
+    "P95": 86.0,
+    "P99": 90.0,
+    "Max": 90.0,
+    "IQR": 46.0,
+    "Skewness": 0.005,
+    "Excess kurtosis": -1.194,
+    "CV %": 58.315
+   },
+   {
+    "Variable": "BMI (kg/m\u00b2)",
+    "Source": "Patients (20,000)",
+    "n": 20000,
+    "Mean": 30.044,
+    "Median": 29.2,
+    "Mode": 32.0,
+    "Std Dev": 10.426,
+    "Variance": 108.699,
+    "Min": 11.1,
+    "P5": 15.0,
+    "P10": 17.1,
+    "Q1 (P25)": 21.7,
+    "Q3 (P75)": 36.9,
+    "P90": 44.6,
+    "P95": 49.3,
+    "P99": 56.101,
+    "Max": 61.2,
+    "IQR": 15.2,
+    "Skewness": 0.458,
+    "Excess kurtosis": -0.39,
+    "CV %": 34.703
+   },
+   {
+    "Variable": "Height (cm)",
+    "Source": "Patients (20,000)",
+    "n": 20000,
+    "Mean": 164.896,
+    "Median": 165.0,
+    "Mode": 152.0,
+    "Std Dev": 14.79,
+    "Variance": 218.747,
+    "Min": 140.0,
+    "P5": 142.0,
+    "P10": 145.0,
+    "Q1 (P25)": 152.0,
+    "Q3 (P75)": 178.0,
+    "P90": 185.0,
+    "P95": 188.0,
+    "P99": 190.0,
+    "Max": 190.0,
+    "IQR": 26.0,
+    "Skewness": 0.016,
+    "Excess kurtosis": -1.216,
+    "CV %": 8.969
+   },
+   {
+    "Variable": "Weight (kg)",
+    "Source": "Patients (20,000)",
+    "n": 20000,
+    "Mean": 79.76,
+    "Median": 80.0,
+    "Mode": 78.0,
+    "Std Dev": 23.38,
+    "Variance": 546.621,
+    "Min": 40.0,
+    "P5": 44.0,
+    "P10": 47.0,
+    "Q1 (P25)": 60.0,
+    "Q3 (P75)": 100.0,
+    "P90": 112.0,
+    "P95": 116.0,
+    "P99": 120.0,
+    "Max": 120.0,
+    "IQR": 40.0,
+    "Skewness": 0.015,
+    "Excess kurtosis": -1.199,
+    "CV %": 29.313
+   },
+   {
+    "Variable": "Length of stay (days)",
+    "Source": "Admissions (5,000)",
+    "n": 5000,
+    "Mean": 5.488,
+    "Median": 6.0,
+    "Mode": 2.0,
+    "Std Dev": 2.874,
+    "Variance": 8.261,
+    "Min": 1.0,
+    "P5": 1.0,
+    "P10": 1.0,
+    "Q1 (P25)": 3.0,
+    "Q3 (P75)": 8.0,
+    "P90": 9.0,
+    "P95": 10.0,
+    "P99": 10.0,
+    "Max": 10.0,
+    "IQR": 5.0,
+    "Skewness": -0.009,
+    "Excess kurtosis": -1.229,
+    "CV %": 52.375
+   },
+   {
+    "Variable": "Bill amount (RWF)",
+    "Source": "Billing (60,000)",
+    "n": 60000,
+    "Mean": 155156.699,
+    "Median": 155247.0,
+    "Mode": 36833.0,
+    "Std Dev": 83840.368,
+    "Variance": 7029207256.6,
+    "Min": 10002.0,
+    "P5": 24717.85,
+    "P10": 38803.8,
+    "Q1 (P25)": 82275.25,
+    "Q3 (P75)": 227907.75,
+    "P90": 271134.2,
+    "P95": 285651.7,
+    "P99": 296837.01,
+    "Max": 299998.0,
+    "IQR": 145632.5,
+    "Skewness": -0.003,
+    "Excess kurtosis": -1.205,
+    "CV %": 54.036
+   },
+   {
+    "Variable": "Amount paid (RWF)",
+    "Source": "Payments (60,000)",
+    "n": 60000,
+    "Mean": 139824.243,
+    "Median": 129821.5,
+    "Mode": 129528.0,
+    "Std Dev": 83370.19,
+    "Variance": 6950588556.409,
+    "Min": 5002.0,
+    "P5": 20555.95,
+    "P10": 32340.6,
+    "Q1 (P25)": 68694.25,
+    "Q3 (P75)": 210240.0,
+    "P90": 264198.6,
+    "P95": 282129.45,
+    "P99": 296143.05,
+    "Max": 299998.0,
+    "IQR": 141545.75,
+    "Skewness": 0.255,
+    "Excess kurtosis": -1.11,
+    "CV %": 59.625
+   },
+   {
+    "Variable": "Outstanding balance (RWF)",
+    "Source": "Billing \u2212 Payments (60,000)",
+    "n": 60000,
+    "Mean": 15332.457,
+    "Median": 0.0,
+    "Mode": 0.0,
+    "Std Dev": 36038.072,
+    "Variance": 1298742597.616,
+    "Min": 0.0,
+    "P5": 0.0,
+    "P10": 0.0,
+    "Q1 (P25)": 0.0,
+    "Q3 (P75)": 0.0,
+    "P90": 76387.4,
+    "P95": 113261.25,
+    "P99": 142715.17,
+    "Max": 149991.0,
+    "IQR": 0.0,
+    "Skewness": 2.334,
+    "Excess kurtosis": 4.195,
+    "CV %": 235.044
+   },
+   {
+    "Variable": "Claim amount (RWF)",
+    "Source": "Insurance claims (42,036)",
+    "n": 42036,
+    "Mean": 116135.296,
+    "Median": 111421.64,
+    "Mode": 42625.0,
+    "Std Dev": 67812.486,
+    "Variance": 4598533237.176,
+    "Min": 5172.54,
+    "P5": 17900.125,
+    "P10": 28055.925,
+    "Q1 (P25)": 59153.72,
+    "Q3 (P75)": 165174.938,
+    "P90": 211879.405,
+    "P95": 236446.775,
+    "P99": 270767.082,
+    "Max": 298532.88,
+    "IQR": 106021.218,
+    "Skewness": 0.329,
+    "Excess kurtosis": -0.76,
+    "CV %": 58.391
+   },
+   {
+    "Variable": "Claim \u00f7 bill",
+    "Source": "Insurance claims (42,036)",
+    "n": 42036,
+    "Mean": 0.75,
+    "Median": 0.749,
+    "Mode": 1.0,
+    "Std Dev": 0.144,
+    "Variance": 0.021,
+    "Min": 0.5,
+    "P5": 0.524,
+    "P10": 0.549,
+    "Q1 (P25)": 0.625,
+    "Q3 (P75)": 0.875,
+    "P90": 0.951,
+    "P95": 0.976,
+    "P99": 0.995,
+    "Max": 1.0,
+    "IQR": 0.249,
+    "Skewness": 0.003,
+    "Excess kurtosis": -1.192,
+    "CV %": 19.264
+   },
+   {
+    "Variable": "Satisfaction rating (1\u20135)",
+    "Source": "Feedback (21,064)",
+    "n": 21064,
+    "Mean": 2.987,
+    "Median": 3.0,
+    "Mode": 2.0,
+    "Std Dev": 1.413,
+    "Variance": 1.996,
+    "Min": 1.0,
+    "P5": 1.0,
+    "P10": 1.0,
+    "Q1 (P25)": 2.0,
+    "Q3 (P75)": 4.0,
+    "P90": 5.0,
+    "P95": 5.0,
+    "P99": 5.0,
+    "Max": 5.0,
+    "IQR": 2.0,
+    "Skewness": 0.013,
+    "Excess kurtosis": -1.298,
+    "CV %": 47.295
+   },
+   {
+    "Variable": "Staff experience (years)",
+    "Source": "All staff (1,250)",
+    "n": 1250,
+    "Mean": 12.928,
+    "Median": 13.0,
+    "Mode": 3.0,
+    "Std Dev": 7.173,
+    "Variance": 51.446,
+    "Min": 1.0,
+    "P5": 2.0,
+    "P10": 3.0,
+    "Q1 (P25)": 6.0,
+    "Q3 (P75)": 19.0,
+    "P90": 23.0,
+    "P95": 24.0,
+    "P99": 25.0,
+    "Max": 25.0,
+    "IQR": 13.0,
+    "Skewness": 0.017,
+    "Excess kurtosis": -1.203,
+    "CV %": 55.481
+   },
+   {
+    "Variable": "Appointments per doctor",
+    "Source": "Appointments \u00d7 doctors (350)",
+    "n": 350,
+    "Mean": 14.286,
+    "Median": 14.0,
+    "Mode": 15.0,
+    "Std Dev": 3.683,
+    "Variance": 13.563,
+    "Min": 5.0,
+    "P5": 9.0,
+    "P10": 10.0,
+    "Q1 (P25)": 12.0,
+    "Q3 (P75)": 16.0,
+    "P90": 19.0,
+    "P95": 21.0,
+    "P99": 24.0,
+    "Max": 28.0,
+    "IQR": 4.0,
+    "Skewness": 0.373,
+    "Excess kurtosis": 0.411,
+    "CV %": 25.779
+   },
+   {
+    "Variable": "Monthly revenue (M RWF)",
+    "Source": "Revenue summary (12)",
+    "n": 12,
+    "Mean": 94.39,
+    "Median": 89.603,
+    "Mode": 66.686,
+    "Std Dev": 25.598,
+    "Variance": 655.264,
+    "Min": 66.686,
+    "P5": 68.421,
+    "P10": 70.514,
+    "Q1 (P25)": 78.167,
+    "Q3 (P75)": 99.081,
+    "P90": 132.846,
+    "P95": 139.34,
+    "P99": 144.476,
+    "Max": 145.76,
+    "IQR": 20.914,
+    "Skewness": 0.956,
+    "Excess kurtosis": -0.419,
+    "CV %": 27.12
+   },
+   {
+    "Variable": "Monthly appointments",
+    "Source": "Revenue summary (12)",
+    "n": 12,
+    "Mean": 5067.417,
+    "Median": 4728.5,
+    "Mode": 3280.0,
+    "Std Dev": 1229.616,
+    "Variance": 1511954.811,
+    "Min": 3280.0,
+    "P5": 3567.1,
+    "P10": 3810.5,
+    "Q1 (P25)": 4340.0,
+    "Q3 (P75)": 5852.25,
+    "P90": 6875.7,
+    "P95": 6942.7,
+    "P99": 6971.74,
+    "Max": 6979.0,
+    "IQR": 1512.25,
+    "Skewness": 0.349,
+    "Excess kurtosis": -1.061,
+    "CV %": 24.265
+   }
+  ],
+  "cat_modes": [
+   {
+    "Variable": "Gender",
+    "Mode": "Male",
+    "Share": "50.4%"
+   },
+   {
+    "Variable": "Blood group",
+    "Mode": "AB+",
+    "Share": "14.6%"
+   },
+   {
+    "Variable": "Chronic condition",
+    "Mode": "None",
+    "Share": "25.4%"
+   },
+   {
+    "Variable": "Diagnosis",
+    "Mode": "Hypertension",
+    "Share": "21.2%"
+   },
+   {
+    "Variable": "Severity",
+    "Mode": "Moderate",
+    "Share": "33.9%"
+   },
+   {
+    "Variable": "Visit type",
+    "Mode": "Follow-up",
+    "Share": "33.9%"
+   },
+   {
+    "Variable": "Lab test",
+    "Mode": "Malaria",
+    "Share": "25.4%"
+   },
+   {
+    "Variable": "Medication",
+    "Mode": "Amlodipine",
+    "Share": "21.4%"
+   },
+   {
+    "Variable": "Payment method",
+    "Mode": "Card",
+    "Share": "25.2%"
+   },
+   {
+    "Variable": "Claim provider",
+    "Mode": "Radiant",
+    "Share": "25.3%"
+   },
+   {
+    "Variable": "Rating",
+    "Mode": 2,
+    "Share": "20.3%"
+   }
+  ],
+  "normality": [
+   {
+    "Variable": "Patient age",
+    "Shapiro-Wilk p": 0.0,
+    "D'Agostino p": 0.0,
+    "Skew": 0.0053,
+    "KS vs uniform p": 0.0022,
+    "Verdict": "Not normal"
+   },
+   {
+    "Variable": "BMI",
+    "Shapiro-Wilk p": 0.0,
+    "D'Agostino p": 0.0,
+    "Skew": 0.4578,
+    "KS vs uniform p": 0.0,
+    "Verdict": "Not normal"
+   },
+   {
+    "Variable": "Bill amount",
+    "Shapiro-Wilk p": 0.0,
+    "D'Agostino p": 0.0,
+    "Skew": -0.0031,
+    "KS vs uniform p": 0.9205,
+    "Verdict": "Not normal; consistent with uniform"
+   },
+   {
+    "Variable": "Length of stay",
+    "Shapiro-Wilk p": 0.0,
+    "D'Agostino p": 0.0,
+    "Skew": -0.0089,
+    "KS vs uniform p": 0.0,
+    "Verdict": "Not normal"
+   },
+   {
+    "Variable": "Staff experience",
+    "Shapiro-Wilk p": 0.0,
+    "D'Agostino p": 0.0,
+    "Skew": 0.017,
+    "KS vs uniform p": 0.0128,
+    "Verdict": "Not normal"
+   }
+  ],
+  "bmi_outlier_pct": 0.0018,
+  "bill_sev_p": 0.6390853276955417,
+  "bmi_chronic_p": 0.9037806377570603,
+  "rating_visit_p": 0.680467673897571,
+  "correlations": [
+   {
+    "Pair": "Age \u2194 hospital admission (0/1)",
+    "Data": "Appointment cohort",
+    "n": 5000,
+    "Method": "Point-biserial (Spearman \u03c1 = 0.021)",
+    "Coefficient": 0.0215,
+    "p_value": 0.129,
+    "Strength": "negligible",
+    "Significant (\u03b1=.05)": "No"
+   },
+   {
+    "Pair": "Age \u2194 billing amount",
+    "Data": "Appointment cohort",
+    "n": 5000,
+    "Method": "Pearson (Spearman \u03c1 = -0.003)",
+    "Coefficient": -0.0025,
+    "p_value": 0.8592,
+    "Strength": "negligible",
+    "Significant (\u03b1=.05)": "No"
+   },
+   {
+    "Pair": "Diagnosis \u2194 length of stay",
+    "Data": "Admitted cohort",
+    "n": 586,
+    "Method": "Kruskal-Wallis; \u03b7 = 0.073 (ANOVA p = 0.544)",
+    "Coefficient": 0.0727,
+    "p_value": 0.5384,
+    "Strength": "negligible",
+    "Significant (\u03b1=.05)": "No"
+   },
+   {
+    "Pair": "Department workload index \u2194 mean satisfaction",
+    "Data": "200 departments (IDs)",
+    "n": 200,
+    "Method": "Spearman",
+    "Coefficient": -0.0245,
+    "p_value": 0.731,
+    "Strength": "negligible",
+    "Significant (\u03b1=.05)": "No"
+   },
+   {
+    "Pair": "  \u2026 same, 10 department types",
+    "Data": "10 department types",
+    "n": 10,
+    "Method": "Spearman",
+    "Coefficient": 0.2249,
+    "p_value": 0.5321,
+    "Strength": "weak",
+    "Significant (\u03b1=.05)": "No"
+   },
+   {
+    "Pair": "  \u2026 same, 20 facilities (appts per clinician)",
+    "Data": "20 facilities",
+    "n": 20,
+    "Method": "Spearman",
+    "Coefficient": 0.0188,
+    "p_value": 0.9373,
+    "Strength": "negligible",
+    "Significant (\u03b1=.05)": "No"
+   },
+   {
+    "Pair": "Monthly revenue \u2194 monthly appointments",
+    "Data": "Revenue summary, 12 months",
+    "n": 12,
+    "Method": "Pearson (Spearman \u03c1 = 0.329)",
+    "Coefficient": 0.2845,
+    "p_value": 0.3701,
+    "Strength": "weak",
+    "Significant (\u03b1=.05)": "No"
+   },
+   {
+    "Pair": "  \u2026 facility billed revenue \u2194 appointments",
+    "Data": "20 facilities (cohort)",
+    "n": 20,
+    "Method": "Pearson",
+    "Coefficient": 0.8964,
+    "p_value": 0.0,
+    "Strength": "strong",
+    "Significant (\u03b1=.05)": "Yes"
+   },
+   {
+    "Pair": "Insurance code (15) \u2194 healthcare utilisation (visited yes/no)",
+    "Data": "20,000 patients",
+    "n": 20000,
+    "Method": "\u03c7\u00b2; Cram\u00e9r's V = 0.006",
+    "Coefficient": 0.0062,
+    "p_value": 0.6931,
+    "Strength": "negligible",
+    "Significant (\u03b1=.05)": "No"
+   },
+   {
+    "Pair": "Claim coverage ratio \u2194 bill amount",
+    "Data": "42,036 bills with claims",
+    "n": 42036,
+    "Method": "Spearman",
+    "Coefficient": 0.0008,
+    "p_value": 0.862,
+    "Strength": "negligible",
+    "Significant (\u03b1=.05)": "No"
+   },
+   {
+    "Pair": "Claim filed (0/1) \u2194 bill amount",
+    "Data": "60,000 bills",
+    "n": 60000,
+    "Method": "Point-biserial",
+    "Coefficient": -0.0058,
+    "p_value": 0.1548,
+    "Strength": "negligible",
+    "Significant (\u03b1=.05)": "No"
+   }
+  ],
+  "corr_matrix_pairs": 120,
+  "corr_matrix_sig": 9,
+  "corr_matrix_sig_holm": 2,
+  "corr_top": [
+   {
+    "A": "Bill amount",
+    "B": "Amount paid",
+    "rho": 0.914,
+    "p": 0.0,
+    "n": 5000.0,
+    "abs": 0.914
+   },
+   {
+    "A": "Amount paid",
+    "B": "Paid \u00f7 billed",
+    "rho": 0.377,
+    "p": 0.0,
+    "n": 5000.0,
+    "abs": 0.377
+   },
+   {
+    "A": "Length of stay",
+    "B": "Abnormal lab",
+    "rho": -0.128,
+    "p": 0.037,
+    "n": 265.0,
+    "abs": 0.128
+   },
+   {
+    "A": "Length of stay",
+    "B": "Patient visits",
+    "rho": -0.122,
+    "p": 0.003,
+    "n": 586.0,
+    "abs": 0.122
+   },
+   {
+    "A": "Paid \u00f7 billed",
+    "B": "Satisfaction rating",
+    "rho": 0.055,
+    "p": 0.021,
+    "n": 1756.0,
+    "abs": 0.055
+   },
+   {
+    "A": "Amount paid",
+    "B": "Satisfaction rating",
+    "rho": 0.052,
+    "p": 0.031,
+    "n": 1756.0,
+    "abs": 0.052
+   },
+   {
+    "A": "Length of stay",
+    "B": "Referred",
+    "rho": 0.048,
+    "p": 0.244,
+    "n": 586.0,
+    "abs": 0.048
+   },
+   {
+    "A": "BMI",
+    "B": "Patient visits",
+    "rho": -0.044,
+    "p": 0.002,
+    "n": 5000.0,
+    "abs": 0.044
+   }
+  ],
+  "admission_factor_scan": [
+   {
+    "Factor": "High-risk patient flag",
+    "Type": "categorical",
+    "n": 5000,
+    "Test": "\u03c7\u00b2",
+    "Statistic": 5.2224,
+    "p": 0.0223,
+    "Effect": 0.0323,
+    "Effect_name": "Cram\u00e9r's V",
+    "Highest_group": "1 (13.2%)",
+    "Lowest_group": "0 (11.0%)",
+    "p_holm": 0.5797,
+    "Signif_raw": true,
+    "Signif_holm": false
+   },
+   {
+    "Factor": "Gender",
+    "Type": "categorical",
+    "n": 5000,
+    "Test": "\u03c7\u00b2",
+    "Statistic": 4.3423,
+    "p": 0.0372,
+    "Effect": 0.0295,
+    "Effect_name": "Cram\u00e9r's V",
+    "Highest_group": "Male (12.7%)",
+    "Lowest_group": "Female (10.7%)",
+    "p_holm": 0.9294,
+    "Signif_raw": true,
+    "Signif_holm": false
+   },
+   {
+    "Factor": "Age group",
+    "Type": "categorical",
+    "n": 5000,
+    "Test": "\u03c7\u00b2",
+    "Statistic": 11.8539,
+    "p": 0.0653,
+    "Effect": 0.0487,
+    "Effect_name": "Cram\u00e9r's V",
+    "Highest_group": "50\u201364 (13.9%)",
+    "Lowest_group": "35\u201349 (9.4%)",
+    "p_holm": 1.0,
+    "Signif_raw": false,
+    "Signif_holm": false
+   },
+   {
+    "Factor": "Insurance code",
+    "Type": "categorical",
+    "n": 5000,
+    "Test": "\u03c7\u00b2",
+    "Statistic": 21.7457,
+    "p": 0.084,
+    "Effect": 0.0659,
+    "Effect_name": "Cram\u00e9r's V",
+    "Highest_group": "INS001 (15.4%)",
+    "Lowest_group": "INS010 (8.0%)",
+    "p_holm": 1.0,
+    "Signif_raw": false,
+    "Signif_holm": false
+   },
+   {
+    "Factor": "Month of visit",
+    "Type": "categorical",
+    "n": 5000,
+    "Test": "\u03c7\u00b2",
+    "Statistic": 16.9442,
+    "p": 0.1095,
+    "Effect": 0.0582,
+    "Effect_name": "Cram\u00e9r's V",
+    "Highest_group": "7 (14.7%)",
+    "Lowest_group": "8 (8.2%)",
+    "p_holm": 1.0,
+    "Signif_raw": false,
+    "Signif_holm": false
+   },
+   {
+    "Factor": "Day of week",
+    "Type": "categorical",
+    "n": 5000,
+    "Test": "\u03c7\u00b2",
+    "Statistic": 9.8379,
+    "p": 0.1316,
+    "Effect": 0.0444,
+    "Effect_name": "Cram\u00e9r's V",
+    "Highest_group": "Saturday (13.9%)",
+    "Lowest_group": "Tuesday (9.3%)",
+    "p_holm": 1.0,
+    "Signif_raw": false,
+    "Signif_holm": false
+   },
+   {
+    "Factor": "Age",
+    "Type": "numeric",
+    "n": 5000,
+    "Test": "Mann-Whitney",
+    "Statistic": 1342728.0,
+    "p": 0.1322,
+    "Effect": 0.0382,
+    "Effect_name": "|rank-biserial r|",
+    "Highest_group": "admitted median 50.0",
+    "Lowest_group": "not admitted median 46.0",
+    "p_holm": 1.0,
+    "Signif_raw": false,
+    "Signif_holm": false
+   },
+   {
+    "Factor": "Patient province",
+    "Type": "categorical",
+    "n": 5000,
+    "Test": "\u03c7\u00b2",
+    "Statistic": 6.9297,
+    "p": 0.1397,
+    "Effect": 0.0372,
+    "Effect_name": "Cram\u00e9r's V",
+    "Highest_group": "Eastern (13.4%)",
+    "Lowest_group": "Kigali City (9.6%)",
+    "p_holm": 1.0,
+    "Signif_raw": false,
+    "Signif_holm": false
+   },
+   {
+    "Factor": "Patient visits",
+    "Type": "numeric",
+    "n": 5000,
+    "Test": "Mann-Whitney",
+    "Statistic": 1325918.5,
+    "p": 0.1629,
+    "Effect": 0.0252,
+    "Effect_name": "|rank-biserial r|",
+    "Highest_group": "admitted median 1.0",
+    "Lowest_group": "not admitted median 1.0",
+    "p_holm": 1.0,
+    "Signif_raw": false,
+    "Signif_holm": false
+   },
+   {
+    "Factor": "Frequent visitor",
+    "Type": "categorical",
+    "n": 5000,
+    "Test": "\u03c7\u00b2",
+    "Statistic": 1.7843,
+    "p": 0.1816,
+    "Effect": 0.0189,
+    "Effect_name": "Cram\u00e9r's V",
+    "Highest_group": "1 (12.9%)",
+    "Lowest_group": "0 (11.4%)",
+    "p_holm": 1.0,
+    "Signif_raw": false,
+    "Signif_holm": false
+   },
+   {
+    "Factor": "Department type",
+    "Type": "categorical",
+    "n": 5000,
+    "Test": "\u03c7\u00b2",
+    "Statistic": 12.0473,
+    "p": 0.2107,
+    "Effect": 0.0491,
+    "Effect_name": "Cram\u00e9r's V",
+    "Highest_group": "Pharmacy (15.1%)",
+    "Lowest_group": "Internal Medicine (9.6%)",
+    "p_holm": 1.0,
+    "Signif_raw": false,
+    "Signif_holm": false
+   },
+   {
+    "Factor": "Doctor experience (y)",
+    "Type": "numeric",
+    "n": 5000,
+    "Test": "Mann-Whitney",
+    "Statistic": 1253062.5,
+    "p": 0.2199,
+    "Effect": 0.0311,
+    "Effect_name": "|rank-biserial r|",
+    "Highest_group": "admitted median 12.0",
+    "Lowest_group": "not admitted median 13.0",
+    "p_holm": 1.0,
+    "Signif_raw": false,
+    "Signif_holm": false
+   },
+   {
+    "Factor": "Referred",
+    "Type": "categorical",
+    "n": 5000,
+    "Test": "\u03c7\u00b2",
+    "Statistic": 1.294,
+    "p": 0.2553,
+    "Effect": 0.0161,
+    "Effect_name": "Cram\u00e9r's V",
+    "Highest_group": "0 (11.9%)",
+    "Lowest_group": "1 (9.9%)",
+    "p_holm": 1.0,
+    "Signif_raw": false,
+    "Signif_holm": false
+   },
+   {
+    "Factor": "Abnormal lab result",
+    "Type": "categorical",
+    "n": 2272,
+    "Test": "\u03c7\u00b2",
+    "Statistic": 0.767,
+    "p": 0.3811,
+    "Effect": 0.0184,
+    "Effect_name": "Cram\u00e9r's V",
+    "Highest_group": "1.0 (12.3%)",
+    "Lowest_group": "0.0 (11.0%)",
+    "p_holm": 1.0,
+    "Signif_raw": false,
+    "Signif_holm": false
+   },
+   {
+    "Factor": "Claim coverage category",
+    "Type": "categorical",
+    "n": 5000,
+    "Test": "\u03c7\u00b2",
+    "Statistic": 2.8631,
+    "p": 0.4132,
+    "Effect": 0.0239,
+    "Effect_name": "Cram\u00e9r's V",
+    "Highest_group": "High (\u226585%) (12.7%)",
+    "Lowest_group": "Low (<60%) (10.8%)",
+    "p_holm": 1.0,
+    "Signif_raw": false,
+    "Signif_holm": false
+   },
+   {
+    "Factor": "Department workload index",
+    "Type": "numeric",
+    "n": 5000,
+    "Test": "Mann-Whitney",
+    "Statistic": 1268574.5,
+    "p": 0.4511,
+    "Effect": 0.0191,
+    "Effect_name": "|rank-biserial r|",
+    "Highest_group": "admitted median 98.5",
+    "Lowest_group": "not admitted median 98.5",
+    "p_holm": 1.0,
+    "Signif_raw": false,
+    "Signif_holm": false
+   },
+   {
+    "Factor": "Visit type",
+    "Type": "categorical",
+    "n": 5000,
+    "Test": "\u03c7\u00b2",
+    "Statistic": 1.3809,
+    "p": 0.5013,
+    "Effect": 0.0166,
+    "Effect_name": "Cram\u00e9r's V",
+    "Highest_group": "Consultation (12.4%)",
+    "Lowest_group": "Emergency (11.2%)",
+    "p_holm": 1.0,
+    "Signif_raw": false,
+    "Signif_holm": false
+   },
+   {
+    "Factor": "BMI",
+    "Type": "numeric",
+    "n": 5000,
+    "Test": "Mann-Whitney",
+    "Statistic": 1271702.0,
+    "p": 0.5106,
+    "Effect": 0.0167,
+    "Effect_name": "|rank-biserial r|",
+    "Highest_group": "admitted median 28.7",
+    "Lowest_group": "not admitted median 29.1",
+    "p_holm": 1.0,
+    "Signif_raw": false,
+    "Signif_holm": false
+   },
+   {
+    "Factor": "Disease severity",
+    "Type": "categorical",
+    "n": 5000,
+    "Test": "\u03c7\u00b2",
+    "Statistic": 1.2596,
+    "p": 0.5327,
+    "Effect": 0.0159,
+    "Effect_name": "Cram\u00e9r's V",
+    "Highest_group": "Severe (12.4%)",
+    "Lowest_group": "Moderate (11.1%)",
+    "p_holm": 1.0,
+    "Signif_raw": false,
+    "Signif_holm": false
+   },
+   {
+    "Factor": "Marital status",
+    "Type": "categorical",
+    "n": 5000,
+    "Test": "\u03c7\u00b2",
+    "Statistic": 0.9995,
+    "p": 0.6067,
+    "Effect": 0.0141,
+    "Effect_name": "Cram\u00e9r's V",
+    "Highest_group": "Single (12.4%)",
+    "Lowest_group": "Widowed (11.4%)",
+    "p_holm": 1.0,
+    "Signif_raw": false,
+    "Signif_holm": false
+   },
+   {
+    "Factor": "Diagnosis",
+    "Type": "categorical",
+    "n": 5000,
+    "Test": "\u03c7\u00b2",
+    "Statistic": 2.4168,
+    "p": 0.6596,
+    "Effect": 0.022,
+    "Effect_name": "Cram\u00e9r's V",
+    "Highest_group": "Upper Respiratory Infection (12.4%)",
+    "Lowest_group": "Malaria (10.7%)",
+    "p_holm": 1.0,
+    "Signif_raw": false,
+    "Signif_holm": false
+   },
+   {
+    "Factor": "Bill amount",
+    "Type": "numeric",
+    "n": 5000,
+    "Test": "Mann-Whitney",
+    "Statistic": 1307386.0,
+    "p": 0.668,
+    "Effect": 0.0109,
+    "Effect_name": "|rank-biserial r|",
+    "Highest_group": "admitted median 158785.5",
+    "Lowest_group": "not admitted median 153554.0",
+    "p_holm": 1.0,
+    "Signif_raw": false,
+    "Signif_holm": false
+   },
+   {
+    "Factor": "BMI category",
+    "Type": "categorical",
+    "n": 5000,
+    "Test": "\u03c7\u00b2",
+    "Statistic": 1.0664,
+    "p": 0.7852,
+    "Effect": 0.0146,
+    "Effect_name": "Cram\u00e9r's V",
+    "Highest_group": "Overweight (12.7%)",
+    "Lowest_group": "Obese (11.4%)",
+    "p_holm": 1.0,
+    "Signif_raw": false,
+    "Signif_holm": false
+   },
+   {
+    "Factor": "Chronic condition",
+    "Type": "categorical",
+    "n": 5000,
+    "Test": "\u03c7\u00b2",
+    "Statistic": 0.8698,
+    "p": 0.8327,
+    "Effect": 0.0132,
+    "Effect_name": "Cram\u00e9r's V",
+    "Highest_group": "Hypertension (12.1%)",
+    "Lowest_group": "None (11.1%)",
+    "p_holm": 1.0,
+    "Signif_raw": false,
+    "Signif_holm": false
+   },
+   {
+    "Factor": "Facility",
+    "Type": "categorical",
+    "n": 5000,
+    "Test": "\u03c7\u00b2",
+    "Statistic": 12.3295,
+    "p": 0.8711,
+    "Effect": 0.0497,
+    "Effect_name": "Cram\u00e9r's V",
+    "Highest_group": "HF007 (15.2%)",
+    "Lowest_group": "HF014 (8.7%)",
+    "p_holm": 1.0,
+    "Signif_raw": false,
+    "Signif_holm": false
+   },
+   {
+    "Factor": "Education",
+    "Type": "categorical",
+    "n": 5000,
+    "Test": "\u03c7\u00b2",
+    "Statistic": 0.9425,
+    "p": 0.9184,
+    "Effect": 0.0137,
+    "Effect_name": "Cram\u00e9r's V",
+    "Highest_group": "Secondary (12.3%)",
+    "Lowest_group": "Diploma (11.0%)",
+    "p_holm": 1.0,
+    "Signif_raw": false,
+    "Signif_holm": false
+   }
+  ],
+  "admission_factors_sig_raw": 2,
+  "admission_factors_tested": 26,
+  "admission_factors_sig_holm": 0,
+  "chronic_attr_tests": [
+   {
+    "Attribute": "Age group",
+    "chi2": 5.7098,
+    "p": 0.4565,
+    "CramersV": 0.0169,
+    "p_holm": 1.0
+   },
+   {
+    "Attribute": "Gender",
+    "chi2": 0.2018,
+    "p": 0.6532,
+    "CramersV": 0.0032,
+    "p_holm": 1.0
+   },
+   {
+    "Attribute": "BMI category",
+    "chi2": 0.3966,
+    "p": 0.9409,
+    "CramersV": 0.0045,
+    "p_holm": 1.0
+   },
+   {
+    "Attribute": "Education",
+    "chi2": 2.2788,
+    "p": 0.6846,
+    "CramersV": 0.0107,
+    "p_holm": 1.0
+   },
+   {
+    "Attribute": "Occupation",
+    "chi2": 6.9273,
+    "p": 0.4365,
+    "CramersV": 0.0186,
+    "p_holm": 1.0
+   },
+   {
+    "Attribute": "Marital status",
+    "chi2": 0.3541,
+    "p": 0.8377,
+    "CramersV": 0.0042,
+    "p_holm": 1.0
+   },
+   {
+    "Attribute": "Province",
+    "chi2": 9.7094,
+    "p": 0.0456,
+    "CramersV": 0.022,
+    "p_holm": 0.3193
+   },
+   {
+    "Attribute": "Blood group",
+    "chi2": 21.4733,
+    "p": 0.0015,
+    "CramersV": 0.0328,
+    "p_holm": 0.0121
+   }
+  ],
+  "chronic_groups_excluding_base": 3,
+  "chronic_groups_tested": 41,
+  "chronic_top_groups": [
+   {
+    "Attribute": "Blood group",
+    "Group": "A+",
+    "n": 2889,
+    "Prevalence": 0.774,
+    "Lo": 0.7584,
+    "Hi": 0.7889,
+    "Diff": 0.0275,
+    "Excludes": true
+   },
+   {
+    "Attribute": "Province",
+    "Group": "Northern",
+    "n": 3923,
+    "Prevalence": 0.7622,
+    "Lo": 0.7486,
+    "Hi": 0.7752,
+    "Diff": 0.0157,
+    "Excludes": true
+   },
+   {
+    "Attribute": "Occupation",
+    "Group": "Student",
+    "n": 2529,
+    "Prevalence": 0.7584,
+    "Lo": 0.7413,
+    "Hi": 0.7747,
+    "Diff": 0.012,
+    "Excludes": false
+   },
+   {
+    "Attribute": "Blood group",
+    "Group": "O-",
+    "n": 2896,
+    "Prevalence": 0.7562,
+    "Lo": 0.7402,
+    "Hi": 0.7715,
+    "Diff": 0.0098,
+    "Excludes": false
+   },
+   {
+    "Attribute": "Age group",
+    "Group": "5\u201314",
+    "n": 2183,
+    "Prevalence": 0.7554,
+    "Lo": 0.7369,
+    "Hi": 0.773,
+    "Diff": 0.0089,
+    "Excludes": false
+   }
+  ],
+  "chronic_auc_cv": [
+   0.5124452994326323,
+   0.006859040307569456
+  ],
+  "chronic_or_excl": 6,
+  "chronic_or_n": 26,
+  "hypothesis_tests": [
+   {
+    "ID": "H1",
+    "Question": "Do average bills differ between bills with an insurance claim and bills without? (100% of patients are insured, so 'uninsured' cannot be tested)",
+    "H0": "Mean bill (claim) = mean bill (no claim)",
+    "H1": "Mean bills differ",
+    "Test": "Welch two-sample t-test (Mann-Whitney U agrees: p = 0.155)",
+    "Alpha": 0.05,
+    "n": 60000,
+    "Statistic": -1.42421,
+    "p_value": 0.1544,
+    "Effect": -0.0127,
+    "Effect_measure": "Cohen's d",
+    "Decision": "Fail to reject H0",
+    "Conclusion": "Mean bill 154,838 RWF with claim vs 155,903 RWF without (-1,065).",
+    "p_holm_all": 1.0,
+    "Interpretation": "No significant difference (p = 0.154); effect size -0.013 is negligible. Mean bill 154,838 RWF with claim vs 155,903 RWF without (-1,065)."
+   },
+   {
+    "ID": "H1b",
+    "Question": "Do bills paid via the 'Insurance' method differ from other payment methods?",
+    "H0": "Mean bill equal",
+    "H1": "Mean bill differs",
+    "Test": "Welch t-test",
+    "Alpha": 0.05,
+    "n": 60000,
+    "Statistic": 0.43887,
+    "p_value": 0.66076,
+    "Effect": 0.00414,
+    "Effect_measure": "Cohen's d",
+    "Decision": "Fail to reject H0",
+    "Conclusion": "155,417 vs 155,070 RWF.",
+    "p_holm_all": 1.0,
+    "Interpretation": "No significant difference (p = 0.661); effect size 0.004 is negligible. 155,417 vs 155,070 RWF."
+   },
+   {
+    "ID": "H2",
+    "Question": "Does patient satisfaction differ across the 20 facilities?",
+    "H0": "Median rating identical in all facilities",
+    "H1": "At least one facility differs",
+    "Test": "Kruskal-Wallis H (one-way ANOVA agrees: p = 0.785)",
+    "Alpha": 0.05,
+    "n": 1756,
+    "Statistic": 13.79987,
+    "p_value": 0.79523,
+    "Effect": 0.00786,
+    "Effect_measure": "\u03b5\u00b2 (rank)",
+    "Decision": "Fail to reject H0",
+    "Conclusion": "Facility means 2.76\u20133.19.",
+    "p_holm_all": 1.0,
+    "Interpretation": "No significant difference (p = 0.795); effect size 0.008 is negligible. Facility means 2.76\u20133.19."
+   },
+   {
+    "ID": "H2b",
+    "Question": "Does satisfaction differ across the 10 department types?",
+    "H0": "Median rating identical",
+    "H1": "At least one differs",
+    "Test": "Kruskal-Wallis H",
+    "Alpha": 0.05,
+    "n": 1756,
+    "Statistic": 4.46727,
+    "p_value": 0.87806,
+    "Effect": 0.00255,
+    "Effect_measure": "\u03b5\u00b2 (rank)",
+    "Decision": "Fail to reject H0",
+    "Conclusion": "",
+    "p_holm_all": 1.0,
+    "Interpretation": "No significant difference (p = 0.878); effect size 0.003 is negligible. "
+   },
+   {
+    "ID": "H3",
+    "Question": "Do admission rates differ between age groups?",
+    "H0": "Admission rate equal across the 7 age groups",
+    "H1": "At least one age group differs",
+    "Test": "\u03c7\u00b2 test of independence (df = 6)",
+    "Alpha": 0.05,
+    "n": 5000,
+    "Statistic": 11.85389,
+    "p_value": 0.06531,
+    "Effect": 0.04869,
+    "Effect_measure": "Cram\u00e9r's V",
+    "Decision": "Fail to reject H0",
+    "Conclusion": "Rates 9.4%\u201313.9%.",
+    "p_holm_all": 0.97963,
+    "Interpretation": "No significant difference (p = 0.065); effect size 0.049 is negligible. Rates 9.4%\u201313.9%."
+   },
+   {
+    "ID": "H4",
+    "Question": "Does satisfaction depend on disease severity?",
+    "H0": "Rating distribution identical across Mild/Moderate/Severe",
+    "H1": "Differs",
+    "Test": "Kruskal-Wallis H",
+    "Alpha": 0.05,
+    "n": 21064,
+    "Statistic": 0.35999,
+    "p_value": 0.83528,
+    "Effect": 2e-05,
+    "Effect_measure": "\u03b5\u00b2 (rank)",
+    "Decision": "Fail to reject H0",
+    "Conclusion": "",
+    "p_holm_all": 1.0,
+    "Interpretation": "No significant difference (p = 0.835); effect size 0.000 is negligible. "
+   },
+   {
+    "ID": "H5",
+    "Question": "Does length of stay differ by diagnosis?",
+    "H0": "Median LOS equal across diagnoses",
+    "H1": "At least one differs",
+    "Test": "Kruskal-Wallis H",
+    "Alpha": 0.05,
+    "n": 586,
+    "Statistic": 3.11735,
+    "p_value": 0.53838,
+    "Effect": 0.00533,
+    "Effect_measure": "\u03b5\u00b2 (rank)",
+    "Decision": "Fail to reject H0",
+    "Conclusion": "Mean LOS 5.3\u20135.9 d.",
+    "p_holm_all": 1.0,
+    "Interpretation": "No significant difference (p = 0.538); effect size 0.005 is negligible. Mean LOS 5.3\u20135.9 d."
+   },
+   {
+    "ID": "H6",
+    "Question": "Is satisfaction related to billing outcome (recorded bill status)?",
+    "H0": "Rating equal across Paid / Partially Paid / Pending",
+    "H1": "Differs",
+    "Test": "Kruskal-Wallis H (Spearman \u03c1 rating vs paid ratio = -0.001, p = 0.893)",
+    "Alpha": 0.05,
+    "n": 21064,
+    "Statistic": 0.66915,
+    "p_value": 0.71564,
+    "Effect": 3e-05,
+    "Effect_measure": "\u03b5\u00b2 (rank)",
+    "Decision": "Fail to reject H0",
+    "Conclusion": "",
+    "p_holm_all": 1.0,
+    "Interpretation": "No significant difference (p = 0.716); effect size 0.000 is negligible. "
+   },
+   {
+    "ID": "H7",
+    "Question": "Are emergency visits admitted more often than other visits?",
+    "H0": "Admission proportion equal",
+    "H1": "Proportions differ",
+    "Test": "\u03c7\u00b2 test (2\u00d72, Yates)",
+    "Alpha": 0.05,
+    "n": 5000,
+    "Statistic": 0.68941,
+    "p_value": 0.40637,
+    "Effect": 0.01174,
+    "Effect_measure": "\u03c6",
+    "Decision": "Fail to reject H0",
+    "Conclusion": "Emergency 11.2% vs other 12.0%.",
+    "p_holm_all": 1.0,
+    "Interpretation": "No significant difference (p = 0.406); effect size 0.012 is negligible. Emergency 11.2% vs other 12.0%."
+   },
+   {
+    "ID": "H8",
+    "Question": "Are severe cases admitted more often than mild cases?",
+    "H0": "Admission rate equal across severity levels",
+    "H1": "Differs",
+    "Test": "\u03c7\u00b2 test (df = 2)",
+    "Alpha": 0.05,
+    "n": 5000,
+    "Statistic": 1.25962,
+    "p_value": 0.53269,
+    "Effect": 0.01587,
+    "Effect_measure": "Cram\u00e9r's V",
+    "Decision": "Fail to reject H0",
+    "Conclusion": "Rates: Mild 11.7%, Moderate 11.1%, Severe 12.4%",
+    "p_holm_all": 1.0,
+    "Interpretation": "No significant difference (p = 0.533); effect size 0.016 is negligible. Rates: Mild 11.7%, Moderate 11.1%, Severe 12.4%"
+   },
+   {
+    "ID": "H9",
+    "Question": "Does chronic-disease prevalence differ by gender?",
+    "H0": "Prevalence equal for men and women",
+    "H1": "Differs",
+    "Test": "\u03c7\u00b2 test (2\u00d72, Yates)",
+    "Alpha": 0.05,
+    "n": 20000,
+    "Statistic": 0.20183,
+    "p_value": 0.65325,
+    "Effect": 0.00318,
+    "Effect_measure": "\u03c6",
+    "Decision": "Fail to reject H0",
+    "Conclusion": "",
+    "p_holm_all": 1.0,
+    "Interpretation": "No significant difference (p = 0.653); effect size 0.003 is negligible. "
+   },
+   {
+    "ID": "H10",
+    "Question": "Does chronic-disease prevalence differ by age group?",
+    "H0": "Prevalence equal across age groups",
+    "H1": "Differs",
+    "Test": "\u03c7\u00b2 test (df = 6)",
+    "Alpha": 0.05,
+    "n": 20000,
+    "Statistic": 5.70975,
+    "p_value": 0.45648,
+    "Effect": 0.0169,
+    "Effect_measure": "Cram\u00e9r's V",
+    "Decision": "Fail to reject H0",
+    "Conclusion": "",
+    "p_holm_all": 1.0,
+    "Interpretation": "No significant difference (p = 0.456); effect size 0.017 is negligible. "
+   },
+   {
+    "ID": "H11",
+    "Question": "Is the written comment related to the numeric rating?",
+    "H0": "Comment independent of rating",
+    "H1": "Associated",
+    "Test": "\u03c7\u00b2 test of independence",
+    "Alpha": 0.05,
+    "n": 21064,
+    "Statistic": 6.23608,
+    "p_value": 0.90372,
+    "Effect": 0.00993,
+    "Effect_measure": "Cram\u00e9r's V",
+    "Decision": "Fail to reject H0",
+    "Conclusion": "A valid feedback instrument should show strong association.",
+    "p_holm_all": 1.0,
+    "Interpretation": "No significant difference (p = 0.904); effect size 0.010 is negligible. A valid feedback instrument should show strong association."
+   },
+   {
+    "ID": "H12",
+    "Question": "Does the claim approval rate differ between insurance providers?",
+    "H0": "Approval rate equal",
+    "H1": "Differs",
+    "Test": "\u03c7\u00b2 test (df = 3)",
+    "Alpha": 0.05,
+    "n": 42036,
+    "Statistic": 6.85781,
+    "p_value": 0.07657,
+    "Effect": 0.01277,
+    "Effect_measure": "Cram\u00e9r's V",
+    "Decision": "Fail to reject H0",
+    "Conclusion": "",
+    "p_holm_all": 1.0,
+    "Interpretation": "No significant difference (p = 0.077); effect size 0.013 is negligible. "
+   },
+   {
+    "ID": "H13",
+    "Question": "Does the share of the bill actually paid differ by payment method?",
+    "H0": "Payment ratio equal across methods",
+    "H1": "Differs",
+    "Test": "Kruskal-Wallis H",
+    "Alpha": 0.05,
+    "n": 60000,
+    "Statistic": 2.87292,
+    "p_value": 0.41164,
+    "Effect": 5e-05,
+    "Effect_measure": "\u03b5\u00b2 (rank)",
+    "Decision": "Fail to reject H0",
+    "Conclusion": "",
+    "p_holm_all": 1.0,
+    "Interpretation": "No significant difference (p = 0.412); effect size 0.000 is negligible. "
+   }
+  ],
+  "ht_rejected": 0,
+  "ht_total": 15,
+  "fc_app": {
+   "best": "Simple exp. smoothing",
+   "backtest": [
+    {
+     "Model": "Simple exp. smoothing",
+     "MAE": 736.67,
+     "RMSE": 978.51,
+     "MAPE": 14.04,
+     "Folds": 15
+    },
+    {
+     "Model": "Mean",
+     "MAE": 758.79,
+     "RMSE": 903.47,
+     "MAPE": 15.28,
+     "Folds": 15
+    },
+    {
+     "Model": "Holt damped trend",
+     "MAE": 1111.61,
+     "RMSE": 1427.42,
+     "MAPE": 21.17,
+     "Folds": 15
+    },
+    {
+     "Model": "Linear trend",
+     "MAE": 1166.94,
+     "RMSE": 1490.63,
+     "MAPE": 21.65,
+     "Folds": 15
+    },
+    {
+     "Model": "Na\u00efve (last value)",
+     "MAE": 1227.87,
+     "RMSE": 1463.7,
+     "MAPE": 24.24,
+     "Folds": 15
+    }
+   ],
+   "mape_best": 14.0425056334886,
+   "mape_mean": 15.278274366888503,
+   "diag": {
+    "trend_rho": -0.1398601398601399,
+    "trend_p": 0.6646331617926677,
+    "lag1_acf": -0.40757070327570527,
+    "acf_bound": 0.5658032638058332,
+    "slope_pct_per_month": -1.321413707738098
+   },
+   "forecast_total_2027": 59700.6040640725,
+   "forecast_monthly": [
+    4975.0,
+    4975.0,
+    4975.0,
+    4975.0,
+    4975.0,
+    4975.0,
+    4975.0,
+    4975.0,
+    4975.0,
+    4975.0,
+    4975.0,
+    4975.0
+   ],
+   "lower": [
+    3057.0,
+    3057.0,
+    3057.0,
+    3057.0,
+    3057.0,
+    3057.0,
+    3057.0,
+    3057.0,
+    3057.0,
+    3057.0,
+    3057.0,
+    3057.0
+   ],
+   "upper": [
+    6893.0,
+    6893.0,
+    6893.0,
+    6893.0,
+    6893.0,
+    6893.0,
+    6893.0,
+    6893.0,
+    6893.0,
+    6893.0,
+    6893.0,
+    6893.0
+   ],
+   "history_total_2026": 60809.0
+  },
+  "fc_app_cohort": {
+   "best": "Simple exp. smoothing",
+   "mape_best": 1.9885140718078624,
+   "diag": {
+    "trend_rho": -0.15384615384615385,
+    "trend_p": 0.6330906812462617,
+    "lag1_acf": -0.3582554517133958,
+    "acf_bound": 0.5658032638058332,
+    "slope_pct_per_month": -0.19132867132867026
+   }
+  },
+  "fc_rev": {
+   "best": "Simple exp. smoothing",
+   "backtest": [
+    {
+     "Model": "Simple exp. smoothing",
+     "MAE": 26183534.02,
+     "RMSE": 31781844.58,
+     "MAPE": 25.56,
+     "Folds": 15
+    },
+    {
+     "Model": "Mean",
+     "MAE": 26980201.66,
+     "RMSE": 31897881.54,
+     "MAPE": 27.0,
+     "Folds": 15
+    },
+    {
+     "Model": "Holt damped trend",
+     "MAE": 27143406.38,
+     "RMSE": 32295130.17,
+     "MAPE": 27.16,
+     "Folds": 15
+    },
+    {
+     "Model": "Linear trend",
+     "MAE": 31476605.19,
+     "RMSE": 36232057.49,
+     "MAPE": 33.37,
+     "Folds": 15
+    },
+    {
+     "Model": "Na\u00efve (last value)",
+     "MAE": 38636862.67,
+     "RMSE": 46648548.18,
+     "MAPE": 39.38,
+     "Folds": 15
+    }
+   ],
+   "mape_best": 25.561434442943376,
+   "mape_mean": 27.00004155791972,
+   "diag": {
+    "trend_rho": -0.17482517482517487,
+    "trend_p": 0.5868236643627043,
+    "lag1_acf": -0.41846211401231787,
+    "acf_bound": 0.5658032638058332,
+    "slope_pct_per_month": 0.6517467193929853
+   },
+   "forecast_total_2027": 1103472996.295993,
+   "history_total_2026": 1132677500.0,
+   "forecast_monthly": [
+    91956083.0,
+    91956083.0,
+    91956083.0,
+    91956083.0,
+    91956083.0,
+    91956083.0,
+    91956083.0,
+    91956083.0,
+    91956083.0,
+    91956083.0,
+    91956083.0,
+    91956083.0
+   ],
+   "lower": [
+    29663668.0,
+    29663668.0,
+    29663668.0,
+    29663668.0,
+    29663668.0,
+    29663668.0,
+    29663668.0,
+    29663668.0,
+    29663668.0,
+    29663668.0,
+    29663668.0,
+    29663668.0
+   ],
+   "upper": [
+    154248498.0,
+    154248498.0,
+    154248498.0,
+    154248498.0,
+    154248498.0,
+    154248498.0,
+    154248498.0,
+    154248498.0,
+    154248498.0,
+    154248498.0,
+    154248498.0,
+    154248498.0
+   ]
+  },
+  "dept_forecast": [
+   {
+    "DepartmentName": "Cardiology",
+    "Share_of_visits": 0.1088,
+    "Clinicians": 105,
+    "Fcst_visits_per_month": 541.2855,
+    "Fcst_per_clinician": 5.1551,
+    "P_overload": 0.3835,
+    "Hist_WorkloadIndex": 108.8,
+    "Fcst_WorkloadIndex": 108.8
+   },
+   {
+    "DepartmentName": "Radiology",
+    "Share_of_visits": 0.105,
+    "Clinicians": 105,
+    "Fcst_visits_per_month": 522.3803,
+    "Fcst_per_clinician": 4.9751,
+    "P_overload": 0.3138,
+    "Hist_WorkloadIndex": 105.0,
+    "Fcst_WorkloadIndex": 105.0
+   },
+   {
+    "DepartmentName": "Obstetrics & Gynecology",
+    "Share_of_visits": 0.1022,
+    "Clinicians": 105,
+    "Fcst_visits_per_month": 508.4501,
+    "Fcst_per_clinician": 4.8424,
+    "P_overload": 0.2632,
+    "Hist_WorkloadIndex": 102.2,
+    "Fcst_WorkloadIndex": 102.2
+   },
+   {
+    "DepartmentName": "Laboratory",
+    "Share_of_visits": 0.0998,
+    "Clinicians": 105,
+    "Fcst_visits_per_month": 496.51,
+    "Fcst_per_clinician": 4.7287,
+    "P_overload": 0.2207,
+    "Hist_WorkloadIndex": 99.8,
+    "Fcst_WorkloadIndex": 99.8
+   },
+   {
+    "DepartmentName": "Emergency",
+    "Share_of_visits": 0.099,
+    "Clinicians": 105,
+    "Fcst_visits_per_month": 492.53,
+    "Fcst_per_clinician": 4.6908,
+    "P_overload": 0.2114,
+    "Hist_WorkloadIndex": 99.0,
+    "Fcst_WorkloadIndex": 99.0
+   },
+   {
+    "DepartmentName": "Pediatrics",
+    "Share_of_visits": 0.0982,
+    "Clinicians": 105,
+    "Fcst_visits_per_month": 488.5499,
+    "Fcst_per_clinician": 4.6529,
+    "P_overload": 0.197,
+    "Hist_WorkloadIndex": 98.2,
+    "Fcst_WorkloadIndex": 98.2
+   },
+   {
+    "DepartmentName": "Pharmacy",
+    "Share_of_visits": 0.098,
+    "Clinicians": 105,
+    "Fcst_visits_per_month": 487.5549,
+    "Fcst_per_clinician": 4.6434,
+    "P_overload": 0.1942,
+    "Hist_WorkloadIndex": 98.0,
+    "Fcst_WorkloadIndex": 98.0
+   },
+   {
+    "DepartmentName": "Internal Medicine",
+    "Share_of_visits": 0.098,
+    "Clinicians": 105,
+    "Fcst_visits_per_month": 487.5549,
+    "Fcst_per_clinician": 4.6434,
+    "P_overload": 0.1913,
+    "Hist_WorkloadIndex": 98.0,
+    "Fcst_WorkloadIndex": 98.0
+   },
+   {
+    "DepartmentName": "Surgery",
+    "Share_of_visits": 0.0976,
+    "Clinicians": 105,
+    "Fcst_visits_per_month": 485.5649,
+    "Fcst_per_clinician": 4.6244,
+    "P_overload": 0.1877,
+    "Hist_WorkloadIndex": 97.6,
+    "Fcst_WorkloadIndex": 97.6
+   },
+   {
+    "DepartmentName": "ICU",
+    "Share_of_visits": 0.0934,
+    "Clinicians": 105,
+    "Fcst_visits_per_month": 464.6697,
+    "Fcst_per_clinician": 4.4254,
+    "P_overload": 0.1253,
+    "Hist_WorkloadIndex": 93.4,
+    "Fcst_WorkloadIndex": 93.4
+   }
+  ],
+  "dept_share_p": 0.4900932429018443,
+  "admission_models": [
+   {
+    "FeatureSet": "A  Booking-time",
+    "Model": "Baseline (prior)",
+    "AUC": 0.5,
+    "AUC_sd": 0.0,
+    "PR_AUC": 0.1172,
+    "Brier": 0.1035,
+    "Brier_baseline": 0.1035
+   },
+   {
+    "FeatureSet": "A  Booking-time",
+    "Model": "Logistic regression",
+    "AUC": 0.5143,
+    "AUC_sd": 0.0243,
+    "PR_AUC": 0.1291,
+    "Brier": 0.1044,
+    "Brier_baseline": 0.1035
+   },
+   {
+    "FeatureSet": "A  Booking-time",
+    "Model": "Random forest",
+    "AUC": 0.5038,
+    "AUC_sd": 0.0222,
+    "PR_AUC": 0.1258,
+    "Brier": 0.1037,
+    "Brier_baseline": 0.1035
+   },
+   {
+    "FeatureSet": "A  Booking-time",
+    "Model": "Gradient boosting",
+    "AUC": 0.5023,
+    "AUC_sd": 0.0312,
+    "PR_AUC": 0.1247,
+    "Brier": 0.1044,
+    "Brier_baseline": 0.1035
+   },
+   {
+    "FeatureSet": "B  + Diagnosis & severity",
+    "Model": "Baseline (prior)",
+    "AUC": 0.5,
+    "AUC_sd": 0.0,
+    "PR_AUC": 0.1172,
+    "Brier": 0.1035,
+    "Brier_baseline": 0.1035
+   },
+   {
+    "FeatureSet": "B  + Diagnosis & severity",
+    "Model": "Logistic regression",
+    "AUC": 0.5092,
+    "AUC_sd": 0.0246,
+    "PR_AUC": 0.127,
+    "Brier": 0.1046,
+    "Brier_baseline": 0.1035
+   },
+   {
+    "FeatureSet": "B  + Diagnosis & severity",
+    "Model": "Random forest",
+    "AUC": 0.5013,
+    "AUC_sd": 0.0249,
+    "PR_AUC": 0.1257,
+    "Brier": 0.1037,
+    "Brier_baseline": 0.1035
+   },
+   {
+    "FeatureSet": "B  + Diagnosis & severity",
+    "Model": "Gradient boosting",
+    "AUC": 0.4959,
+    "AUC_sd": 0.0311,
+    "PR_AUC": 0.1232,
+    "Brier": 0.1046,
+    "Brier_baseline": 0.1035
+   },
+   {
+    "FeatureSet": "C  + Labs, Rx, referral",
+    "Model": "Baseline (prior)",
+    "AUC": 0.5,
+    "AUC_sd": 0.0,
+    "PR_AUC": 0.1172,
+    "Brier": 0.1035,
+    "Brier_baseline": 0.1035
+   },
+   {
+    "FeatureSet": "C  + Labs, Rx, referral",
+    "Model": "Logistic regression",
+    "AUC": 0.5103,
+    "AUC_sd": 0.0233,
+    "PR_AUC": 0.1255,
+    "Brier": 0.1047,
+    "Brier_baseline": 0.1035
+   },
+   {
+    "FeatureSet": "C  + Labs, Rx, referral",
+    "Model": "Random forest",
+    "AUC": 0.4997,
+    "AUC_sd": 0.0248,
+    "PR_AUC": 0.1228,
+    "Brier": 0.1037,
+    "Brier_baseline": 0.1035
+   },
+   {
+    "FeatureSet": "C  + Labs, Rx, referral",
+    "Model": "Gradient boosting",
+    "AUC": 0.4958,
+    "AUC_sd": 0.0323,
+    "PR_AUC": 0.1228,
+    "Brier": 0.1046,
+    "Brier_baseline": 0.1035
+   }
+  ],
+  "admission_prevalence": 0.1172,
+  "admission_perm_p": 0.31683168316831684,
+  "admission_best": {
+   "FeatureSet": "A  Booking-time",
+   "Model": "Logistic regression",
+   "AUC": 0.5143015351474023,
+   "AUC_sd": 0.024295587362957054,
+   "PR_AUC": 0.1291233046300348,
+   "Brier": 0.10439468549860921,
+   "Brier_baseline": 0.10346416
+  },
+  "admission_holdout": {
+   "auc": 0.5294208748342384,
+   "lo": 0.46935231290645657,
+   "hi": 0.590432468649487,
+   "n_test": 1000,
+   "pos_test": 117
+  },
+  "satisfaction_models": [
+   {
+    "Scope": "Scope 1 \u2013 all feedback (n=21,064)",
+    "Model": "Baseline (mean)",
+    "R2": -0.0002,
+    "R2_sd": 0.0002,
+    "MAE": 1.2015,
+    "AUC": NaN,
+    "AUC_sd": NaN
+   },
+   {
+    "Scope": "Scope 1 \u2013 all feedback (n=21,064)",
+    "Model": "Ridge",
+    "R2": -0.0013,
+    "R2_sd": 0.001,
+    "MAE": 1.2064,
+    "AUC": NaN,
+    "AUC_sd": NaN
+   },
+   {
+    "Scope": "Scope 1 \u2013 all feedback (n=21,064)",
+    "Model": "Random forest",
+    "R2": -0.0054,
+    "R2_sd": 0.0017,
+    "MAE": 1.2144,
+    "AUC": NaN,
+    "AUC_sd": NaN
+   },
+   {
+    "Scope": "Scope 1 \u2013 all feedback (n=21,064)",
+    "Model": "Gradient boosting",
+    "R2": -0.0011,
+    "R2_sd": 0.0007,
+    "MAE": 1.2039,
+    "AUC": NaN,
+    "AUC_sd": NaN
+   },
+   {
+    "Scope": "Scope 1 \u2013 all feedback (n=21,064)",
+    "Model": "Logistic regression \u2192 P(rating \u2265 4)",
+    "R2": NaN,
+    "R2_sd": NaN,
+    "MAE": NaN,
+    "AUC": 0.4984,
+    "AUC_sd": 0.008
+   },
+   {
+    "Scope": "Scope 1 \u2013 all feedback (n=21,064)",
+    "Model": "Gradient boosting \u2192 P(rating \u2265 4)",
+    "R2": NaN,
+    "R2_sd": NaN,
+    "MAE": NaN,
+    "AUC": 0.5,
+    "AUC_sd": 0.0053
+   },
+   {
+    "Scope": "Scope 2 \u2013 cohort + operational (n=1,756)",
+    "Model": "Baseline (mean)",
+    "R2": -0.0026,
+    "R2_sd": 0.0034,
+    "MAE": 1.1752,
+    "AUC": NaN,
+    "AUC_sd": NaN
+   },
+   {
+    "Scope": "Scope 2 \u2013 cohort + operational (n=1,756)",
+    "Model": "Ridge",
+    "R2": -0.0292,
+    "R2_sd": 0.0188,
+    "MAE": 1.2013,
+    "AUC": NaN,
+    "AUC_sd": NaN
+   },
+   {
+    "Scope": "Scope 2 \u2013 cohort + operational (n=1,756)",
+    "Model": "Random forest",
+    "R2": -0.0086,
+    "R2_sd": 0.0096,
+    "MAE": 1.1835,
+    "AUC": NaN,
+    "AUC_sd": NaN
+   },
+   {
+    "Scope": "Scope 2 \u2013 cohort + operational (n=1,756)",
+    "Model": "Gradient boosting",
+    "R2": -0.0246,
+    "R2_sd": 0.011,
+    "MAE": 1.1961,
+    "AUC": NaN,
+    "AUC_sd": NaN
+   },
+   {
+    "Scope": "Scope 2 \u2013 cohort + operational (n=1,756)",
+    "Model": "Logistic regression \u2192 P(rating \u2265 4)",
+    "R2": NaN,
+    "R2_sd": NaN,
+    "MAE": NaN,
+    "AUC": 0.5093,
+    "AUC_sd": 0.0222
+   },
+   {
+    "Scope": "Scope 2 \u2013 cohort + operational (n=1,756)",
+    "Model": "Gradient boosting \u2192 P(rating \u2265 4)",
+    "R2": NaN,
+    "R2_sd": NaN,
+    "MAE": NaN,
+    "AUC": 0.4962,
+    "AUC_sd": 0.0265
+   }
+  ],
+  "sat_perm_p": 0.43564356435643564,
+  "sat_best": {
+   "Scope": "Scope 1 \u2013 all feedback (n=21,064)",
+   "Model": "Gradient boosting",
+   "R2": -0.001097051025165241,
+   "R2_sd": 0.0007154900516451928,
+   "MAE": 1.2039220245737248,
+   "AUC": NaN,
+   "AUC_sd": NaN
+  },
+  "sat_holdout_r2": -0.007343027987859241,
+  "patient_clusters": {
+   "k_best": 8,
+   "sil_best": 0.27529543052042693,
+   "null_sil_at_best": 0.21407875676777538,
+   "ari": 1.0,
+   "profile": [
+    {
+     "Segment": 1,
+     "Patients": 4996,
+     "MeanAge": 45.2508,
+     "MeanBMI": 30.1009,
+     "Asthma": 1.0,
+     "Hypertension": 0.0,
+     "Diabetes": 0.0,
+     "Female": 0.495,
+     "MeanVisits": 0.252,
+     "HighRisk": 0.3887,
+     "ChronicAny": 1.0,
+     "AdmitRate": 0.129,
+     "SeenPts": 1116,
+     "Description": "high asthma, low hypertension",
+     "Label": "S1"
+    },
+    {
+     "Segment": 0,
+     "Patients": 4988,
+     "MeanAge": 44.7155,
+     "MeanBMI": 30.1183,
+     "Asthma": 0.0,
+     "Hypertension": 1.0,
+     "Diabetes": 0.0,
+     "Female": 0.4924,
+     "MeanVisits": 0.253,
+     "HighRisk": 0.3837,
+     "ChronicAny": 1.0,
+     "AdmitRate": 0.1359,
+     "SeenPts": 1104,
+     "Description": "high hypertension, low asthma",
+     "Label": "S2"
+    },
+    {
+     "Segment": 2,
+     "Patients": 4945,
+     "MeanAge": 44.6572,
+     "MeanBMI": 29.9768,
+     "Asthma": 0.0,
+     "Hypertension": 0.0,
+     "Diabetes": 1.0,
+     "Female": 0.4963,
+     "MeanVisits": 0.2459,
+     "HighRisk": 0.3798,
+     "ChronicAny": 1.0,
+     "AdmitRate": 0.1346,
+     "SeenPts": 1092,
+     "Description": "high diabetes, low asthma",
+     "Label": "S3"
+    },
+    {
+     "Segment": 3,
+     "Patients": 5071,
+     "MeanAge": 45.4979,
+     "MeanBMI": 29.9784,
+     "Asthma": 0.0,
+     "Hypertension": 0.0,
+     "Diabetes": 0.0,
+     "Female": 0.4983,
+     "MeanVisits": 0.2491,
+     "HighRisk": 0.183,
+     "ChronicAny": 0.0,
+     "AdmitRate": 0.1211,
+     "SeenPts": 1131,
+     "Description": "low asthma, low hypertension",
+     "Label": "S4"
+    }
+   ],
+   "sil_table": [
+    {
+     "k": 2,
+     "inertia": 115599.0581,
+     "silhouette": 0.203,
+     "null_mean": 0.1844,
+     "null_max": 0.1931
+    },
+    {
+     "k": 3,
+     "inertia": 93430.3326,
+     "silhouette": 0.2635,
+     "null_mean": 0.184,
+     "null_max": 0.2077
+    },
+    {
+     "k": 4,
+     "inertia": 79994.5303,
+     "silhouette": 0.2624,
+     "null_mean": 0.1916,
+     "null_max": 0.22
+    },
+    {
+     "k": 5,
+     "inertia": 73001.2482,
+     "silhouette": 0.2522,
+     "null_mean": 0.1939,
+     "null_max": 0.2058
+    },
+    {
+     "k": 6,
+     "inertia": 68236.5918,
+     "silhouette": 0.2546,
+     "null_mean": 0.1929,
+     "null_max": 0.228
+    },
+    {
+     "k": 7,
+     "inertia": 64213.9355,
+     "silhouette": 0.2343,
+     "null_mean": 0.19,
+     "null_max": 0.2052
+    },
+    {
+     "k": 8,
+     "inertia": 59359.6217,
+     "silhouette": 0.2753,
+     "null_mean": 0.2141,
+     "null_max": 0.2211
+    }
+   ]
+  },
+  "patient_cluster_admit_p": 0.7204785732514909,
+  "facility_clusters": {
+   "k": 2,
+   "silhouette": 0.18729236338498934,
+   "null_p": 0.004975124378109453,
+   "ari_kmeans_ward": 0.7999113180356945,
+   "profile": [
+    {
+     "Cluster": 0,
+     "Facilities": 9,
+     "Appointments": 267.8889,
+     "EmergencyShare": 0.3474,
+     "AdmitRate": 0.1128,
+     "MeanLOS": 5.9526,
+     "ReferralRate": 0.0863,
+     "MeanSeverity": 1.9883,
+     "MeanBill": 154119.1922,
+     "CollectionRate": 0.9056,
+     "ClaimApproval": 0.518,
+     "MeanRating": 2.9632,
+     "ApptPerClinician": 5.1084,
+     "StaffPer1000Pts": 234.4417,
+     "PerformanceScore": 71.2927,
+     "Description": "high volume, high load per clinician, low staff ratio",
+     "Members": "01, 06, 08, 10, 11, 12, 13, 14, 16"
+    },
+    {
+     "Cluster": 1,
+     "Facilities": 11,
+     "Appointments": 235.3636,
+     "EmergencyShare": 0.3139,
+     "AdmitRate": 0.1212,
+     "MeanLOS": 5.4668,
+     "ReferralRate": 0.0799,
+     "MeanSeverity": 1.9886,
+     "MeanBill": 154487.666,
+     "CollectionRate": 0.896,
+     "ClaimApproval": 0.4904,
+     "MeanRating": 2.8944,
+     "ApptPerClinician": 4.4798,
+     "StaffPer1000Pts": 268.6782,
+     "PerformanceScore": 35.9027,
+     "Description": "low volume, low load per clinician, high staff ratio",
+     "Members": "02, 03, 04, 05, 07, 09, 15, 17, 18, 19, 20"
+    }
+   ],
+   "sil_table": [
+    {
+     "k": 2,
+     "silhouette": 0.1873
+    },
+    {
+     "k": 3,
+     "silhouette": 0.1548
+    },
+    {
+     "k": 4,
+     "silhouette": 0.1295
+    },
+    {
+     "k": 5,
+     "silhouette": 0.1182
+    },
+    {
+     "k": 6,
+     "silhouette": 0.126
+    }
+   ]
+  },
+  "dept_cluster_type_p": 0.6035761426040428,
+  "dept_clusters": {
+   "k_best": 2,
+   "sil_best": 0.14263946282184303,
+   "null_at_best": 0.10344916713829762,
+   "profile": [
+    {
+     "Segment": 0,
+     "Departments": 47,
+     "Appointments": 22.34,
+     "Emergency": 0.319,
+     "AdmitRate": 0.088,
+     "LabPerAppt": 0.531,
+     "RxPerAppt": 0.754,
+     "MeanSeverity": 1.896,
+     "MeanBill": 145576.2,
+     "ApptPerClinician": 4.278,
+     "Description": "high lab intensity, low Rx intensity, low severity",
+     "Most common type": "Pediatrics (15%)"
+    },
+    {
+     "Segment": 1,
+     "Departments": 69,
+     "Appointments": 29.449,
+     "Emergency": 0.328,
+     "AdmitRate": 0.113,
+     "LabPerAppt": 0.434,
+     "RxPerAppt": 0.767,
+     "MeanSeverity": 1.992,
+     "MeanBill": 158367.02,
+     "ApptPerClinician": 6.229,
+     "Description": "high load per clinician, high volume",
+     "Most common type": "Cardiology (16%)"
+    },
+    {
+     "Segment": 2,
+     "Departments": 40,
+     "Appointments": 21.925,
+     "Emergency": 0.27,
+     "AdmitRate": 0.163,
+     "LabPerAppt": 0.499,
+     "RxPerAppt": 0.847,
+     "MeanSeverity": 2.131,
+     "MeanBill": 151324.214,
+     "ApptPerClinician": 4.156,
+     "Description": "high severity, high admission rate, low volume",
+     "Most common type": "Pharmacy (18%)"
+    },
+    {
+     "Segment": 3,
+     "Departments": 44,
+     "Appointments": 23.659,
+     "Emergency": 0.396,
+     "AdmitRate": 0.115,
+     "LabPerAppt": 0.373,
+     "RxPerAppt": 0.868,
+     "MeanSeverity": 1.966,
+     "MeanBill": 158284.377,
+     "ApptPerClinician": 4.18,
+     "Description": "high Rx intensity, low lab intensity, high emergency share",
+     "Most common type": "Obstetrics & Gynecology (16%)"
+    }
+   ]
+  },
+  "pca": {
+   "patients": {
+    "evr": [
+     0.2098,
+     0.1636,
+     0.1333,
+     0.133,
+     0.1018,
+     0.1003,
+     0.0986,
+     0.0458,
+     0.0125,
+     0.0013
+    ],
+    "n80": 6,
+    "n90": 7,
+    "n_features": 10,
+    "pc1": 0.20983552156001223
+   },
+   "facilities": {
+    "evr": [
+     0.3415,
+     0.1421,
+     0.134,
+     0.0984,
+     0.0902,
+     0.0725,
+     0.0473,
+     0.0272,
+     0.0265,
+     0.0187,
+     0.0016,
+     0.0
+    ],
+    "n80": 5,
+    "n90": 7,
+    "n_features": 12,
+    "pc1": 0.341490462750403
+   }
+  },
+  "recs_evidence": {
+   "pending_claims_n": 21028,
+   "pending_claims_value": 2438605768.02,
+   "dissatisfied_share": 0.40438663121914165,
+   "n_per_facility_needed": 348,
+   "fully_paid_share": 0.8018833333333333,
+   "highrisk_n": 6662,
+   "highrisk_pct": 0.3331,
+   "highrisk_seen": 1498,
+   "fac_gap": 0.28110599078341014,
+   "claim_approved_value": 2443257525.86,
+   "mean_claim_ratio": 0.7499799857427598
+  },
+  "recommendations": [
+   {
+    "Theme": "Operational challenge",
+    "Recommendation": "Fix the data foundation before further modelling",
+    "Evidence": "Only 5,000 of 60,000 billed appointments exist in the Appointments table; 95% of appointments point to a department owned by another facility; no facility master, bed status or equipment availability fields.",
+    "Where in analysis": "Figs. DQ table; \u00a71.4",
+    "Strength of evidence": "High \u2014 verified by direct key checks",
+    "Suggested action": "Re-extract Appointments for the full year; enforce Facility\u2192Department\u2192Doctor foreign keys; add Facility master, bed status and equipment condition fields."
+   },
+   {
+    "Theme": "Operational challenge",
+    "Recommendation": "Stop using bill 'Status' as a collections indicator",
+    "Evidence": "80% of bills are paid in full whatever Status says; 'Pending' bills have the same average payment ratio (90%) as 'Paid'.",
+    "Where in analysis": "f14",
+    "Strength of evidence": "High",
+    "Suggested action": "Derive Status from Amount vs AmountPaid in the billing system; reconcile Revenue_Summary (1.13 bn) with billing (9.31 bn)."
+   },
+   {
+    "Theme": "High-risk patients",
+    "Recommendation": "Target outreach with a rule-based list, not a predictive model",
+    "Evidence": "6,662 patients (33.3%) meet the high-risk rule (65+/50\u201364 with chronic disease, obesity or underweight); only 1,498 had an appointment in 2026. Chronic disease affects 74.6% of patients but no demographic factor predicts it (AUC 0.51).",
+    "Where in analysis": "f03, f24, f25, f33",
+    "Strength of evidence": "Medium \u2014 rule is clinical logic; data cannot validate it",
+    "Suggested action": "Call-back / screening programme for the high-risk list, prioritising patients aged 65+ with a chronic condition and no 2026 visit; evaluate uptake to validate the rule."
+   },
+   {
+    "Theme": "Patient satisfaction",
+    "Recommendation": "Redesign the feedback instrument and capture real drivers",
+    "Evidence": "Mean rating 2.99/5; 40% rate 1\u20132. Ratings are unrelated to comment text, diagnosis, billing, department, facility or any modelled variable (best R\u00b2 \u2248 0).",
+    "Where in analysis": "f16, f17, f32",
+    "Strength of evidence": "High (that data cannot explain satisfaction); drivers unknown",
+    "Suggested action": "Add wait time, staff courtesy, cleanliness, drug availability and discharge-time questions; validate comment/rating consistency; collect \u2265 348 ratings per facility to detect a 0.3-point difference with 80% power (currently \u2248 89)."
+   },
+   {
+    "Theme": "Patient satisfaction",
+    "Recommendation": "Do not rank facilities or departments on current ratings",
+    "Evidence": "Facility means 2.76\u20133.19, department means 2.76\u20133.02; Kruskal-Wallis p = 0.80 (facilities), 0.88 (departments).",
+    "Where in analysis": "f17, H2",
+    "Strength of evidence": "High",
+    "Suggested action": "Publish confidence intervals with any league table; investigate the lowest-rated sites only after the new instrument yields adequate samples."
+   },
+   {
+    "Theme": "Resource optimisation",
+    "Recommendation": "Make staffing follow patient volume",
+    "Evidence": "Facility volumes range 217\u2013278 (28% spread) while headcount is 61\u201364 everywhere; staff numbers do not track volume (\u03c1 = -0.10). Doctor load is random (variance/mean 0.95), i.e. nobody is systematically overloaded.",
+    "Where in analysis": "f10, f11",
+    "Strength of evidence": "Medium \u2014 the volume gap is not statistically significant (p = 0.052) but is practically large",
+    "Suggested action": "Move toward a staffing ratio per 1,000 appointments; rebalance rotas from the quietest sites toward HF013/HF011 as a pilot; review monthly with a rolling 3-month workload index."
+   },
+   {
+    "Theme": "Resource optimisation",
+    "Recommendation": "Verify bed capacity before any bed-related investment",
+    "Evidence": "All 2,000 beds are flagged 'Available'; recorded admissions imply only \u22483.8% annual bed-day use.",
+    "Where in analysis": "f12",
+    "Strength of evidence": "Low \u2014 Admissions table appears to be an extract",
+    "Suggested action": "Capture daily bed census; if the 4% figure holds, consolidate wards rather than expand."
+   },
+   {
+    "Theme": "Resource optimisation",
+    "Recommendation": "Review lab-test ordering",
+    "Evidence": "Lab test type is unrelated to diagnosis (\u03c7\u00b2 p = 0.366) \u2014 e.g. malaria patients are not more likely to get a malaria test \u2014 while prescribing matches diagnosis 100%.",
+    "Where in analysis": "f08",
+    "Strength of evidence": "Medium \u2014 may be a data-linkage artefact",
+    "Suggested action": "Audit test-ordering against diagnostic protocols; link lab orders to diagnosis codes."
+   },
+   {
+    "Theme": "Revenue improvement",
+    "Recommendation": "Collect the outstanding balance and clear pending claims",
+    "Evidence": "0.92 bn RWF (9.9%) of billed amounts is unpaid; 21,028 claims worth 2.44 bn RWF are 'Pending' and only 50% of claims are approved (no difference by provider, p = 0.08).",
+    "Where in analysis": "f14",
+    "Strength of evidence": "High",
+    "Suggested action": "Weekly ageing report on outstanding balances; dedicated follow-up team for pending claims; agree turnaround SLAs with all four insurers; 0.64 bn RWF of 'Insurance'-method payments have no claim on file \u2014 reconcile."
+   },
+   {
+    "Theme": "Revenue improvement",
+    "Recommendation": "Budget on a flat baseline and manage volatility",
+    "Evidence": "2027 forecast \u2248 1.10 bn RWF (92 M/month, 95% band \u00b168%); no trend is detectable (12 months cannot reveal seasonality), and revenue is only weakly tied to visit counts (r = 0.28).",
+    "Where in analysis": "f27, f28",
+    "Strength of evidence": "Medium \u2014 only 12 monthly points",
+    "Suggested action": "Set the budget at the forecast mean with a contingency reserve; analyse the Sep-2026 peak (146 M) and Dec-2026 trough (67 M) for one-off billing events; collect 24+ months before using seasonal models."
+   },
+   {
+    "Theme": "Service expansion",
+    "Recommendation": "Do not expand on current evidence \u2014 build the evidence",
+    "Evidence": "Demand is flat (no trend, \u03c1 = -0.14), evenly spread across provinces (19.6%\u201320.5%) and departments; admissions cannot be predicted; facility locations and service-level data are missing.",
+    "Where in analysis": "f05, f27, f29",
+    "Strength of evidence": "Medium",
+    "Suggested action": "Add facility geography (district, ownership, type) and ServiceID on bills; re-run province-level demand vs capacity once available. Prioritise Cardiology and Radiology for a staffing review (highest forecast load index, \u2248105\u2013109), but treat as provisional."
+   }
+  ],
+  "n_figures": 36
+ },
+ "FIGS": {
+  "f01_patient_profile": {
+   "title": "Who are HealthConnect's patients?",
+   "interp": "The register is balanced by gender (50.4% male) and spans all ages (mean 45.0 y). 74.6% of patients carry a chronic condition, split almost equally across asthma, hypertension and diabetes. Blood groups are near-uniform (\u03c7\u00b2 test for equal shares p = 0.382), which is unusual for a real population where O and A dominate \u2014 another sign the data are simulated."
+  },
+  "f02_age_pyramid": {
+   "title": "Age pyramid of registered patients",
+   "interp": "The pyramid is rectangular rather than the narrow-topped shape of a real East-African population: children under 15 are 16.4% and adults 65+ are 28.5% of patients. Male share stays between 49% and 53% in every five-year band, so neither sex is concentrated in any age group; this evenness is another indicator of synthetic data."
+  },
+  "f03_chronic_by_age": {
+   "title": "Chronic-disease prevalence by age group",
+   "interp": "Chronic-disease prevalence is flat across age groups (range 73\u201376%; \u03c7\u00b2 p = 0.456) and between sexes (p = 0.653). The risk score therefore rises with age almost entirely through the age points themselves: 90% of patients 65+ are high-risk versus 0% of under-5s. In real populations chronic disease rises steeply with age, so the absence of a gradient is a data-quality limitation, not a clinical finding."
+  },
+  "f04_insurance": {
+   "title": "Patients by insurance code (INS001\u2013INS015)",
+   "interp": "Every patient holds one of 15 insurance codes in near-equal numbers (\u03c7\u00b2 for equal shares p = 0.777), so the insurance coverage rate is effectively 100% and no uninsured group exists to compare. Insurance matters instead at billing: 70.1% of bills carry a claim, and the claim usually covers only part of the bill (median coverage 75%)."
+  },
+  "f05_geography": {
+   "title": "Patients by province",
+   "interp": "Western has the most registered patients (4,091, 20.5%) and Northern the fewest (3,923); the spread is modest (\u03c7\u00b2 for equal shares p = 0.238). Every province contains exactly six districts, so near-equal shares are structural rather than a demand signal. The map is schematic: the data contain no coordinates or boundary files, so bubbles sit at approximate province centroids."
+  },
+  "f06_patient_growth": {
+   "title": "Cumulative unique patients seen (growth proxy)",
+   "interp": "The 5,000 appointments involve 4,443 distinct patients (22.2% of the register); 510 patients visited more than once. About 370 new patients appear per month with no visible acceleration, which is what an unrelated random draw from the register would produce. Registration dates are not recorded, so first-appointment month is only a proxy for patient growth."
+  },
+  "f07_diagnoses": {
+   "title": "Diagnosis frequency (60,000 diagnoses)",
+   "interp": "Five diagnoses share the caseload almost equally \u2014 Gastritis leads with 20.3% and Upper Respiratory Infection trails with 19.6%. Severity is split roughly in thirds (severe 33.3%), and the severity mix is the same for every disease (\u03c7\u00b2 p = 0.187). A one-third severe rate is far higher than in usual primary-care case-mix; management should confirm how severity is coded."
+  },
+  "f08_labs_rx": {
+   "title": "Laboratory test volume",
+   "interp": "Lab volume is evenly spread over four tests (CBC, Glucose, Malaria, Urinalysis; 24%\u201325% each) and 50% of results are abnormal (range 50\u201351% by test). Prescribing follows diagnosis exactly \u2014 100% of prescriptions match the standard drug for the diagnosis (Metformin for diabetes, Amlodipine for hypertension, Omeprazole for gastritis, Amoxicillin for URI, Artemether-Lumefantrine for malaria) \u2014 so Amlodipine leads only because it follows the diagnosis mix. Laboratory ordering, by contrast, is unrelated to diagnosis (\u03c7\u00b2 p = 0.366): malaria patients are not more likely to receive a malaria test, which management should review as a possible test-ordering or data-capture gap."
+  },
+  "f09_admissions_referrals": {
+   "title": "Monthly admission and referral rate",
+   "interp": "11.7% of appointments end in admission (586 of 5,000) with a mean stay of 5.5 days; stay lengths 1\u201310 days are equally likely (\u03c7\u00b2 p = 0.159). Monthly admission rates bounce between 8.2% and 14.7% with no trend (Spearman \u03c1 = 0.31, p = 0.319). Referrals touch 8.3% of appointments; destinations range 201\u2013258 referrals per facility and are statistically even (\u03c7\u00b2 p = 0.299), so no facility acts as a referral hub."
+  },
+  "f10_staff_workload": {
+   "title": "Appointments per doctor (350 doctors)",
+   "interp": "Doctors handle 14.3 appointments each on average (range 5\u201328); the variance-to-mean ratio is 0.95, i.e. almost exactly what random assignment (Poisson \u2248 1.0) would produce, so there is no systematic overload of particular doctors. Appointments per nurse range 6.2\u20137.9 across facilities (every facility has 35\u201335 nurses)."
+  },
+  "f11_facility_utilisation": {
+   "title": "Facility utilisation: appointments by facility",
+   "interp": "Facility volumes run from 217 (HF019) to 278 (HF013) appointments \u2014 a 28% gap \u2014 which are not significantly different from equal shares (\u03c7\u00b2 p = 0.052; borderline). Staffing is nearly identical everywhere (61\u201364 staff per facility), so the load per staff member differs only through patient volume: 220 to 290 staff per 1,000 patients seen, and staff numbers do not track patient volume (Spearman \u03c1 = -0.10, p = 0.689)."
+  },
+  "f12_capacity": {
+   "title": "Bed occupancy \u2013 lower-bound estimate",
+   "interp": "All 2,000 beds (100 per facility, 5 per room) carry the status 'Available', so occupancy cannot be read directly. Using admission length-of-stay, recorded admissions fill only about 3.8% of annual bed-days at system level \u2014 far below any realistic figure, which suggests the Admissions extract is a sample. Equipment is one generic line per department (20 per department type), so equipment shortages cannot be measured. The department-by-month heatmap shows no obvious seasonal surge in any department type."
+  },
+  "f13_revenue_trend": {
+   "title": "Monthly revenue (Revenue_Summary)",
+   "interp": "Revenue totals 1.13 bn RWF for 2026 (mean 94 M/month) but is volatile \u2014 coefficient of variation 27%, from 67 M in December to 146 M in September. Revenue per appointment swings between 13k and 32k RWF, and monthly revenue is only weakly related to monthly appointments (r = 0.28, p = 0.370), so revenue is driven by billing size at least as much as by visit counts."
+  },
+  "f14_billing_claims_payments": {
+   "title": "Billing amount distribution (60,000 bills)",
+   "interp": "Bills are uniformly spread between 10k and 300k RWF (mean 155k). Of 9.31 bn billed, 8.39 bn has been paid, leaving 0.92 bn (9.9%) outstanding. The recorded Status field is not a reliable guide: bills marked 'Paid', 'Partially Paid' and 'Pending' have the same average payment ratio (\u224890% in each group). Radiant generates the highest claim value (1.24 bn). Only 50% of claims are approved, and approval does not differ significantly across providers (\u03c7\u00b2 p = 0.077)."
+  },
+  "f15_revenue_by_unit": {
+   "title": "Billed revenue by department type (5,000-appointment cohort)",
+   "interp": "Within the 5,000-appointment cohort (771 M RWF billed), Cardiology bills the most (86 M) and HF011 is the top facility (44 M). Differences are driven by appointment counts, not price: average bill per appointment does not differ significantly across departments (Kruskal-Wallis p = 0.471), facilities (p = 0.303) or diagnoses (p = 0.555). Services are not linked to appointments in the data, so diagnosis is used as the service-line proxy; true 'revenue by service' needs a ServiceID on the bill."
+  },
+  "f16_satisfaction": {
+   "title": "Satisfaction rating distribution (21,064)",
+   "interp": "The average rating is 2.99 out of 5 and all five ratings are about equally common (\u224820% each); 35% of encounters have feedback. The written comment tells us nothing about the score \u2014 a rating of 1 is as likely to carry 'Excellent' as 'Poor' (\u03c7\u00b2 p = 0.904) \u2014 so feedback capture should be reviewed. Monthly shares of poor and excellent ratings fluctuate without trend (Spearman p = 0.83 and 0.83)."
+  },
+  "f17_satisfaction_comparison": {
+   "title": "Mean satisfaction by facility (95% CI)",
+   "interp": "Facility means run from 2.76 (HF020) to 3.19 (HF011) and department-type means from 2.76 to 3.02, but with only ~89 rated visits per facility every confidence interval includes the overall mean (2.93). Kruskal-Wallis finds no significant difference across facilities (p = 0.795) or departments (p = 0.878). Rankings of 'best' and 'worst' sites are therefore not statistically defensible with the current data."
+  },
+  "f18_distributions": {
+   "title": "Distributions of key numeric variables (dashed = median, dotted = quartiles)",
+   "interp": "None of the key variables is bell-shaped: patient age, length of stay and staff experience are flat across their range, and bill amount is statistically indistinguishable from a uniform distribution (KS p = 0.92), while BMI is right-skewed (skew 0.46; median 29.2, mean 30.0) with 0.2% of patients above the upper box-plot fence. Because the data are not normal, rank-based tests (Mann-Whitney, Kruskal-Wallis, Spearman) are used alongside parametric ones in the sections that follow. The median bill is 155k RWF."
+  },
+  "f19_violins": {
+   "title": "Bill amount by disease severity",
+   "interp": "Violin shapes are essentially identical across groups: bills do not differ by severity (Kruskal-Wallis p = 0.639) \u2014 severe cases are not billed more than mild ones, which is clinically unexpected; BMI does not differ by chronic condition (p = 0.904); and satisfaction does not differ by visit type (p = 0.680). Where real-world relationships should exist (severity\u2192cost, obesity\u2192diabetes/hypertension) none is present."
+  },
+  "f20_correlation_heatmap": {
+   "title": "Spearman correlation heatmap \u2014 encounter master (pairwise complete observations)",
+   "interp": "Of 120 variable pairs only 9 reach p < 0.05 unadjusted (about 6 are expected by pure chance), and 2 survive Holm correction. The pairs that survive Holm correction are arithmetic ones (Bill amount \u2194 Amount paid (\u03c1 = 0.91); Amount paid \u2194 Paid \u00f7 billed (\u03c1 = 0.38)). Every clinically meaningful pair \u2014 age, BMI, chronic disease, severity, admission, bill, rating \u2014 is |\u03c1| < 0.13. Key drivers that would normally separate patient groups are absent, which limits what any predictive model can achieve."
+  },
+  "f21_pairplot": {
+   "title": "Pair plot \u2014 age, BMI, bill amount, doctor experience by severity",
+   "interp": "The scatter panels form rectangular clouds with no slope, the density curves on the diagonal overlap for all three severity levels, and no cluster of points separates Severe from Mild cases. Age, BMI, bill size and the treating doctor's experience are statistically independent of each other and of severity in this data."
+  },
+  "f22_age_admission_bill_los": {
+   "title": "Admission rate by age group (95% CI)",
+   "interp": "Admission rates by age group stay within noise of the 11.7% average (highest 13.9% in 50\u201364); the age\u2013admission correlation is 0.021 (p = 0.129) and the age\u2013bill correlation -0.003 (p = 0.859). Mean length of stay is 5.3\u20135.9 days across diagnoses with overlapping intervals (Kruskal-Wallis p = 0.538). Older patients are not admitted more often, billed more, or kept longer."
+  },
+  "f23_admission_drivers": {
+   "title": "Association of each factor with admission",
+   "interp": "Of 26 candidate factors, 2 reach p < 0.05 before correction (about 1 expected by chance) and 0 after Holm correction. The strongest signal is 'High-risk patient flag' (raw p = 0.022, effect size 0.032), which is negligible in size. No demographic, clinical or operational factor can be confirmed as a driver of admission, so admission in this data is best described as unexplained by recorded variables."
+  },
+  "f24_chronic_risk_groups": {
+   "title": "Chronic-disease prevalence by patient group with 95% Wilson CI (red = interval excludes overall 74.6%)",
+   "interp": "Among 41 patient groups, 3 have a prevalence interval that excludes the overall 74.6% (about 2 would be expected by chance). The highest-prevalence group is Blood group = A+ (77.4%, n = 2,889), only 2.8 points above average. Only Blood group survives Holm correction (Cram\u00e9r's V = 0.033, a negligible effect), so no group can be called materially more at risk."
+  },
+  "f25_chronic_odds_ratios": {
+   "title": "Logistic regression: odds ratios for any chronic disease (95% bootstrap CI)",
+   "interp": "Cross-validated AUC for predicting chronic disease from age, BMI, gender, marital status, education, occupation, province and blood group is 0.512 \u00b1 0.007 (0.5 = coin-flip). Only 6 of 26 odds ratios have an interval that excludes 1 (about 1 expected by chance). With an AUC this close to 0.5, the recorded demographics cannot meaningfully identify who is at risk of chronic disease."
+  },
+  "f26_hypothesis_summary": {
+   "title": "Hypothesis tests at a glance (red = significant at \u03b1 = 0.05)",
+   "interp": "0 of 15 tests reject the null hypothesis at \u03b1 = 0.05; after Holm correction 0 remain. None of the outcome-related comparisons \u2014 admission, satisfaction, length of stay, billing \u2014 shows a significant difference, so the data give no evidence that these outcomes vary by the factors tested. The nearest to significance are H3 (admission by age group, p = 0.065) and H12 (claim approval by provider, p = 0.077); neither reaches \u03b1 = 0.05."
+  },
+  "f27_forecast_visits": {
+   "title": "Monthly patient visits \u2014 12-month forecast (Simple exp. smoothing)",
+   "interp": "Monthly visits fluctuate around 5,067 with no trend (Spearman \u03c1 = -0.14, p = 0.665) and no significant month-to-month autocorrelation (lag-1 = -0.41, inside the \u00b10.57 noise band). The best back-tested model is 'Simple exp. smoothing' \u2014 only marginally better than the plain average (MAPE 14.0% vs 15.3%) \u2014 and forecasts \u22484,975 visits a month for 2027 (59,701 for the year, -1.8% versus 2026). Honest answer to 'can demand be forecast accurately?': only at the level of a stable average \u2014 typical monthly error is \u00b114% and the 95% band is \u00b11,918 visits (39%). A real seasonal model needs at least 24 months of history."
+  },
+  "f28_forecast_revenue": {
+   "title": "Monthly revenue \u2014 12-month forecast (Simple exp. smoothing)",
+   "interp": "Revenue shows no detectable trend (Spearman \u03c1 = -0.17, p = 0.587; lag-1 autocorrelation -0.42). The best back-tested model is 'Simple exp. smoothing' (MAPE 26%), giving \u224892 M RWF per month and 1.10 bn RWF for 2027 (-2.6% vs 2026's 1.13 bn). Uncertainty is large \u2014 the 95% band is \u00b162 M per month (\u00b168%) \u2014 because single months such as Sep-2026 (146 M) and Dec-2026 (67 M) are far from the average. Use the 2027 figure as a budget baseline, not a monthly target."
+  },
+  "f29_department_workload_forecast": {
+   "title": "Forecast 2027 visits per month by department type",
+   "interp": "Demand is spread almost evenly over the ten department types (9.3%\u201310.9% of visits; \u03c7\u00b2 for equal shares p = 0.490) and shows no month-of-year pattern by department (\u03c7\u00b2 p = 0.502). With clinician numbers also equal, forecast workload indices lie between 93 and 109; the highest is Cardiology (index 109, simulated probability of exceeding the 115 line 38%). Differences between types are not statistically significant, so no department type is clearly headed for overload; the risk is spread thinly and is dominated by random variation in monthly demand, so staffing decisions should rely on monitoring (rolling 3-month load) rather than a fixed forecast."
+  },
+  "f30_admission_model": {
+   "title": "Cross-validated AUC by model and feature set",
+   "interp": "Best cross-validated AUC is 0.514 (Logistic regression, feature set A) \u2014 at or barely above chance (0.5); the label-shuffling test gives p = 0.317, so it is indistinguishable from chance. Hold-out AUC 0.529 (95% CI 0.47\u20130.59). Adding diagnosis, severity, labs, medication and referral does not improve on booking-time information. Calibration: predicted risks cluster near the 11.7% base rate; observed admission is 16.0% in the top-risk quintile and 12.0% in the lowest, a gap that is within sampling noise for only 200 patients per quintile \u2014 no usable risk stratification. Admissions in this data cannot be predicted from the recorded variables."
+  },
+  "f31_admission_importance": {
+   "title": "Permutation importance \u2014 admission model (drop in hold-out AUC when feature is shuffled)",
+   "interp": "Even the most 'important' feature (DepartmentName) changes hold-out AUC by only 0.011, and most bars straddle zero (error bars = SD over 15 shuffles). Importance values this small indicate noise-fitting rather than genuine drivers, matching the factor screen in section 4.3."
+  },
+  "f32_satisfaction_model": {
+   "title": "Cross-validated R\u00b2 for predicting rating",
+   "interp": "No model predicts satisfaction: the best cross-validated R\u00b2 of any real model is -0.001 (Gradient boosting, Scope 1 \u2013 all feedback) \u2014 zero or negative means no better than always guessing the average rating (\u22482.93). Classifying 'satisfied' (rating \u2265 4) gives AUC 0.50\u20130.51. The label-shuffle test for the cohort model is p = 0.436. Clinical, billing, operational and demographic variables carry no information about the rating, so improving satisfaction needs new data \u2014 waiting time, staff attitude, cleanliness, drug availability \u2014 not a better model."
+  },
+  "f33_patient_clusters": {
+   "title": "Patients: silhouette vs null, by number of clusters",
+   "interp": "The only structure K-Means finds is the set of mutually exclusive chronic-condition indicators: silhouette peaks at 0.28 (k = 8) versus 0.21 for shuffled data, and the gap comes from those binary variables, not from age, BMI, gender or visit behaviour, which show no grouping. The four-segment solution is therefore the three chronic-condition groups (asthma, hypertension, diabetes; each \u22484,992 patients and 38\u201339% meeting the high-risk rule) and the no-chronic-disease group (18% high-risk). Segments do not differ in admission rate (\u03c7\u00b2 p = 0.720), so they help target outreach but add no outcome information beyond the chronic-condition label."
+  },
+  "f34_facility_clusters": {
+   "title": "Ward hierarchical clustering of facilities",
+   "interp": "Facilities split into 2 groups (silhouette 0.19; shuffled-data chance of doing this well p = 0.005), but the grouping is consistent across methods (ARI 0.80). Cluster 1 = high volume, high load per clinician, low staff ratio; cluster 2 = low volume, low load per clinician, high staff ratio \u2014 i.e. the split rests on three mechanically linked volume measures (appointments, load per clinician, staff per 1,000 patients), not on quality or outcomes. The Performance Score (scaled 0\u2013100 by construction; HF001 highest, HF007 lowest) is built from components that rest on only ~89 ratings and ~247 appointments per site, so rank differences are not statistically reliable \u2014 use clusters to pick peer groups for comparison, not to rank."
+  },
+  "f35_department_clusters": {
+   "title": "Departments: silhouette vs null",
+   "interp": "Department profiles form a largely continuous cloud rather than separate groups (best silhouette 0.14, only slightly above 0.10 for shuffled data), and segments are unrelated to department type (\u03c7\u00b2 p = 0.604). The four-segment split still gives management a practical triage list: segments with high volume and high load per clinician (see heat-map rows with positive 'Volume' and 'Load/clin.') are the first candidates for staffing review, but these profiles rest on ~25 appointments per department and should be re-estimated as more data accrue."
+  },
+  "f36_pca": {
+   "title": "Patients: scree plot and cumulative variance",
+   "interp": "Patient data need 6 of 10 components to retain 80% of variance (7 for 90%); the first component explains 21% versus 10% for shuffled data \u2014 the excess comes from variables that are built from each other \u2014 so beyond those built-in links the variables are independent and cannot be compressed much. PC1 is dominated by BMI, WeightKg, RiskScore (loadings +0.63, +0.54, +0.39), reflecting arithmetic links between variables (BMI is computed from height and weight; the risk score from age, BMI and chronic disease). Facility measures need 5 of 12 components for 80% (7 for 90%) because 20 sites \u00d7 12 noisy measures leave little shared structure. PCA therefore offers little dimensionality reduction here; it is retained as a diagnostic that confirms the absence of hidden low-dimensional drivers."
+  }
+ },
+ "DQ": [
+  {
+   "Table": "Patients",
+   "Check": "ChronicCondition 'None' text mis-read as missing by default CSV parsers",
+   "Records_Checked": 20000,
+   "Issues_Found": 5071,
+   "Pct_Affected": 25.36,
+   "Severity": "Medium",
+   "Action_Taken": "Read with keep_default_na=False; kept as explicit category 'None' (= no chronic disease)",
+   "Note": "Na\u00efve read shows 25.4% 'missing' values that are really a valid answer"
+  },
+  {
+   "Table": "All tables",
+   "Check": "Missing values (true NaN) across 31 tables",
+   "Records_Checked": 298110,
+   "Issues_Found": 0,
+   "Pct_Affected": 0.0,
+   "Severity": "Info",
+   "Action_Taken": "None required",
+   "Note": "Tables are structurally complete \u2014 the problems are relational, not nulls"
+  },
+  {
+   "Table": "Patients",
+   "Check": "Duplicate primary key (PatientID)",
+   "Records_Checked": 20000,
+   "Issues_Found": 0,
+   "Pct_Affected": 0.0,
+   "Severity": "Info",
+   "Action_Taken": "None required",
+   "Note": ""
+  },
+  {
+   "Table": "Appointments",
+   "Check": "Duplicate primary key (AppointmentID)",
+   "Records_Checked": 5000,
+   "Issues_Found": 0,
+   "Pct_Affected": 0.0,
+   "Severity": "Info",
+   "Action_Taken": "None required",
+   "Note": ""
+  },
+  {
+   "Table": "Billing",
+   "Check": "Duplicate primary key (BillingID)",
+   "Records_Checked": 60000,
+   "Issues_Found": 0,
+   "Pct_Affected": 0.0,
+   "Severity": "Info",
+   "Action_Taken": "None required",
+   "Note": ""
+  },
+  {
+   "Table": "Payments",
+   "Check": "Duplicate primary key (PaymentID)",
+   "Records_Checked": 60000,
+   "Issues_Found": 0,
+   "Pct_Affected": 0.0,
+   "Severity": "Info",
+   "Action_Taken": "None required",
+   "Note": ""
+  },
+  {
+   "Table": "Insurance_Claims",
+   "Check": "Duplicate primary key (ClaimID)",
+   "Records_Checked": 42036,
+   "Issues_Found": 0,
+   "Pct_Affected": 0.0,
+   "Severity": "Info",
+   "Action_Taken": "None required",
+   "Note": ""
+  },
+  {
+   "Table": "Patient_Feedback",
+   "Check": "Duplicate primary key (FeedbackID)",
+   "Records_Checked": 21064,
+   "Issues_Found": 0,
+   "Pct_Affected": 0.0,
+   "Severity": "Info",
+   "Action_Taken": "None required",
+   "Note": ""
+  },
+  {
+   "Table": "Diagnoses_csv",
+   "Check": "Duplicate primary key (DiagnosisID)",
+   "Records_Checked": 60000,
+   "Issues_Found": 0,
+   "Pct_Affected": 0.0,
+   "Severity": "Info",
+   "Action_Taken": "None required",
+   "Note": ""
+  },
+  {
+   "Table": "CT::Diagnoses",
+   "Check": "Duplicate primary key (DiagnosisID)",
+   "Records_Checked": 5000,
+   "Issues_Found": 0,
+   "Pct_Affected": 0.0,
+   "Severity": "Info",
+   "Action_Taken": "None required",
+   "Note": ""
+  },
+  {
+   "Table": "CT::Diagnoses",
+   "Check": "More than one record per appointment",
+   "Records_Checked": 5000,
+   "Issues_Found": 0,
+   "Pct_Affected": 0.0,
+   "Severity": "Info",
+   "Action_Taken": "None required",
+   "Note": ""
+  },
+  {
+   "Table": "CT::Laboratory_Tests",
+   "Check": "Duplicate primary key (LabID)",
+   "Records_Checked": 5000,
+   "Issues_Found": 0,
+   "Pct_Affected": 0.0,
+   "Severity": "Info",
+   "Action_Taken": "None required",
+   "Note": ""
+  },
+  {
+   "Table": "CT::Laboratory_Tests",
+   "Check": "More than one record per appointment",
+   "Records_Checked": 5000,
+   "Issues_Found": 0,
+   "Pct_Affected": 0.0,
+   "Severity": "Info",
+   "Action_Taken": "None required",
+   "Note": ""
+  },
+  {
+   "Table": "CT::Prescriptions",
+   "Check": "Duplicate primary key (PrescriptionID)",
+   "Records_Checked": 5000,
+   "Issues_Found": 0,
+   "Pct_Affected": 0.0,
+   "Severity": "Info",
+   "Action_Taken": "None required",
+   "Note": ""
+  },
+  {
+   "Table": "CT::Prescriptions",
+   "Check": "More than one record per appointment",
+   "Records_Checked": 5000,
+   "Issues_Found": 0,
+   "Pct_Affected": 0.0,
+   "Severity": "Info",
+   "Action_Taken": "None required",
+   "Note": ""
+  },
+  {
+   "Table": "CT::Admissions",
+   "Check": "Duplicate primary key (AdmissionID)",
+   "Records_Checked": 5000,
+   "Issues_Found": 0,
+   "Pct_Affected": 0.0,
+   "Severity": "Info",
+   "Action_Taken": "None required",
+   "Note": ""
+  },
+  {
+   "Table": "CT::Admissions",
+   "Check": "More than one record per appointment",
+   "Records_Checked": 5000,
+   "Issues_Found": 0,
+   "Pct_Affected": 0.0,
+   "Severity": "Info",
+   "Action_Taken": "None required",
+   "Note": ""
+  },
+  {
+   "Table": "CT::Referrals",
+   "Check": "Duplicate primary key (ReferralID)",
+   "Records_Checked": 4708,
+   "Issues_Found": 0,
+   "Pct_Affected": 0.0,
+   "Severity": "Info",
+   "Action_Taken": "None required",
+   "Note": ""
+  },
+  {
+   "Table": "CT::Referrals",
+   "Check": "More than one record per appointment",
+   "Records_Checked": 4708,
+   "Issues_Found": 0,
+   "Pct_Affected": 0.0,
+   "Severity": "Info",
+   "Action_Taken": "None required",
+   "Note": ""
+  },
+  {
+   "Table": "Doctors",
+   "Check": "Duplicate StaffID",
+   "Records_Checked": 350,
+   "Issues_Found": 0,
+   "Pct_Affected": 0.0,
+   "Severity": "Info",
+   "Action_Taken": "None required",
+   "Note": ""
+  },
+  {
+   "Table": "Nurses",
+   "Check": "Duplicate StaffID",
+   "Records_Checked": 700,
+   "Issues_Found": 0,
+   "Pct_Affected": 0.0,
+   "Severity": "Info",
+   "Action_Taken": "None required",
+   "Note": ""
+  },
+  {
+   "Table": "Pharmacists",
+   "Check": "Duplicate StaffID",
+   "Records_Checked": 50,
+   "Issues_Found": 0,
+   "Pct_Affected": 0.0,
+   "Severity": "Info",
+   "Action_Taken": "None required",
+   "Note": ""
+  },
+  {
+   "Table": "Lab_Scientists",
+   "Check": "Duplicate StaffID",
+   "Records_Checked": 40,
+   "Issues_Found": 0,
+   "Pct_Affected": 0.0,
+   "Severity": "Info",
+   "Action_Taken": "None required",
+   "Note": ""
+  },
+  {
+   "Table": "Radiographers",
+   "Check": "Duplicate StaffID",
+   "Records_Checked": 30,
+   "Issues_Found": 0,
+   "Pct_Affected": 0.0,
+   "Severity": "Info",
+   "Action_Taken": "None required",
+   "Note": ""
+  },
+  {
+   "Table": "Admin_Staff",
+   "Check": "Duplicate StaffID",
+   "Records_Checked": 80,
+   "Issues_Found": 0,
+   "Pct_Affected": 0.0,
+   "Severity": "Info",
+   "Action_Taken": "None required",
+   "Note": ""
+  },
+  {
+   "Table": "Billing",
+   "Check": "Appointments billed more than once",
+   "Records_Checked": 60000,
+   "Issues_Found": 0,
+   "Pct_Affected": 0.0,
+   "Severity": "Info",
+   "Action_Taken": "None required",
+   "Note": ""
+  },
+  {
+   "Table": "All tables",
+   "Check": "Fully duplicated rows",
+   "Records_Checked": 298110,
+   "Issues_Found": 0,
+   "Pct_Affected": 0.0,
+   "Severity": "Info",
+   "Action_Taken": "None required",
+   "Note": ""
+  },
+  {
+   "Table": "Appointments",
+   "Check": "Same patient + doctor + date appears twice",
+   "Records_Checked": 5000,
+   "Issues_Found": 0,
+   "Pct_Affected": 0.0,
+   "Severity": "Info",
+   "Action_Taken": "None required",
+   "Note": ""
+  },
+  {
+   "Table": "Patients",
+   "Check": "Unparseable DateOfBirth",
+   "Records_Checked": 20000,
+   "Issues_Found": 0,
+   "Pct_Affected": 0.0,
+   "Severity": "Info",
+   "Action_Taken": "Converted to datetime (format m/d/Y)",
+   "Note": ""
+  },
+  {
+   "Table": "Patients",
+   "Check": "DateOfBirth is always 1 January (placeholder day/month)",
+   "Records_Checked": 20000,
+   "Issues_Found": 20000,
+   "Pct_Affected": 100.0,
+   "Severity": "Medium",
+   "Action_Taken": "Age used as supplied (equals 2026 \u2212 birth year); month-level age precision is unavailable",
+   "Note": "Age is accurate only to \u00b11 year; infants cannot be separated from 1-year-olds"
+  },
+  {
+   "Table": "Patients",
+   "Check": "Age inconsistent with DateOfBirth (reference year 2026)",
+   "Records_Checked": 20000,
+   "Issues_Found": 0,
+   "Pct_Affected": 0.0,
+   "Severity": "Info",
+   "Action_Taken": "None required",
+   "Note": ""
+  },
+  {
+   "Table": "Patients",
+   "Check": "Impossible age (<0 or >110)",
+   "Records_Checked": 20000,
+   "Issues_Found": 0,
+   "Pct_Affected": 0.0,
+   "Severity": "Info",
+   "Action_Taken": "None required",
+   "Note": "Age range 0\u201390 (mean 45.0)"
+  },
+  {
+   "Table": "Patients",
+   "Check": "Stored BMI differs from Weight/Height\u00b2 by >0.2",
+   "Records_Checked": 20000,
+   "Issues_Found": 0,
+   "Pct_Affected": 0.0,
+   "Severity": "Info",
+   "Action_Taken": "None required",
+   "Note": ""
+  },
+  {
+   "Table": "Patients",
+   "Check": "Phone numbers truncated by scientific-notation export (2.50788E+11)",
+   "Records_Checked": 20000,
+   "Issues_Found": 19990,
+   "Pct_Affected": 99.95,
+   "Severity": "High",
+   "Action_Taken": "Phone excluded from analysis & integrated dataset; flagged PhoneValid = False",
+   "Note": "Only 10 distinct values remain for 20,000 patients, so 'duplicate phone' detection is meaningless; the source export must be re-run with phone stored as text"
+  },
+  {
+   "Table": "Patients",
+   "Check": "Category labels needing trim/case standardisation",
+   "Records_Checked": 120000,
+   "Issues_Found": 0,
+   "Pct_Affected": 0.0,
+   "Severity": "Info",
+   "Action_Taken": "Trim/strip applied to all text columns; labels were already consistent",
+   "Note": ""
+  },
+  {
+   "Table": "Patients",
+   "Check": "Child with adult height/weight (age \u22645 & \u2265125 cm or \u226535 kg; age \u226410 & \u2265150 cm)",
+   "Records_Checked": 20000,
+   "Issues_Found": 2154,
+   "Pct_Affected": 10.77,
+   "Severity": "High",
+   "Action_Taken": "Flagged (Flag_AnthroImplausible); retained and sensitivity-tested",
+   "Note": "Values look randomly generated independently of age \u2014 treat demographic cross-tabs with caution"
+  },
+  {
+   "Table": "Patients",
+   "Check": "BMI < 13 or > 50 (physiologically extreme)",
+   "Records_Checked": 20000,
+   "Issues_Found": 1167,
+   "Pct_Affected": 5.83,
+   "Severity": "Medium",
+   "Action_Taken": "Flagged (Flag_BMIExtreme); retained and sensitivity-tested",
+   "Note": "Values look randomly generated independently of age \u2014 treat demographic cross-tabs with caution"
+  },
+  {
+   "Table": "Patients",
+   "Check": "Age-illogical demographics (child married/widowed, minor with Diploma/Bachelor/Master, under-15 with a job)",
+   "Records_Checked": 20000,
+   "Issues_Found": 3674,
+   "Pct_Affected": 18.37,
+   "Severity": "High",
+   "Action_Taken": "Flagged (Flag_AgeLogic); retained and sensitivity-tested",
+   "Note": "Values look randomly generated independently of age \u2014 treat demographic cross-tabs with caution"
+  },
+  {
+   "Table": "Patients",
+   "Check": "Status = Active for every patient (zero variance; no inactive/deceased records)",
+   "Records_Checked": 20000,
+   "Issues_Found": 20000,
+   "Pct_Affected": 100.0,
+   "Severity": "Low",
+   "Action_Taken": "Noted; 'Active Patients' = all patients",
+   "Note": ""
+  },
+  {
+   "Table": "Appointments",
+   "Check": "Unparseable Date",
+   "Records_Checked": 5000,
+   "Issues_Found": 0,
+   "Pct_Affected": 0.0,
+   "Severity": "Info",
+   "Action_Taken": "Converted to datetime (ISO)",
+   "Note": ""
+  },
+  {
+   "Table": "Appointments",
+   "Check": "Appointments dated after the analysis date (2026-10-23)",
+   "Records_Checked": 5000,
+   "Issues_Found": 898,
+   "Pct_Affected": 17.96,
+   "Severity": "Medium",
+   "Action_Taken": "Retained (could be scheduled bookings); full calendar-year 2026 treated as the observed history",
+   "Note": "No appointment-status column exists, so booked / attended / cancelled cannot be distinguished"
+  },
+  {
+   "Table": "Appointments",
+   "Check": "Cancellation / no-show status column missing",
+   "Records_Checked": 5000,
+   "Issues_Found": 5000,
+   "Pct_Affected": 100.0,
+   "Severity": "Medium",
+   "Action_Taken": "Cancellation-rate KPI cannot be computed",
+   "Note": "Recommend adding AppointmentStatus"
+  },
+  {
+   "Table": "Appointments",
+   "Check": "Category labels with stray whitespace (VisitType)",
+   "Records_Checked": 5000,
+   "Issues_Found": 0,
+   "Pct_Affected": 0.0,
+   "Severity": "Info",
+   "Action_Taken": "Trimmed; none found",
+   "Note": ""
+  },
+  {
+   "Table": "Diagnoses_csv",
+   "Check": "Category labels with stray whitespace (Diagnosis, Severity)",
+   "Records_Checked": 120000,
+   "Issues_Found": 0,
+   "Pct_Affected": 0.0,
+   "Severity": "Info",
+   "Action_Taken": "Trimmed; none found",
+   "Note": ""
+  },
+  {
+   "Table": "Payments",
+   "Check": "Category labels with stray whitespace (Method)",
+   "Records_Checked": 60000,
+   "Issues_Found": 0,
+   "Pct_Affected": 0.0,
+   "Severity": "Info",
+   "Action_Taken": "Trimmed; none found",
+   "Note": ""
+  },
+  {
+   "Table": "Billing",
+   "Check": "Category labels with stray whitespace (Status)",
+   "Records_Checked": 60000,
+   "Issues_Found": 0,
+   "Pct_Affected": 0.0,
+   "Severity": "Info",
+   "Action_Taken": "Trimmed; none found",
+   "Note": ""
+  },
+  {
+   "Table": "Insurance_Claims",
+   "Check": "Category labels with stray whitespace (Provider, Status)",
+   "Records_Checked": 84072,
+   "Issues_Found": 0,
+   "Pct_Affected": 0.0,
+   "Severity": "Info",
+   "Action_Taken": "Trimmed; none found",
+   "Note": ""
+  },
+  {
+   "Table": "Patient_Feedback",
+   "Check": "Category labels with stray whitespace (Comment)",
+   "Records_Checked": 21064,
+   "Issues_Found": 0,
+   "Pct_Affected": 0.0,
+   "Severity": "Info",
+   "Action_Taken": "Trimmed; none found",
+   "Note": ""
+  },
+  {
+   "Table": "Province",
+   "Check": "Foreign key: Province \u2192 Country",
+   "Records_Checked": 5,
+   "Issues_Found": 0,
+   "Pct_Affected": 0.0,
+   "Severity": "Info",
+   "Action_Taken": "None required",
+   "Note": ""
+  },
+  {
+   "Table": "District",
+   "Check": "Foreign key: District \u2192 Province",
+   "Records_Checked": 30,
+   "Issues_Found": 0,
+   "Pct_Affected": 0.0,
+   "Severity": "Info",
+   "Action_Taken": "None required",
+   "Note": ""
+  },
+  {
+   "Table": "Sector",
+   "Check": "Foreign key: Sector \u2192 District",
+   "Records_Checked": 120,
+   "Issues_Found": 0,
+   "Pct_Affected": 0.0,
+   "Severity": "Info",
+   "Action_Taken": "None required",
+   "Note": ""
+  },
+  {
+   "Table": "Village",
+   "Check": "Foreign key: Village \u2192 Sector",
+   "Records_Checked": 480,
+   "Issues_Found": 0,
+   "Pct_Affected": 0.0,
+   "Severity": "Info",
+   "Action_Taken": "None required",
+   "Note": ""
+  },
+  {
+   "Table": "Patient",
+   "Check": "Foreign key: Patient \u2192 Village",
+   "Records_Checked": 20000,
+   "Issues_Found": 0,
+   "Pct_Affected": 0.0,
+   "Severity": "Info",
+   "Action_Taken": "None required",
+   "Note": ""
+  },
+  {
+   "Table": "Department",
+   "Check": "Foreign key: Department \u2192 Facility (ID list derived from Departments)",
+   "Records_Checked": 200,
+   "Issues_Found": 0,
+   "Pct_Affected": 0.0,
+   "Severity": "Info",
+   "Action_Taken": "None required",
+   "Note": ""
+  },
+  {
+   "Table": "Room",
+   "Check": "Foreign key: Room \u2192 Department",
+   "Records_Checked": 400,
+   "Issues_Found": 0,
+   "Pct_Affected": 0.0,
+   "Severity": "Info",
+   "Action_Taken": "None required",
+   "Note": ""
+  },
+  {
+   "Table": "Bed",
+   "Check": "Foreign key: Bed \u2192 Room",
+   "Records_Checked": 2000,
+   "Issues_Found": 0,
+   "Pct_Affected": 0.0,
+   "Severity": "Info",
+   "Action_Taken": "None required",
+   "Note": ""
+  },
+  {
+   "Table": "Equipment",
+   "Check": "Foreign key: Equipment \u2192 Department",
+   "Records_Checked": 200,
+   "Issues_Found": 0,
+   "Pct_Affected": 0.0,
+   "Severity": "Info",
+   "Action_Taken": "None required",
+   "Note": ""
+  },
+  {
+   "Table": "Service",
+   "Check": "Foreign key: Service \u2192 Department",
+   "Records_Checked": 400,
+   "Issues_Found": 0,
+   "Pct_Affected": 0.0,
+   "Severity": "Info",
+   "Action_Taken": "None required",
+   "Note": ""
+  },
+  {
+   "Table": "Specialty",
+   "Check": "Foreign key: Specialty \u2192 Department",
+   "Records_Checked": 200,
+   "Issues_Found": 0,
+   "Pct_Affected": 0.0,
+   "Severity": "Info",
+   "Action_Taken": "None required",
+   "Note": ""
+  },
+  {
+   "Table": "Doctors",
+   "Check": "Foreign key: Doctors \u2192 Department",
+   "Records_Checked": 350,
+   "Issues_Found": 0,
+   "Pct_Affected": 0.0,
+   "Severity": "Info",
+   "Action_Taken": "None required",
+   "Note": ""
+  },
+  {
+   "Table": "Nurses",
+   "Check": "Foreign key: Nurses \u2192 Department",
+   "Records_Checked": 700,
+   "Issues_Found": 0,
+   "Pct_Affected": 0.0,
+   "Severity": "Info",
+   "Action_Taken": "None required",
+   "Note": ""
+  },
+  {
+   "Table": "Pharmacists",
+   "Check": "Foreign key: Pharmacists \u2192 Department",
+   "Records_Checked": 50,
+   "Issues_Found": 0,
+   "Pct_Affected": 0.0,
+   "Severity": "Info",
+   "Action_Taken": "None required",
+   "Note": ""
+  },
+  {
+   "Table": "Lab_Scientists",
+   "Check": "Foreign key: Lab_Scientists \u2192 Department",
+   "Records_Checked": 40,
+   "Issues_Found": 0,
+   "Pct_Affected": 0.0,
+   "Severity": "Info",
+   "Action_Taken": "None required",
+   "Note": ""
+  },
+  {
+   "Table": "Radiographers",
+   "Check": "Foreign key: Radiographers \u2192 Department",
+   "Records_Checked": 30,
+   "Issues_Found": 0,
+   "Pct_Affected": 0.0,
+   "Severity": "Info",
+   "Action_Taken": "None required",
+   "Note": ""
+  },
+  {
+   "Table": "Admin_Staff",
+   "Check": "Foreign key: Admin_Staff \u2192 Department",
+   "Records_Checked": 80,
+   "Issues_Found": 0,
+   "Pct_Affected": 0.0,
+   "Severity": "Info",
+   "Action_Taken": "None required",
+   "Note": ""
+  },
+  {
+   "Table": "Appointment",
+   "Check": "Foreign key: Appointment \u2192 Patient",
+   "Records_Checked": 5000,
+   "Issues_Found": 0,
+   "Pct_Affected": 0.0,
+   "Severity": "Info",
+   "Action_Taken": "None required",
+   "Note": ""
+  },
+  {
+   "Table": "Appointment",
+   "Check": "Foreign key: Appointment \u2192 Doctor",
+   "Records_Checked": 5000,
+   "Issues_Found": 0,
+   "Pct_Affected": 0.0,
+   "Severity": "Info",
+   "Action_Taken": "None required",
+   "Note": ""
+  },
+  {
+   "Table": "Appointment",
+   "Check": "Foreign key: Appointment \u2192 Department",
+   "Records_Checked": 5000,
+   "Issues_Found": 0,
+   "Pct_Affected": 0.0,
+   "Severity": "Info",
+   "Action_Taken": "None required",
+   "Note": ""
+  },
+  {
+   "Table": "Appointment",
+   "Check": "Foreign key: Appointment \u2192 Facility",
+   "Records_Checked": 5000,
+   "Issues_Found": 0,
+   "Pct_Affected": 0.0,
+   "Severity": "Info",
+   "Action_Taken": "None required",
+   "Note": ""
+  },
+  {
+   "Table": "Diagnoses (xlsx)",
+   "Check": "Foreign key: Diagnoses (xlsx) \u2192 Appointment",
+   "Records_Checked": 5000,
+   "Issues_Found": 0,
+   "Pct_Affected": 0.0,
+   "Severity": "Info",
+   "Action_Taken": "None required",
+   "Note": ""
+  },
+  {
+   "Table": "Laboratory_Tests (xlsx)",
+   "Check": "Foreign key: Laboratory_Tests (xlsx) \u2192 Appointment",
+   "Records_Checked": 5000,
+   "Issues_Found": 2728,
+   "Pct_Affected": 54.56,
+   "Severity": "Critical",
+   "Action_Taken": "Orphans retained, excluded from joined analyses; cohort-based analyses disclose n",
+   "Note": "Child records whose parent appointment is absent from the 5,000-row Appointments sheet"
+  },
+  {
+   "Table": "Prescriptions (xlsx)",
+   "Check": "Foreign key: Prescriptions (xlsx) \u2192 Appointment",
+   "Records_Checked": 5000,
+   "Issues_Found": 997,
+   "Pct_Affected": 19.94,
+   "Severity": "High",
+   "Action_Taken": "Orphans retained, excluded from joined analyses; cohort-based analyses disclose n",
+   "Note": "Child records whose parent appointment is absent from the 5,000-row Appointments sheet"
+  },
+  {
+   "Table": "Admissions (xlsx)",
+   "Check": "Foreign key: Admissions (xlsx) \u2192 Appointment",
+   "Records_Checked": 5000,
+   "Issues_Found": 4414,
+   "Pct_Affected": 88.28,
+   "Severity": "Critical",
+   "Action_Taken": "Orphans retained, excluded from joined analyses; cohort-based analyses disclose n",
+   "Note": "Child records whose parent appointment is absent from the 5,000-row Appointments sheet"
+  },
+  {
+   "Table": "Referrals (xlsx)",
+   "Check": "Foreign key: Referrals (xlsx) \u2192 Appointment",
+   "Records_Checked": 4708,
+   "Issues_Found": 4293,
+   "Pct_Affected": 91.19,
+   "Severity": "Critical",
+   "Action_Taken": "Orphans retained, excluded from joined analyses; cohort-based analyses disclose n",
+   "Note": "Child records whose parent appointment is absent from the 5,000-row Appointments sheet"
+  },
+  {
+   "Table": "Referral",
+   "Check": "Foreign key: Referral \u2192 Referred facility",
+   "Records_Checked": 4708,
+   "Issues_Found": 0,
+   "Pct_Affected": 0.0,
+   "Severity": "Info",
+   "Action_Taken": "None required",
+   "Note": ""
+  },
+  {
+   "Table": "Diagnoses (csv)",
+   "Check": "Foreign key: Diagnoses (csv) \u2192 Appointment",
+   "Records_Checked": 60000,
+   "Issues_Found": 55000,
+   "Pct_Affected": 91.67,
+   "Severity": "Critical",
+   "Action_Taken": "Orphans retained, excluded from joined analyses; cohort-based analyses disclose n",
+   "Note": "Child records whose parent appointment is absent from the 5,000-row Appointments sheet"
+  },
+  {
+   "Table": "Billing",
+   "Check": "Foreign key: Billing \u2192 Appointment",
+   "Records_Checked": 60000,
+   "Issues_Found": 55000,
+   "Pct_Affected": 91.67,
+   "Severity": "Critical",
+   "Action_Taken": "Orphans retained, excluded from joined analyses; cohort-based analyses disclose n",
+   "Note": "Child records whose parent appointment is absent from the 5,000-row Appointments sheet"
+  },
+  {
+   "Table": "Payment",
+   "Check": "Foreign key: Payment \u2192 Billing",
+   "Records_Checked": 60000,
+   "Issues_Found": 0,
+   "Pct_Affected": 0.0,
+   "Severity": "Info",
+   "Action_Taken": "None required",
+   "Note": ""
+  },
+  {
+   "Table": "Claim",
+   "Check": "Foreign key: Claim \u2192 Billing",
+   "Records_Checked": 42036,
+   "Issues_Found": 0,
+   "Pct_Affected": 0.0,
+   "Severity": "Info",
+   "Action_Taken": "None required",
+   "Note": ""
+  },
+  {
+   "Table": "Feedback",
+   "Check": "Foreign key: Feedback \u2192 Appointment",
+   "Records_Checked": 21064,
+   "Issues_Found": 19308,
+   "Pct_Affected": 91.66,
+   "Severity": "Critical",
+   "Action_Taken": "Orphans retained, excluded from joined analyses; cohort-based analyses disclose n",
+   "Note": "Child records whose parent appointment is absent from the 5,000-row Appointments sheet"
+  },
+  {
+   "Table": "Patients",
+   "Check": "Duplicate Patient IDs",
+   "Records_Checked": 20000,
+   "Issues_Found": 0,
+   "Pct_Affected": 0.0,
+   "Severity": "Info",
+   "Action_Taken": "None required",
+   "Note": ""
+  },
+  {
+   "Table": "Appointments",
+   "Check": "Duplicate Appointment IDs",
+   "Records_Checked": 5000,
+   "Issues_Found": 0,
+   "Pct_Affected": 0.0,
+   "Severity": "Info",
+   "Action_Taken": "None required",
+   "Note": ""
+  },
+  {
+   "Table": "Appointments",
+   "Check": "Invalid Facility IDs (not in master)",
+   "Records_Checked": 5000,
+   "Issues_Found": 0,
+   "Pct_Affected": 0.0,
+   "Severity": "Info",
+   "Action_Taken": "None required",
+   "Note": ""
+  },
+  {
+   "Table": "Appointments",
+   "Check": "Invalid Department IDs (not in master)",
+   "Records_Checked": 5000,
+   "Issues_Found": 0,
+   "Pct_Affected": 0.0,
+   "Severity": "Info",
+   "Action_Taken": "None required",
+   "Note": ""
+  },
+  {
+   "Table": "Billing",
+   "Check": "Invalid billing amounts (\u2264 0 or missing)",
+   "Records_Checked": 60000,
+   "Issues_Found": 0,
+   "Pct_Affected": 0.0,
+   "Severity": "Info",
+   "Action_Taken": "None required",
+   "Note": "Amounts range 10,002\u2013299,998 RWF"
+  },
+  {
+   "Table": "Payments",
+   "Check": "Invalid payment amounts (\u2264 0)",
+   "Records_Checked": 60000,
+   "Issues_Found": 0,
+   "Pct_Affected": 0.0,
+   "Severity": "Info",
+   "Action_Taken": "None required",
+   "Note": ""
+  },
+  {
+   "Table": "Appointments",
+   "Check": "Appointment FacilityID \u2260 facility that owns the appointment's DepartmentID",
+   "Records_Checked": 5000,
+   "Issues_Found": 4744,
+   "Pct_Affected": 94.88,
+   "Severity": "Critical",
+   "Action_Taken": "Facility = appointment.FacilityID; department TYPE = name of DepartmentID (documented assumption)",
+   "Note": "95% of appointments reference a department belonging to a different facility \u2014 IDs were generated independently"
+  },
+  {
+   "Table": "Appointments",
+   "Check": "Doctor's FacilityID \u2260 appointment FacilityID",
+   "Records_Checked": 5000,
+   "Issues_Found": 4743,
+   "Pct_Affected": 94.86,
+   "Severity": "Critical",
+   "Action_Taken": "Doctor workload computed per DoctorID; facility attribution uses appointment.FacilityID",
+   "Note": ""
+  },
+  {
+   "Table": "Appointments",
+   "Check": "Doctor's department name \u2260 appointment department name",
+   "Records_Checked": 5000,
+   "Issues_Found": 4510,
+   "Pct_Affected": 90.2,
+   "Severity": "High",
+   "Action_Taken": "Noted; department of the appointment record used",
+   "Note": ""
+  },
+  {
+   "Table": "Staff (all cadres)",
+   "Check": "Staff FacilityID \u2260 facility owning their DepartmentID",
+   "Records_Checked": 1250,
+   "Issues_Found": 1187,
+   "Pct_Affected": 94.96,
+   "Severity": "High",
+   "Action_Taken": "Staff attributed to staff.FacilityID for facility counts and to DepartmentID name for department counts",
+   "Note": ""
+  },
+  {
+   "Table": "Staff (all cadres)",
+   "Check": "Staff department name \u2260 name of their DepartmentID",
+   "Records_Checked": 1250,
+   "Issues_Found": 0,
+   "Pct_Affected": 0.0,
+   "Severity": "Info",
+   "Action_Taken": "None required",
+   "Note": ""
+  },
+  {
+   "Table": "Staff (all cadres)",
+   "Check": "Pharmacists / lab scientists / radiographers assigned to a department that does not match their cadre (e.g. radiographer in Pharmacy)",
+   "Records_Checked": 120,
+   "Issues_Found": 108,
+   "Pct_Affected": 90.0,
+   "Severity": "Medium",
+   "Action_Taken": "Staff counted by cadre, not by department fit",
+   "Note": "Department assignment appears cyclic/arbitrary"
+  },
+  {
+   "Table": "Doctors",
+   "Check": "Doctor specialty \u2260 specialty defined for their DepartmentID",
+   "Records_Checked": 350,
+   "Issues_Found": 0,
+   "Pct_Affected": 0.0,
+   "Severity": "Info",
+   "Action_Taken": "None required",
+   "Note": ""
+  },
+  {
+   "Table": "Referrals",
+   "Check": "Referred to the same facility the patient was seen at (self-referral)",
+   "Records_Checked": 415,
+   "Issues_Found": 30,
+   "Pct_Affected": 7.23,
+   "Severity": "Low",
+   "Action_Taken": "Retained",
+   "Note": "Only 415 of 4,708 referrals link to the Appointments sheet"
+  },
+  {
+   "Table": "Beds",
+   "Check": "Every bed has Status = 'Available' (no occupied/maintenance state)",
+   "Records_Checked": 2000,
+   "Issues_Found": 2000,
+   "Pct_Affected": 100.0,
+   "Severity": "High",
+   "Action_Taken": "Bed occupancy estimated indirectly from admissions length-of-stay",
+   "Note": "Snapshot status carries no occupancy information"
+  },
+  {
+   "Table": "Equipment",
+   "Check": "No quantity, condition or availability fields (1 generic item per department)",
+   "Records_Checked": 200,
+   "Issues_Found": 200,
+   "Pct_Affected": 100.0,
+   "Severity": "Medium",
+   "Action_Taken": "Equipment distribution reported; availability cannot be measured",
+   "Note": ""
+  },
+  {
+   "Table": "Facilities",
+   "Check": "No Health-Facility master table (name, type, ownership, district) is included; OwnershipID is not referenced anywhere",
+   "Records_Checked": 20,
+   "Issues_Found": 20,
+   "Pct_Affected": 100.0,
+   "Severity": "High",
+   "Action_Taken": "Facilities identified only as HF001\u2013HF020; ownership/type/regional analysis not possible",
+   "Note": "Brief lists a Health Facilities dataset; the file supplied contains only departments, rooms, beds, etc."
+  },
+  {
+   "Table": "Patients",
+   "Check": "No patient registration date and no patient\u2192facility link",
+   "Records_Checked": 20000,
+   "Issues_Found": 20000,
+   "Pct_Affected": 100.0,
+   "Severity": "Medium",
+   "Action_Taken": "Patient growth proxied by first-appointment month (appointment cohort only)",
+   "Note": ""
+  },
+  {
+   "Table": "Patients",
+   "Check": "InsuranceID has 15 codes but no insurance-plan lookup table; 100% of patients carry an InsuranceID",
+   "Records_Checked": 20000,
+   "Issues_Found": 20000,
+   "Pct_Affected": 100.0,
+   "Severity": "High",
+   "Action_Taken": "'Insured vs uninsured' comparison replaced by 'claim filed vs no claim' and by claim coverage ratio",
+   "Note": ""
+  },
+  {
+   "Table": "Payments",
+   "Check": "AmountPaid exceeds billed Amount",
+   "Records_Checked": 60000,
+   "Issues_Found": 0,
+   "Pct_Affected": 0.0,
+   "Severity": "Info",
+   "Action_Taken": "None required",
+   "Note": ""
+  },
+  {
+   "Table": "Insurance_Claims",
+   "Check": "ClaimAmount exceeds billed Amount",
+   "Records_Checked": 42036,
+   "Issues_Found": 0,
+   "Pct_Affected": 0.0,
+   "Severity": "Info",
+   "Action_Taken": "None required",
+   "Note": ""
+  },
+  {
+   "Table": "Billing/Payments",
+   "Check": "Bill Status 'Paid' but payment < billed amount",
+   "Records_Checked": 20145,
+   "Issues_Found": 4042,
+   "Pct_Affected": 20.06,
+   "Severity": "High",
+   "Action_Taken": "Outstanding balance computed from amounts (Amount \u2212 AmountPaid), not from Status",
+   "Note": ""
+  },
+  {
+   "Table": "Billing/Payments",
+   "Check": "Bill Status 'Pending' but payment = full amount",
+   "Records_Checked": 19884,
+   "Issues_Found": 15975,
+   "Pct_Affected": 80.34,
+   "Severity": "High",
+   "Action_Taken": "As above",
+   "Note": ""
+  },
+  {
+   "Table": "Billing/Payments",
+   "Check": "Bill Status 'Partially Paid' but payment = full amount",
+   "Records_Checked": 19971,
+   "Issues_Found": 16035,
+   "Pct_Affected": 80.29,
+   "Severity": "High",
+   "Action_Taken": "As above",
+   "Note": "Status is statistically unrelated to the amount actually paid \u2192 treat Status as unreliable"
+  },
+  {
+   "Table": "Payments/Claims",
+   "Check": "Payment method 'Insurance' with no insurance claim on file",
+   "Records_Checked": 14944,
+   "Issues_Found": 4485,
+   "Pct_Affected": 30.01,
+   "Severity": "Medium",
+   "Action_Taken": "Noted",
+   "Note": ""
+  },
+  {
+   "Table": "Revenue_Summary",
+   "Check": "Revenue summary total vs sum of billed amounts (should reconcile)",
+   "Records_Checked": 1,
+   "Issues_Found": 1,
+   "Pct_Affected": 100.0,
+   "Severity": "High",
+   "Action_Taken": "Two revenue series reported separately; forecasting uses the monthly Revenue_Summary (only dated series)",
+   "Note": "Summary revenue = 1,132,677,500 RWF vs billed 9,309,401,961 RWF vs paid 8,389,454,556 RWF (ratio 8.2x)"
+  },
+  {
+   "Table": "Revenue_Summary",
+   "Check": "Summary appointment count vs billed appointments",
+   "Records_Checked": 1,
+   "Issues_Found": 1,
+   "Pct_Affected": 100.0,
+   "Severity": "Medium",
+   "Action_Taken": "Noted",
+   "Note": "Summary = 60,809 appointments vs 60,000 bills vs 5,000 rows in Appointments sheet"
+  },
+  {
+   "Table": "Patient_Feedback",
+   "Check": "Rating contradicts comment (rating \u22642 with 'Good/Excellent', or \u22654 with 'Poor')",
+   "Records_Checked": 21064,
+   "Issues_Found": 6336,
+   "Pct_Affected": 30.08,
+   "Severity": "High",
+   "Action_Taken": "Both fields retained; rating used as the primary satisfaction measure",
+   "Note": "Rating and Comment are statistically independent (see \u03c7\u00b2 test in section 4)"
+  }
+ ]
+}
