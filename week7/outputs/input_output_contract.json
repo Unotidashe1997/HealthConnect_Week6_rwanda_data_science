@@ -1,0 +1,74 @@
+{
+  "version": "week7-v2",
+  "numeric": {
+    "Age": [
+      0,
+      110,
+      "years"
+    ],
+    "BMI": [
+      8,
+      80,
+      "kg/m2"
+    ],
+    "RiskScore": [
+      0,
+      6,
+      "rule-based risk score"
+    ],
+    "DoctorYearsExp": [
+      0,
+      60,
+      "years"
+    ],
+    "PatientVisits": [
+      0,
+      50,
+      "appointments on record"
+    ],
+    "Month_": [
+      1,
+      12,
+      "calendar month of the appointment"
+    ],
+    "ChronicFlag": [
+      0,
+      1,
+      "0/1"
+    ]
+  },
+  "categorical": {
+    "Gender": [
+      "Male",
+      "Female"
+    ],
+    "MaritalStatus": null,
+    "Education": null,
+    "Occupation": null,
+    "BloodGroup": null,
+    "ChronicCondition": [
+      "None",
+      "Asthma",
+      "Hypertension",
+      "Diabetes"
+    ],
+    "ProvinceName": [
+      "Eastern",
+      "Kigali City",
+      "Northern",
+      "Southern",
+      "Western"
+    ],
+    "VisitType": null,
+    "DepartmentName": null,
+    "FacilityID": null,
+    "DayOfWeek": null
+  },
+  "output": [
+    "risk_score (0-1)",
+    "risk_band",
+    "warnings",
+    "model_version",
+    "use_caution"
+  ]
+}

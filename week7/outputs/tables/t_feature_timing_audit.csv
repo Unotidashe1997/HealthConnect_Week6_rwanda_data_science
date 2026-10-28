@@ -1,0 +1,7 @@
+Features,Known at prediction time?,In candidate?,Note
+"Age, BMI, RiskScore, ChronicFlag, ChronicCondition, demographics, geography, BloodGroup",Yes,Yes (feature set A),Known at registration
+"VisitType, DepartmentName, FacilityID, DayOfWeek, Month_, DoctorYearsExp",Yes,Yes (feature set A),Known when the appointment is booked
+PatientVisits (appointments on record),Partly,Yes (feature set A),"Counted over the whole year, so it includes visits after the one being scored — mild look-ahead; recompute as 'visits before this date' in production"
+"Diagnosis, Severity",No — recorded at the visit,No (feature set B only),Not available when predicting; excluded from deployment
+"LabDone, LabAbnormal, Prescription, Referred",No — recorded during/after the visit,No (feature set C only),Post-visit information (possible leakage); excluded from deployment
+"LengthOfStayDays, BillAmount, Rating",No — outcome-linked,Never used,Would leak the outcome

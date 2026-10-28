@@ -1,0 +1,7 @@
+,Candidate (Week 6),Refined (R1 Clinical-core features)
+C1 AUC ≥ 0.65,0.529  [FAIL],0.537  [FAIL]
+C2 CI lower > 0.5,0.470  [FAIL],0.485  [FAIL]
+C3 PR-AUC ≥ 1.5×prevalence,0.145 vs 0.176  [FAIL],0.145 vs 0.176  [FAIL]
+C4 stable (≥90% splits >0.5 and time-split CI lower >0.5),40% / 0.43  [FAIL],63% / 0.44  [FAIL]
+C5 slope 0.8–1.2,0.18  [FAIL],0.24  [FAIL]
+C6 beats baseline (corrected CI of AUC−0.5 excludes 0),-0.044 to +0.007  [FAIL],-0.022 to +0.024  [FAIL]

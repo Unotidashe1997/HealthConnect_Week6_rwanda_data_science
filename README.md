@@ -5,6 +5,7 @@ AnalystLab Africa · Experience Lab · **Week 6** · Track 2: Data Science
 | Week | Focus | Status |
 |---|---|---|
 | 6 | Data prep, EDA, statistics, forecasting, models, clustering, reports | ✅ |
+| 7 | Model testing, error analysis, refinement, ML-interface hand-off (`week7/`) | ✅ |
 
 ## Reproduce
 ```bash
@@ -31,3 +32,6 @@ Step-by-step guide: `docs/HealthConnect_Week6_Code_Walkthrough.docx`. The same a
 
 ## Layout
 `src/` scripts · `outputs/figures` 36 charts · `outputs/tables` result tables · `outputs/reports` Word reports + slides · `docs/` walkthrough. Raw data is git-ignored; exports contain no names, phone numbers or emergency contacts.
+
+## Week 7
+See `week7/README.md`: the Week 6 candidate model fails all 6 pre-registered acceptance criteria (hold-out AUC 0.529, CI 0.47–0.59); seven refinements give no meaningful gain; scoring-interface tests improve from 8/18 to 18/18. Report, summary and testing record are in `week7/outputs/reports/`.

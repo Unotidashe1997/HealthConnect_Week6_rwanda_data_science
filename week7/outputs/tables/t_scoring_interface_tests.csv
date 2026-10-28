@@ -1,0 +1,21 @@
+ID,Scenario,Expected,V1_Actual,V1,V2_Actual,V2
+X01,Valid single record,"Returns one probability in [0, 1]","scored, p=0.089",PASS,"scored, p=0.089",PASS
+X02,Valid batch of 200,200 finite probabilities,200 finite scores,PASS,200 finite scores,PASS
+X03,Columns in a different order,Identical scores (columns matched by name),identical scores,PASS,identical scores,PASS
+X04,Unexpected extra column (e.g. PatientName),Scored; ignored column reported (identifier safety),scored silently; extra column (possible identifier) not reported,FAIL,scored and extra column reported,PASS
+X05,Required column missing (Age),Clear error naming 'Age',ValueError: columns are missing: {'Age'},PASS,ScoringError: Missing required column(s): ['Age'],PASS
+X06,Unseen category in an open field (Occupation = Astronaut),"Scored, and the unseen value is reported",scored silently; unseen category not reported,FAIL,scored with warning,PASS
+X07,Impossible value in a closed list (ProvinceName = Mars),Rejected with an error naming ProvinceName,scored an impossible province without complaint,FAIL,"ScoringError: Column 'ProvinceName' has value(s) outside the allowed list ['Eastern', 'Kigali City', 'Northern",PASS
+X08,"Out-of-range numbers (Age = -5, BMI = 500)",Rejected with an error naming the column,"scored Age=-5, BMI=500 without complaint",FAIL,"ScoringError: Column 'Age' out of allowed range [0, 110] at row(s) [0]",PASS
+X09,Missing numeric value (Age = NaN),Clear error naming 'Age',"ValueError: Input X contains NaN.
+LogisticRegression does not accept missing values encoded as NaN natively. F",FAIL,ScoringError: Column 'Age' has missing value(s) at row(s) [0]; missing values are not imputed,PASS
+X10,Wrong data type (Age = 'forty'),Clear error naming 'Age',ValueError: could not convert string to float: 'forty',FAIL,ScoringError: Column 'Age' must be numeric; non-numeric value(s) at row(s) [0],PASS
+X11,Empty input (0 rows),"Empty result, no crash","ValueError: Found array with 0 sample(s) (shape=(0, 7)) while a minimum of 1 is required by StandardScaler.",FAIL,empty result,PASS
+X12,Determinism (same input twice),Identical output,identical on repeat,PASS,identical on repeat,PASS
+X13,Persistence (save and reload the scorer),Identical output after reload,identical after save/load,PASS,identical after save/load,PASS
+X14,ChronicCondition = 'None' (valid: no chronic disease),Accepted as a normal value,'None' accepted as a value,PASS,'None' accepted as a value,PASS
+X15,ChronicCondition missing — the CSV 'None'→NaN pitfall,Rejected with a clear error naming ChronicCondition,"TypeError: ufunc 'isnan' not supported for the input types, and the inputs could not be safely coerced to any supported ",FAIL,"ScoringError: Column 'ChronicCondition' has missing value(s) at row(s) [0] - if the data came from a CSV, the text 'None",PASS
+X16,Output schema,"risk_score, risk_band, warnings, model_version, use_caution","bare array: no band, warnings, version or caution flag",FAIL,output schema as documented,PASS
+X17,Input is not a DataFrame,Clear error saying a DataFrame is required,"ValueError: Expected 2D array, got scalar array instead:
+array={'Age': 12, 'BMI': 43.3, 'RiskScore': 2, 'Docto",FAIL,ScoringError: Input must be a pandas DataFrame with one row per appointment.,PASS
+X18,"Speed: 10,000 rows",Under 5 seconds,"10,000 rows in 0.02s",PASS,"10,000 rows in 0.02s",PASS

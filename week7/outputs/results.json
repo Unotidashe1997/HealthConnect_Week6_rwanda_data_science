@@ -1,0 +1,1594 @@
+{
+ "R": {
+  "repro": {
+   "cv_auc": 0.5143015351474023,
+   "ho_auc": 0.5294208748342384
+  },
+  "stability": {
+   "mean": 0.49486501921383014,
+   "sd": 0.02084455061053333,
+   "lo": 0.4624967331649098,
+   "hi": 0.5339046664924354,
+   "share_above_half": 0.4,
+   "time_auc": 0.48004326165245703,
+   "time_ci": [
+    0.4331992729836258,
+    0.5275812831838259
+   ],
+   "time_n": 1235,
+   "time_pos": 162
+  },
+  "metrics_candidate": [
+   {
+    "Rule": "Model, F1-optimal threshold",
+    "Threshold": 0.06,
+    "Flagged": 985,
+    "TP": 115,
+    "FP": 870,
+    "FN": 2,
+    "TN": 13,
+    "Precision": 0.1168,
+    "Recall": 0.9829,
+    "Specificity": 0.0147,
+    "F1": 0.2087,
+    "Balanced_Acc": 0.4988,
+    "MCC": -0.0063
+   },
+   {
+    "Rule": "Model, threshold 0.5",
+    "Threshold": 0.5,
+    "Flagged": 0,
+    "TP": 0,
+    "FP": 0,
+    "FN": 117,
+    "TN": 883,
+    "Precision": 0.0,
+    "Recall": 0.0,
+    "Specificity": 1.0,
+    "F1": 0.0,
+    "Balanced_Acc": 0.5,
+    "MCC": 0.0
+   },
+   {
+    "Rule": "Model, flag top 20% (capacity rule)",
+    "Threshold": 0.146,
+    "Flagged": 180,
+    "TP": 30,
+    "FP": 150,
+    "FN": 87,
+    "TN": 733,
+    "Precision": 0.1667,
+    "Recall": 0.2564,
+    "Specificity": 0.8301,
+    "F1": 0.202,
+    "Balanced_Acc": 0.5433,
+    "MCC": 0.0724
+   },
+   {
+    "Rule": "Baseline: flag everyone",
+    "Threshold": 0.5,
+    "Flagged": 1000,
+    "TP": 117,
+    "FP": 883,
+    "FN": 0,
+    "TN": 0,
+    "Precision": 0.117,
+    "Recall": 1.0,
+    "Specificity": 0.0,
+    "F1": 0.2095,
+    "Balanced_Acc": 0.5,
+    "MCC": 0.0
+   },
+   {
+    "Rule": "Baseline: flag no one",
+    "Threshold": 0.5,
+    "Flagged": 0,
+    "TP": 0,
+    "FP": 0,
+    "FN": 117,
+    "TN": 883,
+    "Precision": 0.0,
+    "Recall": 0.0,
+    "Specificity": 1.0,
+    "F1": 0.0,
+    "Balanced_Acc": 0.5,
+    "MCC": 0.0
+   },
+   {
+    "Rule": "Baseline: random 20%",
+    "Threshold": 0.798,
+    "Flagged": 200,
+    "TP": 31,
+    "FP": 169,
+    "FN": 86,
+    "TN": 714,
+    "Precision": 0.155,
+    "Recall": 0.265,
+    "Specificity": 0.8086,
+    "F1": 0.1956,
+    "Balanced_Acc": 0.5368,
+    "MCC": 0.0591
+   }
+  ],
+  "capacity_rule": {
+   "precision": 0.16666666666666666,
+   "recall": 0.2564102564102564,
+   "lift": 1.4245014245014243,
+   "p_lo": 0.11235955056179775,
+   "p_hi": 0.22094589889987465,
+   "random_precision": 0.155,
+   "t_f1": 0.06,
+   "flagged_f1": 985,
+   "flagged_05": 0
+  },
+  "calibration": {
+   "slope": 0.18108408312657603,
+   "intercept": -1.6469589001521832,
+   "slope_ci": [
+    -0.06342893831306975,
+    0.40518097776660156
+   ],
+   "brier": 0.10428293412927514,
+   "brier_base": 0.10346416,
+   "pred_min": 0.03280359919046715,
+   "pred_max": 0.3491591640087936
+  },
+  "error_profile": {
+   "Who is missed? (admitted: missed vs caught)": {
+    "n": 16,
+    "raw": 12,
+    "holm": 9,
+    "min_p": 2.764805532773323e-14,
+    "min_var": "DepartmentName"
+   },
+   "Who is wrongly flagged? (not admitted: flagged vs not)": {
+    "n": 16,
+    "raw": 13,
+    "holm": 13,
+    "min_p": 9.327798200318041e-56,
+    "min_var": "DepartmentName"
+   }
+  },
+  "conf_counts": {
+   "TP": 127,
+   "FP": 873,
+   "FN": 459,
+   "TN": 3541
+  },
+  "error_by_visit": [
+   {
+    "VisitType": "Consultation",
+    "n": 1656,
+    "error_rate": 0.307,
+    "admit_rate": 0.124,
+    "flag_rate": 0.256
+   },
+   {
+    "VisitType": "Emergency",
+    "n": 1650,
+    "error_rate": 0.232,
+    "admit_rate": 0.112,
+    "flag_rate": 0.153
+   },
+   {
+    "VisitType": "Follow-up",
+    "n": 1694,
+    "error_rate": 0.261,
+    "admit_rate": 0.116,
+    "flag_rate": 0.191
+   }
+  ],
+  "flag_vs_unflag": {
+   "flagged_rate": 0.127,
+   "unflagged_rate": 0.11475,
+   "p": 0.30667833149046714
+  },
+  "segments": {
+   "n": 34,
+   "holm_sig": 0,
+   "names_above": "DepartmentName Pharmacy (AUC 0.59), DepartmentName Radiology (AUC 0.59), ChronicCondition Diabetes (AUC 0.55)",
+   "above": 3,
+   "below": 1,
+   "min_auc": 0.372961416070008,
+   "max_auc": 0.5927754677754679,
+   "table": [
+    {
+     "Segment": "Gender",
+     "Level": "Female",
+     "n": 2459,
+     "Admissions": 264,
+     "AUC": 0.522,
+     "Lo": 0.483,
+     "Hi": 0.555,
+     "p": 0.243,
+     "p_holm": 1.0,
+     "CI_excludes_0.5": false
+    },
+    {
+     "Segment": "Gender",
+     "Level": "Male",
+     "n": 2541,
+     "Admissions": 322,
+     "AUC": 0.506,
+     "Lo": 0.474,
+     "Hi": 0.54,
+     "p": 0.732,
+     "p_holm": 1.0,
+     "CI_excludes_0.5": false
+    },
+    {
+     "Segment": "AgeBand",
+     "Level": "15\u201334",
+     "n": 1047,
+     "Admissions": 122,
+     "AUC": 0.509,
+     "Lo": 0.457,
+     "Hi": 0.566,
+     "p": 0.759,
+     "p_holm": 1.0,
+     "CI_excludes_0.5": false
+    },
+    {
+     "Segment": "AgeBand",
+     "Level": "35\u201349",
+     "n": 861,
+     "Admissions": 81,
+     "AUC": 0.512,
+     "Lo": 0.444,
+     "Hi": 0.586,
+     "p": 0.718,
+     "p_holm": 1.0,
+     "CI_excludes_0.5": false
+    },
+    {
+     "Segment": "AgeBand",
+     "Level": "50\u201364",
+     "n": 825,
+     "Admissions": 115,
+     "AUC": 0.535,
+     "Lo": 0.48,
+     "Hi": 0.586,
+     "p": 0.231,
+     "p_holm": 1.0,
+     "CI_excludes_0.5": false
+    },
+    {
+     "Segment": "AgeBand",
+     "Level": "65+",
+     "n": 1471,
+     "Admissions": 184,
+     "AUC": 0.514,
+     "Lo": 0.468,
+     "Hi": 0.564,
+     "p": 0.536,
+     "p_holm": 1.0,
+     "CI_excludes_0.5": false
+    },
+    {
+     "Segment": "AgeBand",
+     "Level": "<15",
+     "n": 796,
+     "Admissions": 84,
+     "AUC": 0.503,
+     "Lo": 0.436,
+     "Hi": 0.568,
+     "p": 0.936,
+     "p_holm": 1.0,
+     "CI_excludes_0.5": false
+    },
+    {
+     "Segment": "ProvinceName",
+     "Level": "Eastern",
+     "n": 1006,
+     "Admissions": 135,
+     "AUC": 0.498,
+     "Lo": 0.448,
+     "Hi": 0.547,
+     "p": 0.93,
+     "p_holm": 1.0,
+     "CI_excludes_0.5": false
+    },
+    {
+     "Segment": "ProvinceName",
+     "Level": "Kigali City",
+     "n": 944,
+     "Admissions": 91,
+     "AUC": 0.508,
+     "Lo": 0.444,
+     "Hi": 0.563,
+     "p": 0.803,
+     "p_holm": 1.0,
+     "CI_excludes_0.5": false
+    },
+    {
+     "Segment": "ProvinceName",
+     "Level": "Northern",
+     "n": 1021,
+     "Admissions": 121,
+     "AUC": 0.533,
+     "Lo": 0.478,
+     "Hi": 0.583,
+     "p": 0.232,
+     "p_holm": 1.0,
+     "CI_excludes_0.5": false
+    },
+    {
+     "Segment": "ProvinceName",
+     "Level": "Southern",
+     "n": 978,
+     "Admissions": 118,
+     "AUC": 0.492,
+     "Lo": 0.438,
+     "Hi": 0.551,
+     "p": 0.766,
+     "p_holm": 1.0,
+     "CI_excludes_0.5": false
+    },
+    {
+     "Segment": "ProvinceName",
+     "Level": "Western",
+     "n": 1051,
+     "Admissions": 121,
+     "AUC": 0.52,
+     "Lo": 0.461,
+     "Hi": 0.58,
+     "p": 0.473,
+     "p_holm": 1.0,
+     "CI_excludes_0.5": false
+    },
+    {
+     "Segment": "DepartmentName",
+     "Level": "Cardiology",
+     "n": 544,
+     "Admissions": 71,
+     "AUC": 0.508,
+     "Lo": 0.439,
+     "Hi": 0.567,
+     "p": 0.826,
+     "p_holm": 1.0,
+     "CI_excludes_0.5": false
+    },
+    {
+     "Segment": "DepartmentName",
+     "Level": "Emergency",
+     "n": 495,
+     "Admissions": 58,
+     "AUC": 0.478,
+     "Lo": 0.391,
+     "Hi": 0.57,
+     "p": 0.592,
+     "p_holm": 1.0,
+     "CI_excludes_0.5": false
+    },
+    {
+     "Segment": "DepartmentName",
+     "Level": "ICU",
+     "n": 467,
+     "Admissions": 48,
+     "AUC": 0.373,
+     "Lo": 0.292,
+     "Hi": 0.451,
+     "p": 0.004,
+     "p_holm": 0.133,
+     "CI_excludes_0.5": true
+    },
+    {
+     "Segment": "DepartmentName",
+     "Level": "Internal Medicine",
+     "n": 490,
+     "Admissions": 47,
+     "AUC": 0.54,
+     "Lo": 0.456,
+     "Hi": 0.63,
+     "p": 0.37,
+     "p_holm": 1.0,
+     "CI_excludes_0.5": false
+    },
+    {
+     "Segment": "DepartmentName",
+     "Level": "Laboratory",
+     "n": 499,
+     "Admissions": 61,
+     "AUC": 0.496,
+     "Lo": 0.429,
+     "Hi": 0.573,
+     "p": 0.921,
+     "p_holm": 1.0,
+     "CI_excludes_0.5": false
+    },
+    {
+     "Segment": "DepartmentName",
+     "Level": "Obstetrics & Gynecology",
+     "n": 511,
+     "Admissions": 57,
+     "AUC": 0.435,
+     "Lo": 0.349,
+     "Hi": 0.511,
+     "p": 0.112,
+     "p_holm": 1.0,
+     "CI_excludes_0.5": false
+    },
+    {
+     "Segment": "DepartmentName",
+     "Level": "Pediatrics",
+     "n": 491,
+     "Admissions": 49,
+     "AUC": 0.533,
+     "Lo": 0.454,
+     "Hi": 0.611,
+     "p": 0.455,
+     "p_holm": 1.0,
+     "CI_excludes_0.5": false
+    },
+    {
+     "Segment": "DepartmentName",
+     "Level": "Pharmacy",
+     "n": 490,
+     "Admissions": 74,
+     "AUC": 0.593,
+     "Lo": 0.522,
+     "Hi": 0.667,
+     "p": 0.011,
+     "p_holm": 0.361,
+     "CI_excludes_0.5": true
+    },
+    {
+     "Segment": "DepartmentName",
+     "Level": "Radiology",
+     "n": 525,
+     "Admissions": 58,
+     "AUC": 0.593,
+     "Lo": 0.513,
+     "Hi": 0.675,
+     "p": 0.021,
+     "p_holm": 0.682,
+     "CI_excludes_0.5": true
+    },
+    {
+     "Segment": "DepartmentName",
+     "Level": "Surgery",
+     "n": 488,
+     "Admissions": 63,
+     "AUC": 0.484,
+     "Lo": 0.408,
+     "Hi": 0.565,
+     "p": 0.673,
+     "p_holm": 1.0,
+     "CI_excludes_0.5": false
+    },
+    {
+     "Segment": "VisitType",
+     "Level": "Consultation",
+     "n": 1656,
+     "Admissions": 206,
+     "AUC": 0.544,
+     "Lo": 0.499,
+     "Hi": 0.585,
+     "p": 0.041,
+     "p_holm": 1.0,
+     "CI_excludes_0.5": false
+    },
+    {
+     "Segment": "VisitType",
+     "Level": "Emergency",
+     "n": 1650,
+     "Admissions": 184,
+     "AUC": 0.498,
+     "Lo": 0.455,
+     "Hi": 0.536,
+     "p": 0.947,
+     "p_holm": 1.0,
+     "CI_excludes_0.5": false
+    },
+    {
+     "Segment": "VisitType",
+     "Level": "Follow-up",
+     "n": 1694,
+     "Admissions": 196,
+     "AUC": 0.508,
+     "Lo": 0.466,
+     "Hi": 0.549,
+     "p": 0.725,
+     "p_holm": 1.0,
+     "CI_excludes_0.5": false
+    },
+    {
+     "Segment": "Severity",
+     "Level": "Mild",
+     "n": 1682,
+     "Admissions": 196,
+     "AUC": 0.539,
+     "Lo": 0.49,
+     "Hi": 0.582,
+     "p": 0.072,
+     "p_holm": 1.0,
+     "CI_excludes_0.5": false
+    },
+    {
+     "Segment": "Severity",
+     "Level": "Moderate",
+     "n": 1696,
+     "Admissions": 189,
+     "AUC": 0.529,
+     "Lo": 0.485,
+     "Hi": 0.573,
+     "p": 0.193,
+     "p_holm": 1.0,
+     "CI_excludes_0.5": false
+    },
+    {
+     "Segment": "Severity",
+     "Level": "Severe",
+     "n": 1622,
+     "Admissions": 201,
+     "AUC": 0.489,
+     "Lo": 0.446,
+     "Hi": 0.535,
+     "p": 0.608,
+     "p_holm": 1.0,
+     "CI_excludes_0.5": false
+    },
+    {
+     "Segment": "ChronicFlag",
+     "Level": "0",
+     "n": 1263,
+     "Admissions": 140,
+     "AUC": 0.503,
+     "Lo": 0.45,
+     "Hi": 0.551,
+     "p": 0.923,
+     "p_holm": 1.0,
+     "CI_excludes_0.5": false
+    },
+    {
+     "Segment": "ChronicFlag",
+     "Level": "1",
+     "n": 3737,
+     "Admissions": 446,
+     "AUC": 0.522,
+     "Lo": 0.495,
+     "Hi": 0.548,
+     "p": 0.129,
+     "p_holm": 1.0,
+     "CI_excludes_0.5": false
+    },
+    {
+     "Segment": "ChronicCondition",
+     "Level": "Asthma",
+     "n": 1259,
+     "Admissions": 146,
+     "AUC": 0.506,
+     "Lo": 0.458,
+     "Hi": 0.556,
+     "p": 0.798,
+     "p_holm": 1.0,
+     "CI_excludes_0.5": false
+    },
+    {
+     "Segment": "ChronicCondition",
+     "Level": "Diabetes",
+     "n": 1216,
+     "Admissions": 147,
+     "AUC": 0.549,
+     "Lo": 0.504,
+     "Hi": 0.597,
+     "p": 0.052,
+     "p_holm": 1.0,
+     "CI_excludes_0.5": true
+    },
+    {
+     "Segment": "ChronicCondition",
+     "Level": "Hypertension",
+     "n": 1262,
+     "Admissions": 153,
+     "AUC": 0.51,
+     "Lo": 0.459,
+     "Hi": 0.554,
+     "p": 0.689,
+     "p_holm": 1.0,
+     "CI_excludes_0.5": false
+    },
+    {
+     "Segment": "ChronicCondition",
+     "Level": "None",
+     "n": 1263,
+     "Admissions": 140,
+     "AUC": 0.503,
+     "Lo": 0.45,
+     "Hi": 0.551,
+     "p": 0.923,
+     "p_holm": 1.0,
+     "CI_excludes_0.5": false
+    }
+   ],
+   "expected_chance": 1.7000000000000002
+  },
+  "overfit": [
+   {
+    "Model": "Logistic regression (candidate)",
+    "Train_AUC": 0.6011,
+    "CV_AUC": 0.5204,
+    "Gap": 0.0807
+   },
+   {
+    "Model": "Random forest (Week 6 setting)",
+    "Train_AUC": 0.9425,
+    "CV_AUC": 0.5017,
+    "Gap": 0.4408
+   },
+   {
+    "Model": "Gradient boosting (Week 6 setting)",
+    "Train_AUC": 0.7575,
+    "CV_AUC": 0.4973,
+    "Gap": 0.2603
+   },
+   {
+    "Model": "Random forest, unconstrained (deliberately overfit)",
+    "Train_AUC": 1.0,
+    "CV_AUC": 0.4993,
+    "Gap": 0.5007
+   }
+  ],
+  "learning_curve": [
+   {
+    "n": 500,
+    "rep": 1.0,
+    "train": 0.7813,
+    "test": 0.4665
+   },
+   {
+    "n": 1000,
+    "rep": 1.0,
+    "train": 0.7414,
+    "test": 0.508
+   },
+   {
+    "n": 2000,
+    "rep": 1.0,
+    "train": 0.6686,
+    "test": 0.496
+   },
+   {
+    "n": 3200,
+    "rep": 1.0,
+    "train": 0.6358,
+    "test": 0.5048
+   },
+   {
+    "n": 5000,
+    "rep": 1.0,
+    "train": 0.6134,
+    "test": 0.5086
+   }
+  ],
+  "importance": {
+   "n_features": 18,
+   "consistent": 1,
+   "expected_chance": 0.5625,
+   "top": [
+    {
+     "Feature": "DepartmentName",
+     "Mean": 0.0051,
+     "SD_between_folds": 0.0159,
+     "Folds_positive": 4
+    },
+    {
+     "Feature": "DayOfWeek",
+     "Mean": 0.0051,
+     "SD_between_folds": 0.0052,
+     "Folds_positive": 4
+    },
+    {
+     "Feature": "ProvinceName",
+     "Mean": 0.0043,
+     "SD_between_folds": 0.0089,
+     "Folds_positive": 4
+    },
+    {
+     "Feature": "RiskScore",
+     "Mean": 0.0033,
+     "SD_between_folds": 0.0014,
+     "Folds_positive": 5
+    },
+    {
+     "Feature": "DoctorYearsExp",
+     "Mean": 0.0027,
+     "SD_between_folds": 0.0021,
+     "Folds_positive": 4
+    }
+   ],
+   "max_mean": 0.005121618272608566
+  },
+  "leak_audit": [
+   {
+    "Features": "Age, BMI, RiskScore, ChronicFlag, ChronicCondition, demographics, geography, BloodGroup",
+    "Known at prediction time?": "Yes",
+    "In candidate?": "Yes (feature set A)",
+    "Note": "Known at registration"
+   },
+   {
+    "Features": "VisitType, DepartmentName, FacilityID, DayOfWeek, Month_, DoctorYearsExp",
+    "Known at prediction time?": "Yes",
+    "In candidate?": "Yes (feature set A)",
+    "Note": "Known when the appointment is booked"
+   },
+   {
+    "Features": "PatientVisits (appointments on record)",
+    "Known at prediction time?": "Partly",
+    "In candidate?": "Yes (feature set A)",
+    "Note": "Counted over the whole year, so it includes visits after the one being scored \u2014 mild look-ahead; recompute as 'visits before this date' in production"
+   },
+   {
+    "Features": "Diagnosis, Severity",
+    "Known at prediction time?": "No \u2014 recorded at the visit",
+    "In candidate?": "No (feature set B only)",
+    "Note": "Not available when predicting; excluded from deployment"
+   },
+   {
+    "Features": "LabDone, LabAbnormal, Prescription, Referred",
+    "Known at prediction time?": "No \u2014 recorded during/after the visit",
+    "In candidate?": "No (feature set C only)",
+    "Note": "Post-visit information (possible leakage); excluded from deployment"
+   },
+   {
+    "Features": "LengthOfStayDays, BillAmount, Rating",
+    "Known at prediction time?": "No \u2014 outcome-linked",
+    "In candidate?": "Never used",
+    "Note": "Would leak the outcome"
+   }
+  ],
+  "negative_control": {
+   "null_mean": 0.5007285511310613,
+   "null_sd": 0.017542391310074238,
+   "obs": 0.5204085980230204,
+   "p": 0.18811881188118812
+  },
+  "planted": [
+   {
+    "Planted_effect": 0.0,
+    "True_AUC_of_signal": 0.5161,
+    "Pipeline_CV_AUC": 0.5122,
+    "Perm_p": 0.1935,
+    "Detected": false
+   },
+   {
+    "Planted_effect": 0.2,
+    "True_AUC_of_signal": 0.5669,
+    "Pipeline_CV_AUC": 0.5419,
+    "Perm_p": 0.0323,
+    "Detected": true
+   },
+   {
+    "Planted_effect": 0.4,
+    "True_AUC_of_signal": 0.617,
+    "Pipeline_CV_AUC": 0.5898,
+    "Perm_p": 0.0323,
+    "Detected": true
+   },
+   {
+    "Planted_effect": 0.6,
+    "True_AUC_of_signal": 0.6756,
+    "Pipeline_CV_AUC": 0.6578,
+    "Perm_p": 0.0323,
+    "Detected": true
+   },
+   {
+    "Planted_effect": 0.9,
+    "True_AUC_of_signal": 0.746,
+    "Pipeline_CV_AUC": 0.7311,
+    "Perm_p": 0.0323,
+    "Detected": true
+   }
+  ],
+  "min_detectable_auc": 0.5668750456585951,
+  "refine_dev": [
+   {
+    "Model": "Baseline (prior probability)",
+    "AUC": 0.5,
+    "AUC_sd": 0.0,
+    "PR_AUC": 0.1172,
+    "Brier": 0.1035,
+    "dAUC_vs_candidate": 0.0185,
+    "dAUC_lo": -0.0075,
+    "dAUC_hi": 0.0445,
+    "p_corrected_t": 0.1493
+   },
+   {
+    "Model": "Rule only (RiskScore)",
+    "AUC": 0.5169,
+    "AUC_sd": 0.0254,
+    "PR_AUC": 0.1231,
+    "Brier": 0.1035,
+    "dAUC_vs_candidate": 0.0354,
+    "dAUC_lo": -0.0079,
+    "dAUC_hi": 0.0787,
+    "p_corrected_t": 0.1011
+   },
+   {
+    "Model": "Candidate (Week 6)",
+    "AUC": 0.4815,
+    "AUC_sd": 0.0208,
+    "PR_AUC": 0.1183,
+    "Brier": 0.1053,
+    "dAUC_vs_candidate": 0.0,
+    "dAUC_lo": NaN,
+    "dAUC_hi": NaN,
+    "p_corrected_t": NaN
+   },
+   {
+    "Model": "R1 Clinical-core features",
+    "AUC": 0.5007,
+    "AUC_sd": 0.0183,
+    "PR_AUC": 0.1263,
+    "Brier": 0.1039,
+    "dAUC_vs_candidate": 0.0192,
+    "dAUC_lo": -0.0063,
+    "dAUC_hi": 0.0447,
+    "p_corrected_t": 0.1282
+   },
+   {
+    "Model": "R2a Stronger L2 (C=0.01)",
+    "AUC": 0.4847,
+    "AUC_sd": 0.0206,
+    "PR_AUC": 0.1174,
+    "Brier": 0.104,
+    "dAUC_vs_candidate": 0.0031,
+    "dAUC_lo": -0.0104,
+    "dAUC_hi": 0.0167,
+    "p_corrected_t": 0.6276
+   },
+   {
+    "Model": "R2b L1 feature selection",
+    "AUC": 0.4914,
+    "AUC_sd": 0.0243,
+    "PR_AUC": 0.1186,
+    "Brier": 0.1036,
+    "dAUC_vs_candidate": 0.0099,
+    "dAUC_lo": -0.0231,
+    "dAUC_hi": 0.0429,
+    "p_corrected_t": 0.5304
+   },
+   {
+    "Model": "R3 Balanced class weights",
+    "AUC": 0.4794,
+    "AUC_sd": 0.0206,
+    "PR_AUC": 0.1173,
+    "Brier": 0.2488,
+    "dAUC_vs_candidate": -0.0021,
+    "dAUC_lo": -0.0096,
+    "dAUC_hi": 0.0054,
+    "p_corrected_t": 0.5572
+   },
+   {
+    "Model": "R4 Shallow gradient boosting",
+    "AUC": 0.4749,
+    "AUC_sd": 0.0274,
+    "PR_AUC": 0.1116,
+    "Brier": 0.1039,
+    "dAUC_vs_candidate": -0.0066,
+    "dAUC_lo": -0.0361,
+    "dAUC_hi": 0.0229,
+    "p_corrected_t": 0.6385
+   },
+   {
+    "Model": "R5 Candidate + isotonic calibration",
+    "AUC": 0.4845,
+    "AUC_sd": 0.0265,
+    "PR_AUC": 0.1196,
+    "Brier": 0.104,
+    "dAUC_vs_candidate": 0.003,
+    "dAUC_lo": -0.0118,
+    "dAUC_hi": 0.0177,
+    "p_corrected_t": 0.6709
+   }
+  ],
+  "dev_prev": 0.11725,
+  "best_refinement": {
+   "name": "R1 Clinical-core features",
+   "d": 0.01922618165719832,
+   "p": 0.12815961223335387,
+   "accepted": false
+  },
+  "holdout_final": {
+   "cand": {
+    "auc": 0.5294208748342384,
+    "lo": 0.4702138324974839,
+    "hi": 0.5913086234566934,
+    "ap": 0.14538579029083334
+   },
+   "ref": {
+    "name": "R1 Clinical-core features",
+    "auc": 0.5371935224709856,
+    "lo": 0.48479112764494076,
+    "hi": 0.5911694340558992,
+    "ap": 0.1450337699302479,
+    "precision20": 0.13,
+    "recall20": 0.2222222222222222
+   },
+   "delta": 0.007772647636747232,
+   "delta_ci": [
+    -0.039647883838457666,
+    0.05969009565631809
+   ],
+   "prevalence": 0.117,
+   "stability_ref": {
+    "mean": 0.5139551128792352,
+    "share": 0.6333333333333333,
+    "lo": 0.4712131331610381,
+    "hi": 0.5604195100231341
+   },
+   "time_ref": {
+    "auc": 0.48830439635037337,
+    "ci": [
+     0.44202816681011625,
+     0.5334101076061608
+    ]
+   },
+   "calib_ref": {
+    "slope": 0.2415600858741699,
+    "brier": 0.103652626010327
+   },
+   "brier_calibrated": 0.10368956578060838,
+   "brier_candidate": 0.10428293412927514,
+   "brier_base": 0.10346416
+  },
+  "criteria": {
+   "table": [
+    {
+     "index": "C1 AUC \u2265 0.65",
+     "Candidate (Week 6)": "0.529  [FAIL]",
+     "Refined (R1 Clinical-core features)": "0.537  [FAIL]"
+    },
+    {
+     "index": "C2 CI lower > 0.5",
+     "Candidate (Week 6)": "0.470  [FAIL]",
+     "Refined (R1 Clinical-core features)": "0.485  [FAIL]"
+    },
+    {
+     "index": "C3 PR-AUC \u2265 1.5\u00d7prevalence",
+     "Candidate (Week 6)": "0.145 vs 0.176  [FAIL]",
+     "Refined (R1 Clinical-core features)": "0.145 vs 0.176  [FAIL]"
+    },
+    {
+     "index": "C4 stable (\u226590% splits >0.5 and time-split CI lower >0.5)",
+     "Candidate (Week 6)": "40% / 0.43  [FAIL]",
+     "Refined (R1 Clinical-core features)": "63% / 0.44  [FAIL]"
+    },
+    {
+     "index": "C5 slope 0.8\u20131.2",
+     "Candidate (Week 6)": "0.18  [FAIL]",
+     "Refined (R1 Clinical-core features)": "0.24  [FAIL]"
+    },
+    {
+     "index": "C6 beats baseline (corrected CI of AUC\u22120.5 excludes 0)",
+     "Candidate (Week 6)": "-0.044 to +0.007  [FAIL]",
+     "Refined (R1 Clinical-core features)": "-0.022 to +0.024  [FAIL]"
+    }
+   ],
+   "passed": [
+    0,
+    0
+   ],
+   "total": 6
+  },
+  "suitable_patient_level": false,
+  "interface": {
+   "table": [
+    {
+     "ID": "X01",
+     "Scenario": "Valid single record",
+     "Expected": "Returns one probability in [0, 1]",
+     "V1_Actual": "scored, p=0.089",
+     "V1": "PASS",
+     "V2_Actual": "scored, p=0.089",
+     "V2": "PASS"
+    },
+    {
+     "ID": "X02",
+     "Scenario": "Valid batch of 200",
+     "Expected": "200 finite probabilities",
+     "V1_Actual": "200 finite scores",
+     "V1": "PASS",
+     "V2_Actual": "200 finite scores",
+     "V2": "PASS"
+    },
+    {
+     "ID": "X03",
+     "Scenario": "Columns in a different order",
+     "Expected": "Identical scores (columns matched by name)",
+     "V1_Actual": "identical scores",
+     "V1": "PASS",
+     "V2_Actual": "identical scores",
+     "V2": "PASS"
+    },
+    {
+     "ID": "X04",
+     "Scenario": "Unexpected extra column (e.g. PatientName)",
+     "Expected": "Scored; ignored column reported (identifier safety)",
+     "V1_Actual": "scored silently; extra column (possible identifier) not reported",
+     "V1": "FAIL",
+     "V2_Actual": "scored and extra column reported",
+     "V2": "PASS"
+    },
+    {
+     "ID": "X05",
+     "Scenario": "Required column missing (Age)",
+     "Expected": "Clear error naming 'Age'",
+     "V1_Actual": "ValueError: columns are missing: {'Age'}",
+     "V1": "PASS",
+     "V2_Actual": "ScoringError: Missing required column(s): ['Age']",
+     "V2": "PASS"
+    },
+    {
+     "ID": "X06",
+     "Scenario": "Unseen category in an open field (Occupation = Astronaut)",
+     "Expected": "Scored, and the unseen value is reported",
+     "V1_Actual": "scored silently; unseen category not reported",
+     "V1": "FAIL",
+     "V2_Actual": "scored with warning",
+     "V2": "PASS"
+    },
+    {
+     "ID": "X07",
+     "Scenario": "Impossible value in a closed list (ProvinceName = Mars)",
+     "Expected": "Rejected with an error naming ProvinceName",
+     "V1_Actual": "scored an impossible province without complaint",
+     "V1": "FAIL",
+     "V2_Actual": "ScoringError: Column 'ProvinceName' has value(s) outside the allowed list ['Eastern', 'Kigali City', 'Northern",
+     "V2": "PASS"
+    },
+    {
+     "ID": "X08",
+     "Scenario": "Out-of-range numbers (Age = -5, BMI = 500)",
+     "Expected": "Rejected with an error naming the column",
+     "V1_Actual": "scored Age=-5, BMI=500 without complaint",
+     "V1": "FAIL",
+     "V2_Actual": "ScoringError: Column 'Age' out of allowed range [0, 110] at row(s) [0]",
+     "V2": "PASS"
+    },
+    {
+     "ID": "X09",
+     "Scenario": "Missing numeric value (Age = NaN)",
+     "Expected": "Clear error naming 'Age'",
+     "V1_Actual": "ValueError: Input X contains NaN.\nLogisticRegression does not accept missing values encoded as NaN natively. F",
+     "V1": "FAIL",
+     "V2_Actual": "ScoringError: Column 'Age' has missing value(s) at row(s) [0]; missing values are not imputed",
+     "V2": "PASS"
+    },
+    {
+     "ID": "X10",
+     "Scenario": "Wrong data type (Age = 'forty')",
+     "Expected": "Clear error naming 'Age'",
+     "V1_Actual": "ValueError: could not convert string to float: 'forty'",
+     "V1": "FAIL",
+     "V2_Actual": "ScoringError: Column 'Age' must be numeric; non-numeric value(s) at row(s) [0]",
+     "V2": "PASS"
+    },
+    {
+     "ID": "X11",
+     "Scenario": "Empty input (0 rows)",
+     "Expected": "Empty result, no crash",
+     "V1_Actual": "ValueError: Found array with 0 sample(s) (shape=(0, 7)) while a minimum of 1 is required by StandardScaler.",
+     "V1": "FAIL",
+     "V2_Actual": "empty result",
+     "V2": "PASS"
+    },
+    {
+     "ID": "X12",
+     "Scenario": "Determinism (same input twice)",
+     "Expected": "Identical output",
+     "V1_Actual": "identical on repeat",
+     "V1": "PASS",
+     "V2_Actual": "identical on repeat",
+     "V2": "PASS"
+    },
+    {
+     "ID": "X13",
+     "Scenario": "Persistence (save and reload the scorer)",
+     "Expected": "Identical output after reload",
+     "V1_Actual": "identical after save/load",
+     "V1": "PASS",
+     "V2_Actual": "identical after save/load",
+     "V2": "PASS"
+    },
+    {
+     "ID": "X14",
+     "Scenario": "ChronicCondition = 'None' (valid: no chronic disease)",
+     "Expected": "Accepted as a normal value",
+     "V1_Actual": "'None' accepted as a value",
+     "V1": "PASS",
+     "V2_Actual": "'None' accepted as a value",
+     "V2": "PASS"
+    },
+    {
+     "ID": "X15",
+     "Scenario": "ChronicCondition missing \u2014 the CSV 'None'\u2192NaN pitfall",
+     "Expected": "Rejected with a clear error naming ChronicCondition",
+     "V1_Actual": "TypeError: ufunc 'isnan' not supported for the input types, and the inputs could not be safely coerced to any supported ",
+     "V1": "FAIL",
+     "V2_Actual": "ScoringError: Column 'ChronicCondition' has missing value(s) at row(s) [0] - if the data came from a CSV, the text 'None",
+     "V2": "PASS"
+    },
+    {
+     "ID": "X16",
+     "Scenario": "Output schema",
+     "Expected": "risk_score, risk_band, warnings, model_version, use_caution",
+     "V1_Actual": "bare array: no band, warnings, version or caution flag",
+     "V1": "FAIL",
+     "V2_Actual": "output schema as documented",
+     "V2": "PASS"
+    },
+    {
+     "ID": "X17",
+     "Scenario": "Input is not a DataFrame",
+     "Expected": "Clear error saying a DataFrame is required",
+     "V1_Actual": "ValueError: Expected 2D array, got scalar array instead:\narray={'Age': 12, 'BMI': 43.3, 'RiskScore': 2, 'Docto",
+     "V1": "FAIL",
+     "V2_Actual": "ScoringError: Input must be a pandas DataFrame with one row per appointment.",
+     "V2": "PASS"
+    },
+    {
+     "ID": "X18",
+     "Scenario": "Speed: 10,000 rows",
+     "Expected": "Under 5 seconds",
+     "V1_Actual": "10,000 rows in 0.02s",
+     "V1": "PASS",
+     "V2_Actual": "10,000 rows in 0.02s",
+     "V2": "PASS"
+    }
+   ],
+   "v1_pass": 8,
+   "v2_pass": 18,
+   "total": 18,
+   "final_model": "Candidate (Week 6), unchanged",
+   "range_violations": {
+    "Age": 0,
+    "BMI": 0,
+    "RiskScore": 0,
+    "DoctorYearsExp": 0,
+    "PatientVisits": 0,
+    "Month_": 0,
+    "ChronicFlag": 0
+   }
+  },
+  "tests_summary": {
+   "n": 33,
+   "passed": 11,
+   "failed": 22
+  },
+  "tests": [
+   {
+    "ID": "T01",
+    "Scenario": "Reproduce Week 6 candidate (CV and hold-out)",
+    "Expected": "CV AUC 0.514 and hold-out AUC 0.529 (\u00b10.002)",
+    "Actual": "CV AUC 0.514; hold-out AUC 0.529",
+    "Result": "PASS",
+    "Issue": "",
+    "Action": "",
+    "Retest": "",
+    "Collaborating_Track": "Data Science",
+    "Evidence": "notebook B1"
+   },
+   {
+    "ID": "T02",
+    "Scenario": "Stability across 30 random splits",
+    "Expected": "AUC > 0.5 in \u2265 90% of splits (C4)",
+    "Actual": "40% above 0.5; mean 0.495 (range 0.461\u20130.549)",
+    "Result": "FAIL",
+    "Issue": "Skill is not consistently above chance",
+    "Action": "",
+    "Retest": "",
+    "Collaborating_Track": "Data Science",
+    "Evidence": "Fig. w01"
+   },
+   {
+    "ID": "T03",
+    "Scenario": "Time-based split (train Jan\u2013Sep, test Oct\u2013Dec)",
+    "Expected": "AUC > 0.5 with CI above 0.5 (C4, C2)",
+    "Actual": "AUC 0.480 (95% CI 0.433\u20130.528)",
+    "Result": "FAIL",
+    "Issue": "CI includes 0.5: no demonstrable skill on future data",
+    "Action": "",
+    "Retest": "",
+    "Collaborating_Track": "Data Science",
+    "Evidence": "Fig. w01"
+   },
+   {
+    "ID": "T04",
+    "Scenario": "Metrics at deployable thresholds on untouched hold-out",
+    "Expected": "Top-20% rule has lift \u2265 1.5 over prevalence (C3)",
+    "Actual": "Lift 1.42x (precision 0.167 vs prevalence 0.117); 0.5 threshold flags 0 patients; F1-optimal threshold flags 985 of 1000",
+    "Result": "FAIL",
+    "Issue": "At 0.5 the model never flags anyone; the F1-optimal threshold flags nearly everyone \u2014 the model has no useful operating point",
+    "Action": "",
+    "Retest": "",
+    "Collaborating_Track": "Data Science",
+    "Evidence": "table t_metrics_candidate_holdout.csv; Fig. w02"
+   },
+   {
+    "ID": "T05",
+    "Scenario": "Calibration (out-of-fold, all encounters)",
+    "Expected": "Calibration slope within 0.8\u20131.2 (C5) and Brier below baseline",
+    "Actual": "Slope 0.18 (95% CI -0.06\u20130.41); Brier 0.1043 vs baseline 0.1035",
+    "Result": "FAIL",
+    "Issue": "Predicted risks are not informative about actual risk (slope far below 1; Brier no better than baseline)",
+    "Action": "",
+    "Retest": "",
+    "Collaborating_Track": "Data Science",
+    "Evidence": "Fig. w03"
+   },
+   {
+    "ID": "T06",
+    "Scenario": "Error analysis: FN vs TP and FP vs TN profiles; do flags enrich for admissions?",
+    "Expected": "Errors show outcome-related, correctable patterns, and flagged patients are admitted more often than unflagged",
+    "Actual": "Flagged patients are admitted at 12.7% vs 11.5% unflagged (p = 0.31); 78% of admissions missed, 87% of flags false alarms. Profile differences (9 of 16 and 13 of 16 variables after Holm) mirror the features the score is built from (selection effect), led by DepartmentName/DayOfWeek/ProvinceName - categories with no demonstrated link to admission",
+    "Result": "FAIL",
+    "Issue": "Flags are driven by noise categories, not by outcome-related patterns; there is no error pattern that feature fixes could remove",
+    "Action": "",
+    "Retest": "",
+    "Collaborating_Track": "Data Science",
+    "Evidence": "table t_error_profile_tests.csv"
+   },
+   {
+    "ID": "T07",
+    "Scenario": "Performance across segments (gender, age band, province, department, visit type, severity, chronic status)",
+    "Expected": "AUC consistently > 0.5 across segments; no segment where the model fails",
+    "Actual": "34 segments: AUC 0.37\u20130.59; 3 intervals above and 1 below 0.5 (\u22481.7 expected by chance); 0 significant after Holm correction",
+    "Result": "FAIL",
+    "Issue": "No segment where the model works reliably once multiple testing is accounted for; results scatter around 0.5",
+    "Action": "",
+    "Retest": "",
+    "Collaborating_Track": "Data Science",
+    "Evidence": "Fig. w04; table t_segment_auc.csv"
+   },
+   {
+    "ID": "T08",
+    "Scenario": "Overfitting: train vs CV AUC; learning curve",
+    "Expected": "Small train\u2013CV gap and CV AUC rising with more data",
+    "Actual": "Candidate gap 0.081 (train 0.601, CV 0.520); learning-curve train AUC falls 0.78\u21920.61 while CV stays ~0.5; unconstrained forest train 1.000 vs CV 0.499",
+    "Result": "FAIL",
+    "Issue": "Mild overfitting (train above CV) and no learning: CV AUC stays at ~0.5 as data grows while training AUC falls \u2014 the model fits noise. Flexible models only memorise it",
+    "Action": "",
+    "Retest": "",
+    "Collaborating_Track": "Data Science",
+    "Evidence": "Fig. w05; table t_overfitting.csv"
+   },
+   {
+    "ID": "T09",
+    "Scenario": "Feature validity: per-fold permutation importance and prediction-time availability",
+    "Expected": "Some features contribute consistently; all features available at prediction time",
+    "Actual": "1 of 18 features consistent across folds (\u22480.6 by chance); max importance 0.0051; one mild look-ahead feature found (PatientVisits)",
+    "Result": "FAIL",
+    "Issue": "No feature contributes reliably; PatientVisits uses the full-year count (look-ahead) \u2014 must be 'visits before this appointment' in production",
+    "Action": "Documented in feature-timing audit and the input contract",
+    "Retest": "",
+    "Collaborating_Track": "Data Science",
+    "Evidence": "Fig. w06; tables t_feature_importance_folds.csv, t_feature_timing_audit.csv"
+   },
+   {
+    "ID": "T10",
+    "Scenario": "Negative control (shuffled labels)",
+    "Expected": "Mean AUC \u2248 0.50 (pipeline free of leakage/bias)",
+    "Actual": "Shuffled mean 0.501 (sd 0.018); observed 0.520, permutation p = 0.19",
+    "Result": "PASS",
+    "Issue": "",
+    "Action": "",
+    "Retest": "",
+    "Collaborating_Track": "Data Science",
+    "Evidence": "notebook D4"
+   },
+   {
+    "ID": "T11",
+    "Scenario": "Planted-signal detection (can the method find a real effect?)",
+    "Expected": "Pipeline recovers a planted Age effect and flags it significant",
+    "Actual": "Detected from true AUC \u2248 0.57 upward; with no planted effect, no detection",
+    "Result": "PASS",
+    "Issue": "",
+    "Action": "",
+    "Retest": "",
+    "Collaborating_Track": "Data Science",
+    "Evidence": "Fig. w06; table t_planted_signal_power.csv"
+   },
+   {
+    "ID": "T12",
+    "Scenario": "Refinement comparison on development CV (7 variants vs candidate)",
+    "Expected": "At least one refinement beats the candidate by \u2265 0.02 AUC (corrected-t p < 0.05)",
+    "Actual": "Best: R1 Clinical-core features, \u0394AUC +0.019 (p = 0.13); R5 calibration changes Brier -0.0013",
+    "Result": "FAIL",
+    "Issue": "No refinement produced a meaningful improvement",
+    "Action": "Refinements tried: clinical-core features, L2/L1 regularisation, class weights, shallow boosting, isotonic calibration",
+    "Retest": "",
+    "Collaborating_Track": "Data Science",
+    "Evidence": "Fig. w07; table t_refinement_dev_cv.csv"
+   },
+   {
+    "ID": "T13",
+    "Scenario": "Re-test of refined model on untouched hold-out",
+    "Expected": "Refined AUC \u2265 0.65 with lower CI bound > 0.5 (C1, C2)",
+    "Actual": "R1 Clinical-core features: AUC 0.537 (95% CI 0.48\u20130.59); candidate 0.529; paired \u0394 +0.008 (95% CI -0.040 to +0.060)",
+    "Result": "FAIL",
+    "Issue": "Refinement does not create skill",
+    "Action": "",
+    "Retest": "",
+    "Collaborating_Track": "Data Science",
+    "Evidence": "Fig. w07"
+   },
+   {
+    "ID": "T14",
+    "Scenario": "Re-test: stability and time-based split of refined model",
+    "Expected": "AUC > 0.5 in \u2265 90% of splits and in the time split (C4)",
+    "Actual": "63% of splits above 0.5 (mean 0.514); time split 0.488 (CI 0.44\u20130.53)",
+    "Result": "FAIL",
+    "Issue": "",
+    "Action": "",
+    "Retest": "",
+    "Collaborating_Track": "Data Science",
+    "Evidence": "notebook E"
+   },
+   {
+    "ID": "T15",
+    "Scenario": "Re-test: calibration after refinement (slope; isotonic recalibration)",
+    "Expected": "Slope within 0.8\u20131.2 and Brier below baseline (C5)",
+    "Actual": "Refined slope 0.24, Brier 0.1037; isotonic-calibrated candidate Brier 0.1037 vs baseline 0.1035",
+    "Result": "FAIL",
+    "Issue": "Recalibration can only push predictions toward the average rate (Brier \u2248 baseline); it cannot add information",
+    "Action": "",
+    "Retest": "",
+    "Collaborating_Track": "Data Science",
+    "Evidence": "notebook E"
+   },
+   {
+    "ID": "X01",
+    "Scenario": "Interface: Valid single record",
+    "Expected": "Returns one probability in [0, 1]",
+    "Actual": "V1: scored, p=0.089",
+    "Result": "PASS",
+    "Issue": "",
+    "Action": "",
+    "Retest": "V2: PASS - scored, p=0.089",
+    "Collaborating_Track": "ML Engineering (interface contract; teammate sign-off pending)",
+    "Evidence": "src/admission_risk_scorer.py; table t_scoring_interface_tests.csv"
+   },
+   {
+    "ID": "X02",
+    "Scenario": "Interface: Valid batch of 200",
+    "Expected": "200 finite probabilities",
+    "Actual": "V1: 200 finite scores",
+    "Result": "PASS",
+    "Issue": "",
+    "Action": "",
+    "Retest": "V2: PASS - 200 finite scores",
+    "Collaborating_Track": "ML Engineering (interface contract; teammate sign-off pending)",
+    "Evidence": "src/admission_risk_scorer.py; table t_scoring_interface_tests.csv"
+   },
+   {
+    "ID": "X03",
+    "Scenario": "Interface: Columns in a different order",
+    "Expected": "Identical scores (columns matched by name)",
+    "Actual": "V1: identical scores",
+    "Result": "PASS",
+    "Issue": "",
+    "Action": "",
+    "Retest": "V2: PASS - identical scores",
+    "Collaborating_Track": "ML Engineering (interface contract; teammate sign-off pending)",
+    "Evidence": "src/admission_risk_scorer.py; table t_scoring_interface_tests.csv"
+   },
+   {
+    "ID": "X04",
+    "Scenario": "Interface: Unexpected extra column (e.g. PatientName)",
+    "Expected": "Scored; ignored column reported (identifier safety)",
+    "Actual": "V1: scored silently; extra column (possible identifier) not reported",
+    "Result": "FAIL",
+    "Issue": "Week 6 scoring behaviour does not meet the interface contract",
+    "Action": "Report extra columns (possible identifiers) in the output warnings",
+    "Retest": "V2: PASS - scored and extra column reported",
+    "Collaborating_Track": "ML Engineering (interface contract; teammate sign-off pending)",
+    "Evidence": "src/admission_risk_scorer.py; table t_scoring_interface_tests.csv"
+   },
+   {
+    "ID": "X05",
+    "Scenario": "Interface: Required column missing (Age)",
+    "Expected": "Clear error naming 'Age'",
+    "Actual": "V1: ValueError: columns are missing: {'Age'}",
+    "Result": "PASS",
+    "Issue": "",
+    "Action": "",
+    "Retest": "V2: PASS - ScoringError: Missing required column(s): ['Age']",
+    "Collaborating_Track": "ML Engineering (interface contract; teammate sign-off pending)",
+    "Evidence": "src/admission_risk_scorer.py; table t_scoring_interface_tests.csv"
+   },
+   {
+    "ID": "X06",
+    "Scenario": "Interface: Unseen category in an open field (Occupation = Astronaut)",
+    "Expected": "Scored, and the unseen value is reported",
+    "Actual": "V1: scored silently; unseen category not reported",
+    "Result": "FAIL",
+    "Issue": "Week 6 scoring behaviour does not meet the interface contract",
+    "Action": "Flag categories never seen in training instead of scoring silently",
+    "Retest": "V2: PASS - scored with warning",
+    "Collaborating_Track": "ML Engineering (interface contract; teammate sign-off pending)",
+    "Evidence": "src/admission_risk_scorer.py; table t_scoring_interface_tests.csv"
+   },
+   {
+    "ID": "X07",
+    "Scenario": "Interface: Impossible value in a closed list (ProvinceName = Mars)",
+    "Expected": "Rejected with an error naming ProvinceName",
+    "Actual": "V1: scored an impossible province without complaint",
+    "Result": "FAIL",
+    "Issue": "Week 6 scoring behaviour does not meet the interface contract",
+    "Action": "Closed lists (province, gender, chronic condition) enforced",
+    "Retest": "V2: PASS - ScoringError: Column 'ProvinceName' has value(s) outside the allowed list ['Eastern', 'Kigali City', 'Northern",
+    "Collaborating_Track": "ML Engineering (interface contract; teammate sign-off pending)",
+    "Evidence": "src/admission_risk_scorer.py; table t_scoring_interface_tests.csv"
+   },
+   {
+    "ID": "X08",
+    "Scenario": "Interface: Out-of-range numbers (Age = -5, BMI = 500)",
+    "Expected": "Rejected with an error naming the column",
+    "Actual": "V1: scored Age=-5, BMI=500 without complaint",
+    "Result": "FAIL",
+    "Issue": "Week 6 scoring behaviour does not meet the interface contract",
+    "Action": "Numeric range checks from the contract",
+    "Retest": "V2: PASS - ScoringError: Column 'Age' out of allowed range [0, 110] at row(s) [0]",
+    "Collaborating_Track": "ML Engineering (interface contract; teammate sign-off pending)",
+    "Evidence": "src/admission_risk_scorer.py; table t_scoring_interface_tests.csv"
+   },
+   {
+    "ID": "X09",
+    "Scenario": "Interface: Missing numeric value (Age = NaN)",
+    "Expected": "Clear error naming 'Age'",
+    "Actual": "V1: ValueError: Input X contains NaN.\nLogisticRegression does not accept missing values encoded as NaN natively. F",
+    "Result": "FAIL",
+    "Issue": "Week 6 scoring behaviour does not meet the interface contract",
+    "Action": "Missing values rejected with the field name",
+    "Retest": "V2: PASS - ScoringError: Column 'Age' has missing value(s) at row(s) [0]; missing values are not imputed",
+    "Collaborating_Track": "ML Engineering (interface contract; teammate sign-off pending)",
+    "Evidence": "src/admission_risk_scorer.py; table t_scoring_interface_tests.csv"
+   },
+   {
+    "ID": "X10",
+    "Scenario": "Interface: Wrong data type (Age = 'forty')",
+    "Expected": "Clear error naming 'Age'",
+    "Actual": "V1: ValueError: could not convert string to float: 'forty'",
+    "Result": "FAIL",
+    "Issue": "Week 6 scoring behaviour does not meet the interface contract",
+    "Action": "Type checks with the field name",
+    "Retest": "V2: PASS - ScoringError: Column 'Age' must be numeric; non-numeric value(s) at row(s) [0]",
+    "Collaborating_Track": "ML Engineering (interface contract; teammate sign-off pending)",
+    "Evidence": "src/admission_risk_scorer.py; table t_scoring_interface_tests.csv"
+   },
+   {
+    "ID": "X11",
+    "Scenario": "Interface: Empty input (0 rows)",
+    "Expected": "Empty result, no crash",
+    "Actual": "V1: ValueError: Found array with 0 sample(s) (shape=(0, 7)) while a minimum of 1 is required by StandardScaler.",
+    "Result": "FAIL",
+    "Issue": "Week 6 scoring behaviour does not meet the interface contract",
+    "Action": "Empty input returns an empty, correctly-typed result",
+    "Retest": "V2: PASS - empty result",
+    "Collaborating_Track": "ML Engineering (interface contract; teammate sign-off pending)",
+    "Evidence": "src/admission_risk_scorer.py; table t_scoring_interface_tests.csv"
+   },
+   {
+    "ID": "X12",
+    "Scenario": "Interface: Determinism (same input twice)",
+    "Expected": "Identical output",
+    "Actual": "V1: identical on repeat",
+    "Result": "PASS",
+    "Issue": "",
+    "Action": "",
+    "Retest": "V2: PASS - identical on repeat",
+    "Collaborating_Track": "ML Engineering (interface contract; teammate sign-off pending)",
+    "Evidence": "src/admission_risk_scorer.py; table t_scoring_interface_tests.csv"
+   },
+   {
+    "ID": "X13",
+    "Scenario": "Interface: Persistence (save and reload the scorer)",
+    "Expected": "Identical output after reload",
+    "Actual": "V1: identical after save/load",
+    "Result": "PASS",
+    "Issue": "",
+    "Action": "",
+    "Retest": "V2: PASS - identical after save/load",
+    "Collaborating_Track": "ML Engineering (interface contract; teammate sign-off pending)",
+    "Evidence": "src/admission_risk_scorer.py; table t_scoring_interface_tests.csv"
+   },
+   {
+    "ID": "X14",
+    "Scenario": "Interface: ChronicCondition = 'None' (valid: no chronic disease)",
+    "Expected": "Accepted as a normal value",
+    "Actual": "V1: 'None' accepted as a value",
+    "Result": "PASS",
+    "Issue": "",
+    "Action": "",
+    "Retest": "V2: PASS - 'None' accepted as a value",
+    "Collaborating_Track": "ML Engineering (interface contract; teammate sign-off pending)",
+    "Evidence": "src/admission_risk_scorer.py; table t_scoring_interface_tests.csv"
+   },
+   {
+    "ID": "X15",
+    "Scenario": "Interface: ChronicCondition missing \u2014 the CSV 'None'\u2192NaN pitfall",
+    "Expected": "Rejected with a clear error naming ChronicCondition",
+    "Actual": "V1: TypeError: ufunc 'isnan' not supported for the input types, and the inputs could not be safely coerced to any supported ",
+    "Result": "FAIL",
+    "Issue": "Week 6 scoring behaviour does not meet the interface contract",
+    "Action": "Missing ChronicCondition rejected with a hint about the CSV 'None' pitfall",
+    "Retest": "V2: PASS - ScoringError: Column 'ChronicCondition' has missing value(s) at row(s) [0] - if the data came from a CSV, the text 'None",
+    "Collaborating_Track": "ML Engineering (interface contract; teammate sign-off pending)",
+    "Evidence": "src/admission_risk_scorer.py; table t_scoring_interface_tests.csv"
+   },
+   {
+    "ID": "X16",
+    "Scenario": "Interface: Output schema",
+    "Expected": "risk_score, risk_band, warnings, model_version, use_caution",
+    "Actual": "V1: bare array: no band, warnings, version or caution flag",
+    "Result": "FAIL",
+    "Issue": "Week 6 scoring behaviour does not meet the interface contract",
+    "Action": "Documented output schema incl. risk band, version and 'use caution' field",
+    "Retest": "V2: PASS - output schema as documented",
+    "Collaborating_Track": "ML Engineering (interface contract; teammate sign-off pending)",
+    "Evidence": "src/admission_risk_scorer.py; table t_scoring_interface_tests.csv"
+   },
+   {
+    "ID": "X17",
+    "Scenario": "Interface: Input is not a DataFrame",
+    "Expected": "Clear error saying a DataFrame is required",
+    "Actual": "V1: ValueError: Expected 2D array, got scalar array instead:\narray={'Age': 12, 'BMI': 43.3, 'RiskScore': 2, 'Docto",
+    "Result": "FAIL",
+    "Issue": "Week 6 scoring behaviour does not meet the interface contract",
+    "Action": "Explicit DataFrame requirement",
+    "Retest": "V2: PASS - ScoringError: Input must be a pandas DataFrame with one row per appointment.",
+    "Collaborating_Track": "ML Engineering (interface contract; teammate sign-off pending)",
+    "Evidence": "src/admission_risk_scorer.py; table t_scoring_interface_tests.csv"
+   },
+   {
+    "ID": "X18",
+    "Scenario": "Interface: Speed: 10,000 rows",
+    "Expected": "Under 5 seconds",
+    "Actual": "V1: 10,000 rows in 0.02s",
+    "Result": "PASS",
+    "Issue": "",
+    "Action": "",
+    "Retest": "V2: PASS - 10,000 rows in 0.02s",
+    "Collaborating_Track": "ML Engineering (interface contract; teammate sign-off pending)",
+    "Evidence": "src/admission_risk_scorer.py; table t_scoring_interface_tests.csv"
+   }
+  ],
+  "n_figures": 8
+ },
+ "FIGS": {
+  "w01_stability": {
+   "title": "Stability of the candidate model",
+   "interp": "Across 30 random splits the AUC averages 0.495 (sd 0.021, range 0.461\u20130.549); 40% of splits land above 0.50 \u2014 about what chance alone would give. On genuinely future data (Oct\u2013Dec) the AUC is 0.480 with a 95% interval of 0.43\u20130.53. The Week 6 hold-out value (0.529) is one ordinary draw from this spread, not evidence of skill."
+  },
+  "w02_roc_gains": {
+   "title": "ROC and cumulative-gains curves, hold-out set",
+   "interp": "The candidate's ROC curve hugs the diagonal (AUC 0.529; the interval 0.47\u20130.59 includes 0.50) and the gains curve is indistinguishable from random ordering. Flagging the top 20% captures 26% of admissions with precision 16.7% (lift 1.42x; random gives 15.5%). The model gives no practical advantage over choosing patients at random."
+  },
+  "w03_calibration": {
+   "title": "Calibration of the candidate model",
+   "interp": "Observed admission rates in the ten risk groups stay close to the overall 11.7% regardless of the predicted risk, so the reliability curve is flat rather than following the diagonal (calibration slope 0.18, 95% CI -0.06\u20130.41, ideal 1.0). Predictions span only 0.03\u20130.35. The Brier score (0.1043) is no better than always predicting the average (0.1035)."
+  },
+  "w04_segments": {
+   "title": "Model performance by segment",
+   "interp": "Across 34 segments the AUC ranges from 0.37 to 0.59 and almost every interval crosses 0.50. 3 interval(s) sit wholly above 0.50 and 1 wholly below (about 1.7 expected by chance with this many tests), and 0 segment(s) remain significant after Holm correction. Even the best segments (AUC \u2264 0.59) are far below the 0.65 criterion, so there is no segment in which the model can be trusted."
+  },
+  "w05_overfitting": {
+   "title": "Overfitting and learning-curve check",
+   "interp": "The candidate overfits mildly (train 0.60 vs CV 0.52): as data grows its training AUC falls from 0.78 to 0.61 while cross-validated AUC stays at ~0.5 \u2014 it is fitting noise, not signal. A deliberately unconstrained forest reaches a training AUC of 1.00 yet cross-validates at 0.50, the signature of memorised noise. More data of the same kind would not help."
+  },
+  "w06_importance_power": {
+   "title": "Feature importance and planted-signal power check",
+   "interp": "No feature is reliably useful: the largest mean importance is 0.0051 AUC points and 1 of 18 features are positive in every fold (\u22480.6 expected by luck). Right: when a genuine Age effect is planted, the same pipeline recovers it (detected from a true AUC of about 0.57 upward) and the shuffled-label control averages 0.501. So the 'no signal' verdict reflects the data, not a weak test."
+  },
+  "w07_refinement": {
+   "title": "Before/after: candidate vs refinements",
+   "interp": "All variants sit between 0.475 and 0.517 AUC \u2014 indistinguishable from the 0.50 baseline. The best refinement (R1 Clinical-core features) changes AUC by +0.019 (corrected-t p = 0.13), well short of the +0.02 needed, and on the untouched hold-out it scores 0.537 (95% CI 0.48\u20130.59) versus 0.529 for the candidate. Refinement changed behaviour but did not create skill: the information is not in the data."
+  },
+  "w08_interface_tests": {
+   "title": "Scoring-interface tests, before and after refinement",
+   "interp": "Of 18 interface tests, the Week 6 scoring behaviour (V1) passed 8 and failed 10: it scored impossible values (Age = -5, Province = Mars), silently accepted a missing ChronicCondition (the CSV 'None' pitfall) and unreported extra columns, and returned a bare array. After adding a validated input contract and a documented output schema (V2), 18 of 18 pass. This is a genuine Test \u2192 Finding \u2192 Action \u2192 Retest cycle for the Data Science \u2192 ML Engineering hand-off."
+  }
+ },
+ "DQ": []
+}

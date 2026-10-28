@@ -1,0 +1,33 @@
+Question,Variable,Test,p,Detail,p_holm
+Who is missed? (admitted: missed vs caught),Age,Mann-Whitney,4.2422080507459655e-05,mean FN 44.88 vs TP 55.50,0.0006366329963474127
+Who is missed? (admitted: missed vs caught),BMI,Mann-Whitney,3.9789562271713294e-05,mean FN 30.62 vs TP 26.41,0.0006366329963474127
+Who is missed? (admitted: missed vs caught),RiskScore,Mann-Whitney,0.0015558736379354464,mean FN 2.12 vs TP 2.45,0.01711461001728991
+Who is missed? (admitted: missed vs caught),PatientVisits,Mann-Whitney,2.6043274745658707e-06,mean FN 1.22 vs TP 1.45,4.948222201675154e-05
+Who is missed? (admitted: missed vs caught),DoctorYearsExp,Mann-Whitney,0.03808519202352962,mean FN 12.95 vs TP 11.54,0.30468153618823696
+Who is missed? (admitted: missed vs caught),SeverityScore,Mann-Whitney,0.4587241145906291,mean FN 2.02 vs TP 1.96,1.0
+Who is missed? (admitted: missed vs caught),VisitType,Chi-square,0.001280213493808317,3 levels,0.015362561925699805
+Who is missed? (admitted: missed vs caught),Severity,Chi-square,0.7420815242714989,3 levels,1.0
+Who is missed? (admitted: missed vs caught),DepartmentName,Chi-square,2.764805532773323e-14,10 levels,6.635533278655975e-13
+Who is missed? (admitted: missed vs caught),Gender,Chi-square,7.100874154615945e-05,2 levels,0.0009231136401000728
+Who is missed? (admitted: missed vs caught),ProvinceName,Chi-square,4.31645142297733e-05,5 levels,0.0006366329963474127
+Who is missed? (admitted: missed vs caught),ChronicCondition,Chi-square,0.030602929229730607,4 levels,0.27542636306757545
+Who is missed? (admitted: missed vs caught),DayOfWeek,Chi-square,3.0836657175098995e-05,7 levels,0.0005242231719766829
+Who is missed? (admitted: missed vs caught),Diagnosis,Chi-square,0.31044610570423625,5 levels,1.0
+Who is missed? (admitted: missed vs caught),MaritalStatus,Chi-square,0.017314392833717305,3 levels,0.17314392833717304
+Who is missed? (admitted: missed vs caught),Education,Chi-square,0.8729605458024459,5 levels,1.0
+Who is wrongly flagged? (not admitted: flagged vs not),Age,Mann-Whitney,7.974141896141596e-22,mean FP 53.03 vs TN 43.56,2.153018311958231e-20
+Who is wrongly flagged? (not admitted: flagged vs not),BMI,Mann-Whitney,1.0136418892137573e-05,mean FP 28.69 vs TN 30.41,0.0001824555400584763
+Who is wrongly flagged? (not admitted: flagged vs not),RiskScore,Mann-Whitney,1.498253852282927e-29,mean FP 2.47 vs TN 2.01,4.344936171620489e-28
+Who is wrongly flagged? (not admitted: flagged vs not),PatientVisits,Mann-Whitney,6.421532091562493e-16,mean FP 1.37 vs TN 1.21,1.669598343806248e-14
+Who is wrongly flagged? (not admitted: flagged vs not),DoctorYearsExp,Mann-Whitney,3.771253289806818e-15,mean FP 11.33 vs TN 13.48,9.428133224517046e-14
+Who is wrongly flagged? (not admitted: flagged vs not),SeverityScore,Mann-Whitney,0.4377048164382651,mean FP 2.00 vs TN 1.98,1.0
+Who is wrongly flagged? (not admitted: flagged vs not),VisitType,Chi-square,2.9035248307375727e-10,3 levels,6.678107110696417e-09
+Who is wrongly flagged? (not admitted: flagged vs not),Severity,Chi-square,0.28773065344960314,3 levels,1.0
+Who is wrongly flagged? (not admitted: flagged vs not),DepartmentName,Chi-square,9.327798200318041e-56,10 levels,2.984895424101773e-54
+Who is wrongly flagged? (not admitted: flagged vs not),Gender,Chi-square,8.26043701411469e-28,2 levels,2.312922363952113e-26
+Who is wrongly flagged? (not admitted: flagged vs not),ProvinceName,Chi-square,9.225159468146654e-32,5 levels,2.767547840443996e-30
+Who is wrongly flagged? (not admitted: flagged vs not),ChronicCondition,Chi-square,5.242211195523567e-07,4 levels,1.0484422391047134e-05
+Who is wrongly flagged? (not admitted: flagged vs not),DayOfWeek,Chi-square,4.548714859595349e-47,7 levels,1.4101016064745583e-45
+Who is wrongly flagged? (not admitted: flagged vs not),Diagnosis,Chi-square,0.7521662894238699,5 levels,1.0
+Who is wrongly flagged? (not admitted: flagged vs not),MaritalStatus,Chi-square,7.615910004118237e-09,3 levels,1.6755002009060122e-07
+Who is wrongly flagged? (not admitted: flagged vs not),Education,Chi-square,3.9300321206665307e-08,5 levels,8.253067453399715e-07
