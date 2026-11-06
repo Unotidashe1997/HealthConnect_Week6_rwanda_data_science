@@ -1,0 +1,5 @@
+Model,AUC,Lo,Hi,Evaluated on
+Baseline (prior probability),0.5,0.5,0.5,"Hold-out, Week 7"
+"Week 6 candidate (FINAL, fixture only)",0.5294208748342384,0.4702138324974839,0.5913086234566934,"Hold-out, Week 7"
+Best refinement (R1 Clinical-core features),0.5371935224709856,0.48479112764494076,0.5911694340558992,"Hold-out, Week 7"
+Rule: RiskScore (no fitting),0.5203177602756356,0.4946141083463945,0.5432289702346844,"All 5,000 appointments, descriptive"

@@ -1,0 +1,8 @@
+Item,Finding,Note
+Flagging rule,"Top 20% by score (capacity rule), out-of-fold on all 5,000",
+True / false positives,127 / 873,Precision 12.7% vs prevalence 11.7%
+False / true negatives,"459 / 3,541",78% of admissions missed
+Admission rate: flagged vs unflagged,12.7% vs 11.5%,chi-square p = 0.31: flags do not enrich for admissions
+Error pattern,"Flags driven by department, weekday, province categories",Selection effect; no outcome-related pattern to correct
+Segments,34 assessed; 0 significant after Holm,No segment where the model works
+Overfitting,Train 0.60 vs CV 0.52,Mild; learning curve flat at 0.5

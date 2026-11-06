@@ -1,0 +1,10 @@
+Week 7 result,Value,Meaning
+Hold-out ROC-AUC (95% CI),0.529 (0.47–0.59),Includes chance (0.50); required ≥ 0.65 with lower bound > 0.50
+Time-based test AUC (Oct–Dec),0.480 (CI 0.43–0.53),No demonstrable skill on future data
+Share of 30 random splits with AUC > 0.5,40%,About what chance gives
+Calibration slope (ideal 1.0),0.18,Predicted risks are not informative
+Top-20% rule: precision vs prevalence,0.167 vs 0.117 (lift 1.42×),No enrichment of admissions
+Acceptance criteria met,0 of 6 (candidate); 0 of 6 (best refinement),Not suitable for patient-level use
+Best refinement (development CV),"R1 Clinical-core features: ΔAUC +0.019, p = 0.13",Below the +0.02 gain required; not accepted
+Method validity (planted signals),Detected from true AUC ≈ 0.57; shuffled-label AUC 0.501,"'No signal' reflects the data, not a weak test"
+Scoring-interface tests (Week 6 → refined),8/18 → 18/18,Interface hardened for ML Engineering

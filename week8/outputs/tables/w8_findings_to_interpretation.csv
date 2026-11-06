@@ -1,0 +1,7 @@
+Validated finding,How it changed model interpretation
+0 of 26 candidate admission factors significant after Holm correction,Explains why no model finds signal; the candidate's features carry no information
+"Admission rate does not differ by age, gender, diagnosis, visit type or department",Confirms that department/weekday/province weights in the model are noise
+High-risk rule flags 33.3% of patients; only 22% of them had a 2026 appointment,"The actionable gap is access/outreach, not prediction; supports the rule-based list"
+"Visits are stable at ≈4,975/month with no detectable trend",Supports using a flat forecast for slot planning rather than a model
+Satisfaction not related to any recorded driver,Warns against using ratings as model features
+"Bill 'Status' unreliable; 5,000 of 60,000 bills have an appointment record",Limits any join-based feature; justifies the data-integrity recommendation

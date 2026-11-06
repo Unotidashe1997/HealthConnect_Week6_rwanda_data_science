@@ -1,37 +1,56 @@
-# HealthConnect Rwanda — Healthcare Predictive Analytics & Population Health Intelligence
+# HealthConnect Rwanda — Data Science Case Study (Weeks 6–8)
 
-AnalystLab Africa · Experience Lab · **Week 6** · Track 2: Data Science
+AnalystLab Africa · Experience Lab · Data Science track · **Project question:** *How can HealthConnect Clinic use data and AI to reduce missed appointments and improve the patient support experience?*
 
-| Week | Focus | Status |
-|---|---|---|
-| 6 | Data prep, EDA, statistics, forecasting, models, clustering, reports | ✅ |
-| 7 | Model testing, error analysis, refinement, ML-interface hand-off (`week7/`) | ✅ |
+## Summary
+Across three weeks I analysed 27 HealthConnect files (20,000 patients, 5,000 appointments, 60,000 bills), built an admission-risk model, tested it rigorously and documented the final decision. **The model has no usable predictive skill** (hold-out AUC 0.53, 95% CI 0.47–0.59, 0 of 6 pre-set criteria met), and the data contains no attendance field, so missed appointments cannot be modelled yet. The validated outputs are a transparent outreach rule, a flat visit forecast, collections findings and a reusable test harness.
+
+| Week | Focus | Folder | Status |
+|---|---|---|---|
+| 6 | Data prep, EDA, statistics, forecasting, models, clustering | `src/`, `outputs/`, `notebooks/`, `docs/` | ✅ |
+| 7 | Model testing, error analysis, refinement, ML hand-off | `week7/`, `week7_test/` | ✅ |
+| 8 | Final model decision, documentation, cross-track package, presentation | `week8/` | ✅ |
+
+## Final model decision (Week 8)
+- Final model: Week 6 logistic regression, unchanged, kept as an **integration fixture**. Not approved for patient-level decisions.
+- Cannot be used to rank patients, show risk percentages or predict no-shows.
+- Can be used to test ML pipelines; the **rule-based list** (6,662 high-risk patients, 5,164 with no 2026 appointment) and the **forecast** (≈4,975 visits/month) are the usable outputs.
+- Requirements for ML Engineering: `week8/FINAL_MODEL_REQUIREMENTS.md`.
+
+## Key findings
+- 0 of 26 admission factors significant after Holm correction; 0 of 15 hypothesis tests significant.
+- 0.92 bn RWF billing unpaid; 21,028 claims (2.44 bn RWF) pending.
+- Only 5,000 of 60,000 bills have an appointment record; keys are inconsistent.
+- Planted-signal tests show the method detects true signals from AUC ≈ 0.57, so the "no signal" result reflects the data.
+
+## Repository layout
+```
+src/            Week 6 pipeline (8 scripts)
+notebooks/      Week 6 notebook
+docs/           Week 6 code walkthrough
+outputs/        Week 6 figures, tables, reports
+week7/          Model testing, scorer V2, model card, hand-off
+week7_test/     Copies of the Week 7 documents
+week8/          Final evaluation notebook, package, slides, video script, case study
+```
 
 ## Reproduce
 ```bash
-python -m venv venv && source venv/bin/activate      # Windows: venv\Scripts\activate
+python -m venv venv && source venv/bin/activate
 pip install -r requirements.txt
-# put the 27 raw files in data/ (see data/README.md), then:
-python src/01_data_prep_and_integration.py
-python src/02_features_and_eda.py
-python src/03_statistical_analysis.py
-python src/04_forecasting_and_models.py
-python src/05_clustering_and_pca.py
-python src/06_recommendations_and_export.py
-python src/07_build_reports.py
-python src/08_build_slides.py
+# place the 27 raw files in data/ (see data/README.md)
+python src/01_data_prep_and_integration.py   # ... through 08
+python week7/src/week7_model_testing.py
+python week8/src/_nb_runner.py week8/src/week8_final_model_evaluation.py week8/outputs/HC_Week8_Final_Model_Evaluation_Notebook.ipynb
+python week8/src/build_week8_docs.py && python week8/src/build_week8_slides.py
 ```
-Step-by-step guide: `docs/HealthConnect_Week6_Code_Walkthrough.docx`. The same analysis as one notebook: `notebooks/HC_Week6_DataScience_Notebook.ipynb`.
+Read CSVs with `keep_default_na=False, na_values=[""]`: the value "None" is real data.
 
-## Headline results
-- 20,000 patients, 5,000 appointment encounters, 60,000 bills, 20 facilities; 108 data-quality checks (8 critical).
-- Only 5,000 of 60,000 billed visits have an appointment record; facility/department/doctor keys are inconsistent.
-- 0.92 bn RWF (9.9%) of billing unpaid; 21,028 claims (2.44 bn RWF) pending; claim approval 50%.
-- 0 of 15 hypothesis tests significant; admission model CV AUC ≈ 0.51 (chance); satisfaction R² ≈ 0.
-- 2027 forecast: ≈ 4,975 visits/month (MAPE 14.0%), ≈ 1.10 bn RWF revenue.
+## Privacy
+Names, phone numbers and emergency contacts are excluded from exports. Patient-level data is not stored in this repository.
 
-## Layout
-`src/` scripts · `outputs/figures` 36 charts · `outputs/tables` result tables · `outputs/reports` Word reports + slides · `docs/` walkthrough. Raw data is git-ignored; exports contain no names, phone numbers or emergency contacts.
+## Limitations
+No attendance data; wrong target (admission); one year of data; look-ahead feature (`PatientVisits`); no external validation. Teammate integration evidence is recorded separately by each intern.
 
-## Week 7
-See `week7/README.md`: the Week 6 candidate model fails all 6 pre-registered acceptance criteria (hold-out AUC 0.529, CI 0.47–0.59); seven refinements give no meaningful gain; scoring-interface tests improve from 8/18 to 18/18. Report, summary and testing record are in `week7/outputs/reports/`.
+## Reflection
+A rigorous negative result is more useful than a model that looks good. Next step: obtain appointment status data and rerun the same tests.

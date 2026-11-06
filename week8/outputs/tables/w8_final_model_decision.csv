@@ -1,0 +1,5 @@
+Option,Criteria met,Hold-out AUC,Reason,Decision
+"Week 6 candidate (logistic regression, 18 booking-time features)",0/6,0.529,"Simplest, reproducible, already wrapped by the validated scorer",SELECTED as fixture
+Best refinement (R1 Clinical-core features),0/6,0.537,"Not a meaningful gain (ΔAUC +0.008, CI spans 0); fewer features but no better",Not selected
+Random forest / gradient boosting (Week 6),not run (CV AUC 0.50),≈0.50,"Memorises noise (unconstrained forest train AUC 1.00, CV 0.50)",Rejected
+"Rule-based risk score (RiskScore, no fitting)",see comparison below,see comparison below,"Transparent, needs no training data; matches Week 6 recommendation",Recommended operational tool

@@ -1,0 +1,320 @@
+{
+ "R": {
+  "rule": {
+   "auc": 0.5203177602756356,
+   "lo": 0.4946141083463945,
+   "hi": 0.5432289702346844,
+   "hr_rate": 0.13199764289923394,
+   "non_rate": 0.1095973357553739,
+   "p": 0.02229787793734499,
+   "hr_share": 0.3394,
+   "n": 5000,
+   "prev": 0.1172
+  },
+  "highrisk": {
+   "n": 6662,
+   "seen": 1498,
+   "unseen": 5164,
+   "share": 0.3331,
+   "unseen_share": 0.7751425998198739
+  },
+  "review": [
+   {
+    "Week 7 result": "Hold-out ROC-AUC (95% CI)",
+    "Value": "0.529 (0.47\u20130.59)",
+    "Meaning": "Includes chance (0.50); required \u2265 0.65 with lower bound > 0.50"
+   },
+   {
+    "Week 7 result": "Time-based test AUC (Oct\u2013Dec)",
+    "Value": "0.480 (CI 0.43\u20130.53)",
+    "Meaning": "No demonstrable skill on future data"
+   },
+   {
+    "Week 7 result": "Share of 30 random splits with AUC > 0.5",
+    "Value": "40%",
+    "Meaning": "About what chance gives"
+   },
+   {
+    "Week 7 result": "Calibration slope (ideal 1.0)",
+    "Value": "0.18",
+    "Meaning": "Predicted risks are not informative"
+   },
+   {
+    "Week 7 result": "Top-20% rule: precision vs prevalence",
+    "Value": "0.167 vs 0.117 (lift 1.42\u00d7)",
+    "Meaning": "No enrichment of admissions"
+   },
+   {
+    "Week 7 result": "Acceptance criteria met",
+    "Value": "0 of 6 (candidate); 0 of 6 (best refinement)",
+    "Meaning": "Not suitable for patient-level use"
+   },
+   {
+    "Week 7 result": "Best refinement (development CV)",
+    "Value": "R1 Clinical-core features: \u0394AUC +0.019, p = 0.13",
+    "Meaning": "Below the +0.02 gain required; not accepted"
+   },
+   {
+    "Week 7 result": "Method validity (planted signals)",
+    "Value": "Detected from true AUC \u2248 0.57; shuffled-label AUC 0.501",
+    "Meaning": "'No signal' reflects the data, not a weak test"
+   },
+   {
+    "Week 7 result": "Scoring-interface tests (Week 6 \u2192 refined)",
+    "Value": "8/18 \u2192 18/18",
+    "Meaning": "Interface hardened for ML Engineering"
+   }
+  ],
+  "options": [
+   {
+    "Option": "Week 6 candidate (logistic regression, 18 booking-time features)",
+    "Criteria met": "0/6",
+    "Hold-out AUC": "0.529",
+    "Reason": "Simplest, reproducible, already wrapped by the validated scorer",
+    "Decision": "SELECTED as fixture"
+   },
+   {
+    "Option": "Best refinement (R1 Clinical-core features)",
+    "Criteria met": "0/6",
+    "Hold-out AUC": "0.537",
+    "Reason": "Not a meaningful gain (\u0394AUC +0.008, CI spans 0); fewer features but no better",
+    "Decision": "Not selected"
+   },
+   {
+    "Option": "Random forest / gradient boosting (Week 6)",
+    "Criteria met": "not run (CV AUC 0.50)",
+    "Hold-out AUC": "\u22480.50",
+    "Reason": "Memorises noise (unconstrained forest train AUC 1.00, CV 0.50)",
+    "Decision": "Rejected"
+   },
+   {
+    "Option": "Rule-based risk score (RiskScore, no fitting)",
+    "Criteria met": "see comparison below",
+    "Hold-out AUC": "see comparison below",
+    "Reason": "Transparent, needs no training data; matches Week 6 recommendation",
+    "Decision": "Recommended operational tool"
+   }
+  ],
+  "final": [
+   {
+    "Model": "Baseline (prior probability)",
+    "AUC": 0.5,
+    "Lo": 0.5,
+    "Hi": 0.5,
+    "Evaluated on": "Hold-out, Week 7"
+   },
+   {
+    "Model": "Week 6 candidate (FINAL, fixture only)",
+    "AUC": 0.5294,
+    "Lo": 0.4702,
+    "Hi": 0.5913,
+    "Evaluated on": "Hold-out, Week 7"
+   },
+   {
+    "Model": "Best refinement (R1 Clinical-core features)",
+    "AUC": 0.5372,
+    "Lo": 0.4848,
+    "Hi": 0.5912,
+    "Evaluated on": "Hold-out, Week 7"
+   },
+   {
+    "Model": "Rule: RiskScore (no fitting)",
+    "AUC": 0.5203,
+    "Lo": 0.4946,
+    "Hi": 0.5432,
+    "Evaluated on": "All 5,000 appointments, descriptive"
+   }
+  ],
+  "errors": [
+   {
+    "Item": "Flagging rule",
+    "Finding": "Top 20% by score (capacity rule), out-of-fold on all 5,000",
+    "Note": ""
+   },
+   {
+    "Item": "True / false positives",
+    "Finding": "127 / 873",
+    "Note": "Precision 12.7% vs prevalence 11.7%"
+   },
+   {
+    "Item": "False / true negatives",
+    "Finding": "459 / 3,541",
+    "Note": "78% of admissions missed"
+   },
+   {
+    "Item": "Admission rate: flagged vs unflagged",
+    "Finding": "12.7% vs 11.5%",
+    "Note": "chi-square p = 0.31: flags do not enrich for admissions"
+   },
+   {
+    "Item": "Error pattern",
+    "Finding": "Flags driven by department, weekday, province categories",
+    "Note": "Selection effect; no outcome-related pattern to correct"
+   },
+   {
+    "Item": "Segments",
+    "Finding": "34 assessed; 0 significant after Holm",
+    "Note": "No segment where the model works"
+   },
+   {
+    "Item": "Overfitting",
+    "Finding": "Train 0.60 vs CV 0.52",
+    "Note": "Mild; learning curve flat at 0.5"
+   }
+  ],
+  "strength_weak": [
+   {
+    "": "Strengths",
+    "Assessment": "Fully reproducible; transparent (logistic); uses only booking-time fields; validated input/output contract; negative-control and power-tested; model card and caution flag"
+   },
+   {
+    "": "Weaknesses",
+    "Assessment": "No discrimination (AUC \u2248 0.53); uninformative probabilities; flags driven by noise categories; PatientVisits look-ahead; one year of data; wrong target for the project objective (admission, not no-show)"
+   }
+  ],
+  "decisions": [
+   {
+    "ID": "D1",
+    "Week": "Week 6",
+    "Decision": "Target = hospital admission (no attendance field exists)",
+    "Reason": "Only outcome available that is recorded per appointment",
+    "Outcome": "Wrong target for no-show; flagged as open issue I-02"
+   },
+   {
+    "ID": "D2",
+    "Week": "Week 6",
+    "Decision": "Exclude diagnosis, severity, labs, prescriptions, referral from the candidate",
+    "Reason": "Post-visit information: would be leakage at booking time",
+    "Outcome": "Feature set A only"
+   },
+   {
+    "ID": "D3",
+    "Week": "Week 6",
+    "Decision": "Logistic regression as the candidate; compare with RF and boosting against baselines",
+    "Reason": "Transparent, strong baseline for weak-signal data",
+    "Outcome": "Flexible models memorised noise"
+   },
+   {
+    "ID": "D4",
+    "Week": "Week 7",
+    "Decision": "Fix six acceptance criteria before testing",
+    "Reason": "Prevent the verdict being tuned to the results",
+    "Outcome": "0 of 6 met"
+   },
+   {
+    "ID": "D5",
+    "Week": "Week 7",
+    "Decision": "Select refinements on development CV only; open hold-out once",
+    "Reason": "Avoid optimistic bias",
+    "Outcome": "No refinement accepted (needed \u0394AUC \u2265 0.02, p < 0.05)"
+   },
+   {
+    "ID": "D6",
+    "Week": "Week 7",
+    "Decision": "Plant known signals and shuffle labels to test the method",
+    "Reason": "A 'no signal' verdict needs proof that signal would be seen",
+    "Outcome": "Detected from true AUC \u2248 0.57 upward"
+   },
+   {
+    "ID": "D7",
+    "Week": "Week 7",
+    "Decision": "Rebuild the scoring interface with a validated contract (V2)",
+    "Reason": "Interface tests failed 10 of 18 for the Week 6 behaviour",
+    "Outcome": "18/18 pass"
+   },
+   {
+    "ID": "D8",
+    "Week": "Week 8",
+    "Decision": "Retain the Week 6 candidate unchanged as the FINAL model, as an integration fixture with a caution flag",
+    "Reason": "No variant met the criteria; simplest documented model",
+    "Outcome": "Not approved for patient-level decisions"
+   },
+   {
+    "ID": "D9",
+    "Week": "Week 8",
+    "Decision": "Recommend the rule-based risk list and forecasts for operational use",
+    "Reason": "They need no predictive claim; validated in Week 6",
+    "Outcome": "Used for outreach and slot planning"
+   }
+  ],
+  "use": [
+   {
+    "Possible use": "Rank patients by admission risk for clinical decisions",
+    "Allowed?": "NO",
+    "Evidence": "AUC 0.53, CI includes chance; 0/6 criteria"
+   },
+   {
+    "Possible use": "Show a risk percentage to staff or patients",
+    "Allowed?": "NO",
+    "Evidence": "Calibration slope 0.18; probabilities uninformative"
+   },
+   {
+    "Possible use": "Predict missed appointments / no-shows",
+    "Allowed?": "NO",
+    "Evidence": "No attendance field in the data; different target"
+   },
+   {
+    "Possible use": "Rank facilities, departments or doctors",
+    "Allowed?": "NO",
+    "Evidence": "Segments and facilities show no reliable differences; keys inconsistent"
+   },
+   {
+    "Possible use": "Test the ML pipeline end to end (inputs, outputs, errors, persistence)",
+    "Allowed?": "YES",
+    "Evidence": "Validated scorer, 18/18 interface tests, model card, contract"
+   },
+   {
+    "Possible use": "Reuse the testing harness on an attendance model",
+    "Allowed?": "YES",
+    "Evidence": "Target-independent: criteria, stability, calibration, error and power tests"
+   },
+   {
+    "Possible use": "Targeted outreach by a transparent rule (65+/50\u201364 with chronic disease, obesity or underweight)",
+    "Allowed?": "YES (rule, not model)",
+    "Evidence": "6,662 high-risk patients; 5,164 (78%) had no 2026 appointment"
+   },
+   {
+    "Possible use": "Plan appointment slots with the 2027 visit forecast",
+    "Allowed?": "YES (as a flat baseline)",
+    "Evidence": "\u22484,975 visits/month; MAPE 14.0% vs 15.3% for the mean; no trend"
+   }
+  ],
+  "integration": [
+   {
+    "Validated finding": "0 of 26 candidate admission factors significant after Holm correction",
+    "How it changed model interpretation": "Explains why no model finds signal; the candidate's features carry no information"
+   },
+   {
+    "Validated finding": "Admission rate does not differ by age, gender, diagnosis, visit type or department",
+    "How it changed model interpretation": "Confirms that department/weekday/province weights in the model are noise"
+   },
+   {
+    "Validated finding": "High-risk rule flags 33.3% of patients; only 22% of them had a 2026 appointment",
+    "How it changed model interpretation": "The actionable gap is access/outreach, not prediction; supports the rule-based list"
+   },
+   {
+    "Validated finding": "Visits are stable at \u22484,975/month with no detectable trend",
+    "How it changed model interpretation": "Supports using a flat forecast for slot planning rather than a model"
+   },
+   {
+    "Validated finding": "Satisfaction not related to any recorded driver",
+    "How it changed model interpretation": "Warns against using ratings as model features"
+   },
+   {
+    "Validated finding": "Bill 'Status' unreliable; 5,000 of 60,000 bills have an appointment record",
+    "How it changed model interpretation": "Limits any join-based feature; justifies the data-integrity recommendation"
+   }
+  ]
+ },
+ "FIGS": {
+  "w8_01_baseline_vs_final": {
+   "title": "Final model compared with baseline",
+   "interp": "Every option sits on the chance line: the final candidate scores 0.529 (interval 0.47\u20130.59), the best refinement 0.537, and the transparent RiskScore rule 0.520 (0.49\u20130.54). None approaches the required 0.65. The final model is therefore retained only as a tested integration fixture, not as a decision tool."
+  },
+  "w8_02_integration_view": {
+   "title": "Data Science component in the integrated solution",
+   "interp": "Only the Data Science box is evidenced by my own work. The ML Engineering, Data Analytics, GenAI and Project Management boxes are shown as teammate-owned and must be confirmed by those teammates; the arrows show the information that is exchanged between tracks."
+  }
+ },
+ "DQ": []
+}

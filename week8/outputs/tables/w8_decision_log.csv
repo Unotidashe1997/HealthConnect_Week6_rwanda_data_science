@@ -1,0 +1,10 @@
+ID,Week,Decision,Reason,Outcome
+D1,Week 6,Target = hospital admission (no attendance field exists),Only outcome available that is recorded per appointment,Wrong target for no-show; flagged as open issue I-02
+D2,Week 6,"Exclude diagnosis, severity, labs, prescriptions, referral from the candidate",Post-visit information: would be leakage at booking time,Feature set A only
+D3,Week 6,Logistic regression as the candidate; compare with RF and boosting against baselines,"Transparent, strong baseline for weak-signal data",Flexible models memorised noise
+D4,Week 7,Fix six acceptance criteria before testing,Prevent the verdict being tuned to the results,0 of 6 met
+D5,Week 7,Select refinements on development CV only; open hold-out once,Avoid optimistic bias,"No refinement accepted (needed ΔAUC ≥ 0.02, p < 0.05)"
+D6,Week 7,Plant known signals and shuffle labels to test the method,A 'no signal' verdict needs proof that signal would be seen,Detected from true AUC ≈ 0.57 upward
+D7,Week 7,Rebuild the scoring interface with a validated contract (V2),Interface tests failed 10 of 18 for the Week 6 behaviour,18/18 pass
+D8,Week 8,"Retain the Week 6 candidate unchanged as the FINAL model, as an integration fixture with a caution flag",No variant met the criteria; simplest documented model,Not approved for patient-level decisions
+D9,Week 8,Recommend the rule-based risk list and forecasts for operational use,They need no predictive claim; validated in Week 6,Used for outreach and slot planning

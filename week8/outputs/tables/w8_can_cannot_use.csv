@@ -1,0 +1,9 @@
+Possible use,Allowed?,Evidence
+Rank patients by admission risk for clinical decisions,NO,"AUC 0.53, CI includes chance; 0/6 criteria"
+Show a risk percentage to staff or patients,NO,Calibration slope 0.18; probabilities uninformative
+Predict missed appointments / no-shows,NO,No attendance field in the data; different target
+"Rank facilities, departments or doctors",NO,Segments and facilities show no reliable differences; keys inconsistent
+"Test the ML pipeline end to end (inputs, outputs, errors, persistence)",YES,"Validated scorer, 18/18 interface tests, model card, contract"
+Reuse the testing harness on an attendance model,YES,"Target-independent: criteria, stability, calibration, error and power tests"
+"Targeted outreach by a transparent rule (65+/50–64 with chronic disease, obesity or underweight)","YES (rule, not model)","6,662 high-risk patients; 5,164 (78%) had no 2026 appointment"
+Plan appointment slots with the 2027 visit forecast,YES (as a flat baseline),"≈4,975 visits/month; MAPE 14.0% vs 15.3% for the mean; no trend"
